@@ -1,4 +1,4 @@
-# Self hosted
+# Self-hosted
 
 This documentation will explain how to run your own auto-update server.
 

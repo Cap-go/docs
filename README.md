@@ -6,9 +6,13 @@
 
 ## Choose between Auto and Manual
 
-In auto mode, part of logic is handled by the Native code, updates are decided server side, this is more secure and allow fine grain update as AB test or Partial deploy.
+In auto mode, part of logic is handled by the Native code, updates are decided server side, this is more secure and allow fine grain update Partial deploy to one device or group and more.
 
 In manual mode, all the logic is handled by the JS, that some good and some bad in both scenario.
+
+{% hint style="info" %}
+In V4 you can use Capgo cloud and manual more simply
+{% endhint %}
 
 ### Auto
 
@@ -65,27 +69,27 @@ Let the plugin handle all for you
 
 Setup all in 5 mins
 
-[automatic build and release with GitHub actions](https://capgo.app/blog/automatic-build-and-release-with-github-actions)
+[automatic build and release with GitHub action](https://capgo.app/blog/automatic-build-and-release-with-github-actions)s
 
 Auto-push your version after each commit with GitHub action
 
 ### Register
 
-Before using the CLI, you should register here : [https://web.capgo.app/register](https://web.capgo.app/register)
+Before using the CLI, you should register [here](https://web.capgo.app/register)&#x20;
 
 ### Documentation
 
-[Capgo CLI](https://github.com/Cap-go/capacitor-updater/wiki/Capgo-CLI)
+[CLI](tooling/cli.md)
 
 [Auto-update](https://github.com/Cap-go/capacitor-updater/wiki/Auto-update)
 
 [Capgo Sandbox App](https://github.com/Cap-go/capacitor-updater/wiki/Capgo-Sandbox-App)
 
-[Auto-update on premise](https://github.com/Cap-go/capacitor-updater/wiki/Auto-update-on-premise)
+[Auto-update self-hosted](plugin/auto-update/self-hosted.md)
 
-[Upgrade from version 2 to 3](https://github.com/Cap-go/capacitor-updater/wiki/Upgrade-from-version-2-to-3)
+[Upgrade](broken-reference)
 
-[Capgo API](https://github.com/Cap-go/capacitor-updater/wiki/Capgo-API)
+[API](https://github.com/Cap-go/capacitor-updater/wiki/Capgo-API)
 
 ## Manual update
 
@@ -93,9 +97,9 @@ Build your own logic in JavaScript
 
 ### Documentation
 
-[Capacitor-updater plugin](https://github.com/Cap-go/capacitor-updater/wiki/Capacitor-updater-plugin)
+[Plugin](broken-reference)
 
-[Manual update on premise](https://github.com/Cap-go/capacitor-updater/wiki/Manual-mode)
+[Manual update](./#manual-update)
 
 ## Roadmap
 
