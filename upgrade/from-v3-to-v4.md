@@ -16,7 +16,10 @@ if you use the basic example in your app, you are safe to migrate to the new ver
 
 ## Auto-update self-hosted
 
-For you, still simple, the changes are the name of setting `autoUpdateUrl` and the change from `get` to `post`
+For you, still simple, the changes are:
+
+* The name of the setting from `autoUpdateUrl` in `updateUrl`
+* The Endpoint method change from `GET` to POST
 
 ## Manual users
 
@@ -39,23 +42,24 @@ interface BundleInfo {
 ```
 
 * Renamed of misleading names now (even to explain cannot be clear, but at usage is easy to understand the new one):
-  * what was called a `version` is now refer to a `bundle`
+  * what was called a `version` is now referring to a `bundle`
   * `id` refer to the old `version` who was a random string of 10 char, this `id` is the only trustable and unique way to access to your bundles, example `7Dfcd2RedN`.
   * `version` refer now to the `versionName` you choose for a bundle, example `1.0.0`
 * `updateUrl` move from `get` to `post`, since custom headers were a problem to some of you and post is more logical, all previous headers go to the body and prefix `cap_` disappear.
 * `versionName` method is deleted, in favor of `getId`
-* list return now a list of `BundleInfo`
+* list returns now a list of `BundleInfo`
 * Rename `getId` in `getDeviceId`
 
 ## News
 
 * Method `getLatest`, this method allow you to get from your server set with `updateUrl` the last version available.
-* Method `setDelay` who take `{delay: boolean}` as argument to set true or false the delay for auto-update
+* Method `setDelay` who take `{`kind`:` "background" | "kill" | "nativeVersion" | "date", value : string`}` as argument to set delay to different modes.
 * Method `next`, to set the version in next backgrounding, in opposite to `set` who do it instantly.
 * Method `isAutoUpdateEnabled`, to let you know if you are in auto-update context
 * Event `downloadComplete` when download reach 100%
 * Added mandatory field `version` in download method
 * `notifyAppReady` become mandatory in manual mode too, if not call after 10 sec the app revert to past version
+*
 
 ## Contributors
 
