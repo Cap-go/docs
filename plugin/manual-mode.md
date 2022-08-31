@@ -18,6 +18,11 @@ Capgo offer can't suit you, then put your own price and back a bootstrapped Make
 
 ## Quick install
 
+```
+npm install @capgo/capacitor-updater
+npx cap sync
+```
+
 You can add this code to your app to use manual download
 
 ```jsx
@@ -43,8 +48,21 @@ App.addListener('appStateChange', async(state) => {
        }
      }
  })
+ 
 ```
+
+⚠️ _Be extra careful when you update manually._ If you send a broken update, the app will crash until the user uninstall it. To fix that, use auto-update.
+
+## Demo app&#x20;
 
 Check the demo app for more info
 
-[Cap-go/demo-app](https://github.com/Cap-go/demo-app/blob/main/src/App.vue)
+[GitHub - Cap-go/demo-app: demo app with manual and auto mode](https://github.com/Cap-go/demo-app)
+
+## Package
+
+Whatever you choose to name the file you download from your release/update server URL, the zip file should contain the full contents of your production Capacitor build output folder, usually `{project directory}/dist/` or `{project directory}/www/`.
+
+This is where `index.html` will be located, and it should also contain all bundled JavaScript, CSS, and web resources necessary for your app to run.
+
+Do not password encrypt this file, or it will fail to unpack.

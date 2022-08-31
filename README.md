@@ -1,4 +1,4 @@
-# Home
+# Getting started
 
 ## Join Discord Community
 
@@ -6,12 +6,16 @@
 
 ## Choose between Auto and Manual
 
+{% hint style="danger" %}
+⛔ The Live Update feature only works on HTML, CSS, JS changes, if you update native code, you must resubmit to the app store.
+{% endhint %}
+
 In auto mode, part of logic is handled by the Native code, updates are decided server side, this is more secure and allow fine grain update Partial deploy to one device or group and more.
 
 In manual mode, all the logic is handled by the JS, that some good and some bad in both scenario.
 
 {% hint style="info" %}
-In V4 you can use Capgo cloud and manual more simply
+In V4 you can use Capgo cloud with manual&#x20;
 {% endhint %}
 
 ### Auto
@@ -39,6 +43,10 @@ In V4 you can use Capgo cloud and manual more simply
 
 </details>
 
+{% content-ref url="plugin/auto-update/cloud.md" %}
+[cloud.md](plugin/auto-update/cloud.md)
+{% endcontent-ref %}
+
 ### Manual
 
 <details>
@@ -54,60 +62,19 @@ In V4 you can use Capgo cloud and manual more simply
 
 <summary>Bad 🥲</summary>
 
-* If your update fails, you will not be able to revert
 * Long to handle all scenario yourself
 
 </details>
 
-## Auto-update
-
-Let the plugin handle all for you
-
-### Tutorial
-
-[update your capacitor apps seamlessly using capacitor updater](https://capgo.app/blog/update-your-capacitor-apps-seamlessly-using-capacitor-updater)
-
-Setup all in 5 mins
-
-[automatic build and release with GitHub action](https://capgo.app/blog/automatic-build-and-release-with-github-actions)s
-
-Auto-push your version after each commit with GitHub action
-
-### Register
-
-Before using the CLI, you should register [here](https://web.capgo.app/register)&#x20;
-
-### Documentation
-
-[CLI](tooling/cli.md)
-
-[Auto-update](https://github.com/Cap-go/capacitor-updater/wiki/Auto-update)
-
-[Capgo Sandbox App](https://github.com/Cap-go/capacitor-updater/wiki/Capgo-Sandbox-App)
-
-[Auto-update self-hosted](plugin/auto-update/self-hosted.md)
-
-[Upgrade](broken-reference)
-
-[API](https://github.com/Cap-go/capacitor-updater/wiki/Capgo-API)
-
-## Manual update
-
-Build your own logic in JavaScript
-
-### Documentation
-
-[Plugin](broken-reference)
-
-[Manual update](./#manual-update)
+{% content-ref url="plugin/manual-mode.md" %}
+[manual-mode.md](plugin/manual-mode.md)
+{% endcontent-ref %}
 
 ## Roadmap
 
+The roadmap is handle in GitHub&#x20;
+
 [Roadmap](https://github.com/orgs/Cap-go/projects/1)
-
-### Our demo app
-
-[GitHub - Cap-go/demo-app: demo app with manual and auto mode](https://github.com/Cap-go/demo-app)
 
 ## Open source
 
@@ -115,10 +82,11 @@ The plugin and the back-end are open source and under the LGPL-3.0 License for t
 
 > 💡 LGPL-3.0 mean if someone modify the code of the project, it’s mandatory to publish it, in open-source with same licensing. If you use the code without modification, that doesn’t concern you. See issue below for more details : https://github.com/Cap-go/capacitor-updater/issues/7
 
-## Know incompatibility
+## Know issues
 
-* when you develop, if you use the Ionic live reload feature from the CLI, it will override the plugin, so you will never see your update.
-* same issue with quasar live reload
+* When you develop, if you use the Ionic live reload feature from the CLI, it will override the plugin, so you will never see your update.
+* Same issue with Quasar live reload
+* Big app update (> 20mb) will have a big percentage of user who doesn't get the last version, since users are on the go and need to keep the app open to download happen.
 
 ## Last words
 

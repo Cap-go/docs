@@ -1,13 +1,13 @@
 # Table of contents
 
-* [Home](README.md)
+* [Getting started](README.md)
 
 ## Plugin
 
-* [Home](plugin/home.md)
 * [Auto update](plugin/auto-update/README.md)
   * [Cloud](plugin/auto-update/cloud.md)
   * [Self-hosted](plugin/auto-update/self-hosted.md)
+* [API](plugin/api.md)
 * [Manual mode](plugin/manual-mode.md)
 * [Debug](plugin/debug.md)
 * [Cordova](plugin/cordova.md)

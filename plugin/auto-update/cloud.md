@@ -1,7 +1,5 @@
 # Cloud
 
-
-
 It allows developers to use capacitor-updater with auto-update mode link to Capgo channel or equivalent.
 
 ### Prerequisite
@@ -11,6 +9,18 @@ The only, thing you need to do before using Capgo auto-update is using https://s
 * `package.json` in **version**
 * `android/app/build.gradle` in **versionName**
 * `ios/App/App.xcodeproj/project.pbxproj` in **CURRENT\_PROJECT\_VERSION**
+
+### Tutorial
+
+Setup all in 5 mins
+
+[Update your capacitor apps seamlessly using capacitor updater](https://capgo.app/blog/update-your-capacitor-apps-seamlessly-using-capacitor-updater)
+
+Setup all in 5 mins
+
+[Automatic build and release with GitHub actions](https://capgo.app/blog/automatic-build-and-release-with-github-actions)
+
+
 
 ### Install
 
