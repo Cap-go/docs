@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Getting started](README.md)
+* [How to](how-to.md)
 
 ## Plugin
 
