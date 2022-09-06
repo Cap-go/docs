@@ -6,11 +6,15 @@ All command should be run in your app folder with capacitor project ignited. See
 
 [Capacitor: Cross-platform native runtime for web apps](https://capacitorjs.com/docs/getting-started)
 
-#### **Login to Cloud**
+### **Login**
 
 `npx @capgo/cli login [apikey]`&#x20;
 
-This method is here to remember the `apikey` for you. You can also use `--apikey=********` in every command to override it
+This method is here to remember the `apikey` for you.&#x20;
+
+{% hint style="info" %}
+use `--apikey=********` in any command to override it
+{% endhint %}
 
 #### **Add app to Cloud**
 
@@ -20,7 +24,7 @@ This method is here to remember the `apikey` for you. You can also use `--apikey
 
 Optionally, you can give:
 
-* `[appId]` your app ID the format `com.test.app` is explained [**here**](https://capacitorjs.com/docs/cli/init)
+* `[appId]` your app ID the format `com.test.app` is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
 * icon with `--icon /path/to/my/icon` to have a custom icon in the list
 * name with `--name test` to have a custom name in the list
 
@@ -34,13 +38,13 @@ Example of capacitor.config.json for appId and AppName, the icon is guess in the
 }
 ```
 
-#### Upload **version to Cloud**
+### Upload **version**
 
 `npx @capgo/cli upload [appId]`&#x20;
 
 Optionally, you can give:
 
-* `[appId]` is your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/init)
+* `[appId]` is your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
 * icon with `--path ./www` to send your code to the cloud
 * channel with `--channel prod` to link this version to channel by default, it's `dev`
 * version with `--version 1.0.0` to choose the version number, if not provided it use the one in the `package.json`
@@ -62,18 +66,26 @@ Example of package.json for version
 
 > 💡 Don't forget to update the version number each time you send one, or device will don't see the update
 
-#### **Send version to Cloud channel**
+### **List versions**
+
+`npx @capgo/cli list [appId]`&#x20;
+
+Optionally, you can give:
+
+* `[appId]` is your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
+
+### **Send version to channel**
 
 `npx @capgo/cli set [appId]`&#x20;
 
 Optionally, you can give:
 
-* `[appId]` your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/init)
+* `[appId]` your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
 * `--version` your app version already sent to the cloud
 * `--channel` the channel you want to link the version, it doesn't exist it will be created
 * `--state` set the channel state, can be private or public. To use in your app, channel need to be public.
 
-#### **Delete package or version to Cloud**
+### **Delete package or version to Cloud**
 
 `npx @capgo/cli delete [appId]`&#x20;
 
