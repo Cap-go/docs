@@ -30,7 +30,7 @@ For you, this is the most significant changes, but for the best! You get tons of
 * `autoUpdateUrl` become `updateUrl` since this setting can be use in manual mode now too
 * Delete of `cancelDelay` and `delayUpdate` in favor of `setDelay`
 * No more `versionName` in set
-* Change `version` key who was returned in most function to object `BundleInfo`
+* Change `version` key, who was returned in most function to object `BundleInfo`
 
 ```typescript
 interface BundleInfo {
@@ -50,10 +50,12 @@ interface BundleInfo {
 * list returns now a list of `BundleInfo`
 * Rename `getId` in `getDeviceId`
 
+``
+
 ## News
 
 * Method `getLatest`, this method allow you to get from your server set with `updateUrl` the last version available.
-* Method `setDelay` who take `{`kind`:` "background" | "kill" | "nativeVersion" | "date", value : string`}` as argument to set delay to different modes.
+* Method `setDelay` who take `{`kind`:` "background" | "kill" | "nativeVersion" | "date", value? : string`}` as argument to set delay to different modes.
 * Method `next`, to set the version in next backgrounding, in opposite to `set` who do it instantly.
 * Method `isAutoUpdateEnabled`, to let you know if you are in auto-update context
 * Event `downloadComplete` when download reach 100%

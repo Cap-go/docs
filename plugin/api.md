@@ -2,97 +2,113 @@
 
 ## API
 
+### notifyAppReady()
+
+```typescript
+notifyAppReady() => Promise<BundleInfo>
+```
+
+Notify Capacitor Updater that the current bundle is working (a rollback will occur of this method is not called on every app launch)
+
+**Returns:** `Promise<BundleInfo>`
+
+***
+
 ### download(...)
 
 ```typescript
-download(options: { url: string; }) => Promise<{ version: string; }>
+download(options: { url: string; version?: string; }) => Promise<BundleInfo>
 ```
 
-Download a new version from the provided URL, it should be a zip file, with files inside or with a unique folder inside with all your files
+Download a new version from the provided URL, it should be a zip file, with files inside or with a unique id inside with all your files
 
-| Param         | Type               |
-| ------------- | ------------------ |
-| **`options`** | `{ url: string; }` |
+| Param         | Type                                 |
+| ------------- | ------------------------------------ |
+| **`options`** | `{ url: string; version?: string; }` |
 
-**Returns:** `Promise<{ version: string; }>`
+**Returns:** `Promise<BundleInfo>`
+
+***
+
+### next(...)
+
+```typescript
+next(options: { id: string; }) => Promise<BundleInfo>
+```
+
+Set the next bundle to be used when the app is reloaded.
+
+| Param         | Type              |
+| ------------- | ----------------- |
+| **`options`** | `{ id: string; }` |
+
+**Returns:** `Promise<BundleInfo>`
 
 ***
 
 ### set(...)
 
 ```typescript
-set(options: { version: string; versionName?: string; }) => Promise<void>
+set(options: { id: string; }) => Promise<void>
 ```
 
-Set version as current version, set will return an error if there are is no index.html file inside the version folder. `versionName` is optional, and it's a custom value that will be saved for you
+Set the current bundle and immediately reloads the app.
 
-| Param         | Type                                         |
-| ------------- | -------------------------------------------- |
-| **`options`** | `{ version: string; versionName?: string; }` |
+| Param         | Type              |
+| ------------- | ----------------- |
+| **`options`** | `{ id: string; }` |
 
 ***
 
-### getId()
+### delete(...)
 
 ```typescript
-getId() => Promise<{ id: string; }>
+delete(options: { id: string; }) => Promise<void>
 ```
 
-Get unique ID used to identify device into auto update server
+Delete bundle in storage
 
-**Returns:** `Promise<{ id: string; }>`
-
-***
-
-#### delete(...)
-
-```typescript
-delete(options: { version: string; }) => Promise<void>
-```
-
-Delete version in storage
-
-| Param         | Type                   |
-| ------------- | ---------------------- |
-| **`options`** | `{ version: string; }` |
+| Param         | Type              |
+| ------------- | ----------------- |
+| **`options`** | `{ id: string; }` |
 
 ***
 
 ### list()
 
 ```typescript
-list() => Promise<{ versions: string[]; }>
+list() => Promise<{ bundles: BundleInfo[]; }>
 ```
 
 Get all available versions
 
-**Returns:** `Promise<{ versions: string[]; }>`
+**Returns:** `Promise<{ bundles: BundleInfo[]; }>`
 
 ***
 
 ### reset(...)
 
 ```typescript
-reset(options?: { toAutoUpdate?: boolean | undefined; } | undefined) => Promise<void>
+reset(options?: { toLastSuccessful?: boolean | undefined; } | undefined) => Promise<void>
 ```
 
 Set the `builtin` version (the one sent to Apple store / Google play store ) as current version
 
-| Param         | Type                          |
-| ------------- | ----------------------------- |
-| **`options`** | `{ toAutoUpdate?: boolean; }` |
+| Param         | Type                              |
+| ------------- | --------------------------------- |
+| **`options`** | `{ toLastSuccessful?: boolean; }` |
 
 ***
 
 ### current()
 
 ```typescript
-current() => Promise<{ current: string; currentNative: string; }>
+current() => Promise<{ bundle: BundleInfo; native: string; }>
 ```
 
-Get the current version, if none are set it returns `builtin`, currentNative is the original version install on the device
+Get the current bundle, if none are set it returns `builtin`, currentNative is the original bundle installed on the device
 
-**Returns:** `Promise<{ current: string; currentNative: string; }>`
+**Returns:** `Promise<{ bundle: BundleInfo; native: string; }>`
 
 ***
 
@@ -106,77 +122,19 @@ Reload the view
 
 ***
 
-### versionName()
+### setDelay(...)
 
 ```typescript
-versionName() => Promise<{ versionName: string; }>
+setDelay(options: { delay: boolean; }) => Promise<void>
 ```
 
-Get the version name, if it was set during the set phase
+Set delay to skip updates in the next time the app goes into the background
 
-**Returns:** `Promise<{ versionName: string; }>`
+| Param         | Type                  |
+| ------------- | --------------------- |
+| **`options`** | `{ delay: boolean; }` |
 
 ***
-
-### notifyAppReady()
-
-```typescript
-notifyAppReady() => Promise<void>
-```
-
-Notify native plugin that the update is working, only in auto-update
-
-***
-
-### delayUpdate()
-
-```typescript
-delayUpdate() => Promise<void>
-```
-
-Skip updates in the next time the app goes into the background, only in auto-update
-
-***
-
-### cancelDelay()
-
-```typescript
-cancelDelay() => Promise<void>
-```
-
-allow update in the next time the app goes into the background, only in auto-update
-
-## Events
-
-#### Listen to download events
-
-```javascript
-  import { CapacitorUpdater } from '@capgo/capacitor-updater';
-
-CapacitorUpdater.addListener('download', (info: any) => {
-  console.log('download was fired', info.percent);
-});
-```
-
-On iOS, Apple don't allow you to show a message when the app is updated, so you can't show a progress bar.
-
-### Angular specific
-
-You need to use ngZone to let the event be detected in angular
-
-```jsx
-public updatingDownloadProgress: number = 0;
-constructor(
-  ...
-  private ngZone: NgZone
-  ...) {
-	CapacitorUpdater.addListener("download", (state: DownloadEvent) => {
-	      this.ngZone.run(() => {
-	        this.updatingDownloadProgress = state.percent; 
-	      });
-	    });
-}
-```
 
 ### addListener('download', ...)
 
@@ -194,6 +152,25 @@ Listen for download event in the App, let you know when the download is started,
 **Returns:** `Promise<PluginListenerHandle> & PluginListenerHandle`
 
 **Since:** 2.0.11
+
+***
+
+### addListener('downloadComplete', ...)
+
+```typescript
+addListener(eventName: 'downloadComplete', listenerFunc: DownloadCompleteListener) => Promise<PluginListenerHandle> & PluginListenerHandle
+```
+
+Listen for download event in the App, let you know when the download is started, loading and finished
+
+| Param              | Type                       |
+| ------------------ | -------------------------- |
+| **`eventName`**    | `'downloadComplete'`       |
+| **`listenerFunc`** | `DownloadCompleteListener` |
+
+**Returns:** `Promise<PluginListenerHandle> & PluginListenerHandle`
+
+**Since:** 4.0.0
 
 ***
 
@@ -216,22 +193,58 @@ Listen for Major update event in the App, let you know when major update is bloc
 
 ***
 
-### addListener('updateAvailable', ...)
+### addListener('updateFailed', ...)
 
 ```typescript
-addListener(eventName: 'updateAvailable', listenerFunc: UpdateAvailableListener) => Promise<PluginListenerHandle> & PluginListenerHandle
+addListener(eventName: 'updateFailed', listenerFunc: UpdateFailedListener) => Promise<PluginListenerHandle> & PluginListenerHandle
 ```
 
 Listen for update event in the App, let you know when update is ready to install at next app start
 
-| Param              | Type                      |
-| ------------------ | ------------------------- |
-| **`eventName`**    | `'updateAvailable'`       |
-| **`listenerFunc`** | `UpdateAvailableListener` |
+| Param              | Type                   |
+| ------------------ | ---------------------- |
+| **`eventName`**    | `'updateFailed'`       |
+| **`listenerFunc`** | `UpdateFailedListener` |
 
 **Returns:** `Promise<PluginListenerHandle> & PluginListenerHandle`
 
 **Since:** 2.3.0
+
+***
+
+### getId()
+
+```typescript
+getId() => Promise<{ id: string; }>
+```
+
+Get unique ID used to identify device (sent to auto update server)
+
+**Returns:** `Promise<{ id: string; }>`
+
+***
+
+### getPluginVersion()
+
+```typescript
+getPluginVersion() => Promise<{ version: string; }>
+```
+
+Get the native Capacitor Updater plugin version (sent to auto update server)
+
+**Returns:** `Promise<{ version: string; }>`
+
+***
+
+### isAutoUpdateEnabled()
+
+```typescript
+isAutoUpdateEnabled() => Promise<{ enabled: boolean; }>
+```
+
+Get the state of auto update config. This will return `false` in manual mode.
+
+**Returns:** `Promise<{ enabled: boolean; }>`
 
 ***
 
@@ -258,7 +271,16 @@ removeAllListeners() => Promise<void>
 
 ***
 
-### Interfaces
+## Interfaces
+
+### **BundleInfo**
+
+| Prop             | Type           |
+| ---------------- | -------------- |
+| **`id`**         | `string`       |
+| **`version`**    | `string`       |
+| **`downloaded`** | `string`       |
+| **`status`**     | `BundleStatus` |
 
 ### **PluginListenerHandle**
 
@@ -268,35 +290,62 @@ removeAllListeners() => Promise<void>
 
 ### **DownloadEvent**
 
-| Prop          | Type     | Description                                    | Since  |
-| ------------- | -------- | ---------------------------------------------- | ------ |
-| **`percent`** | `number` | Current status of download, between 0 and 100. | 2.0.11 |
+| Prop          | Type         | Description                                    | Since |
+| ------------- | ------------ | ---------------------------------------------- | ----- |
+| **`percent`** | `number`     | Current status of download, between 0 and 100. | 4.0.0 |
+| **`bundle`**  | `BundleInfo` |                                                |       |
+
+### **DownloadCompleteEvent**
+
+| Prop         | Type         | Description                          | Since |
+| ------------ | ------------ | ------------------------------------ | ----- |
+| **`bundle`** | `BundleInfo` | Emit when a new update is available. | 4.0.0 |
 
 ### **MajorAvailableEvent**
 
 | Prop          | Type     | Description                                 | Since |
 | ------------- | -------- | ------------------------------------------- | ----- |
-| **`version`** | `string` | Emit when a new major version is available. | 2.3.0 |
+| **`version`** | `string` | Emit when a new major version is available. | 4.0.0 |
 
-### **UpdateAvailableEvent**
+### **UpdateFailedEvent**
 
-| Prop          | Type     | Description                          | Since |
-| ------------- | -------- | ------------------------------------ | ----- |
-| **`version`** | `string` | Emit when a new update is available. | 3.0.0 |
+| Prop         | Type         | Description                           | Since |
+| ------------ | ------------ | ------------------------------------- | ----- |
+| **`bundle`** | `BundleInfo` | Emit when a update failed to install. | 4.0.0 |
 
-#### Type Aliases
+## Type Aliases
 
-**DownloadChangeListener**
+### **BundleStatus**
+
+`'success' | 'error' | 'pending' | 'downloading'`
+
+### **DownloadChangeListener**
 
 `(state: DownloadEvent): void`
 
-**MajorAvailableListener**
+### **DownloadCompleteListener**
+
+`(state: DownloadCompleteEvent): void`
+
+### **MajorAvailableListener**
 
 `(state: MajorAvailableEvent): void`
 
-**UpdateAvailableListener**
+### **UpdateFailedListener**
 
-`(state: UpdateAvailableEvent): void`
+`(state: UpdateFailedEvent): void`
+
+#### Listen to download events
+
+```javascript
+  import { CapacitorUpdater } from '@capgo/capacitor-updater';
+
+CapacitorUpdater.addListener('download', (info: any) => {
+  console.log('download was fired', info.percent);
+});
+```
+
+On iOS, Apple don't allow you to show a message when the app is updated, so you can't show a progress bar.
 
 
 

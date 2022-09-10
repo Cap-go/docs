@@ -17,9 +17,14 @@
 
 * [CLI](tooling/cli.md)
 * [API](tooling/api.md)
+* [Webapp](tooling/webapp.md)
 * [Sandbox App](tooling/sandbox-app.md)
 
 ## Upgrade
 
 * [From V3 to V4](upgrade/from-v3-to-v4.md)
 * [From V2 to V3](upgrade/from-v2-to-v3.md)
+
+## V3
+
+* [Plugin API](v3/plugin-api.md)

@@ -2,7 +2,7 @@
 
 This documentation will explain how to run your own auto-update server.
 
-## Before star
+## Before start
 
 If you use this work on your own, I couldn't suggest you more to support my work thought [this](https://github.com/sponsors/riderx).
 
@@ -62,7 +62,7 @@ In Auto-update the server should do the work of compares the version and return 
 
 If you add "message" key, the version will not be set and the message will be display in logs instead.
 
-The zip should have `index.html` file at the root, or only one folder at the root with `index.html` inside
+The zip should have `index.html` a file at the root, or only one folder at the root with `index.html` inside
 
 ### Statistics
 

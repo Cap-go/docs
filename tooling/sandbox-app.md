@@ -8,7 +8,7 @@ Capgo sandbox app goal:
 * test versions directly in it.
 * allow other teammates to test versions
 
-It’s the same code as the website.
+It’s the same code as the webapp.
 
 ## Install
 
@@ -47,19 +47,6 @@ Shake your phone at any time to see the menu below
 
 ![](https://user-images.githubusercontent.com/4084527/163660713-dbfd8d37-494d-4ce2-a696-67faa02f4b01.png)
 
-### Share app to other user
-
-If you have a team who need to test your update, ask them to register to Capgo and add them to a channel. They will see the app appear in their app list, and they will be able to test it from Capgo app
-
-⛔ Shared channel don’t allow you to upload to the channel, this will come, ti’s in the roadmap
-
-### configure channel
-
-You have two server-side option for each channel:
-
-* `disableAutoUpdateUnderNative`: Disallow the app to self downgrade under the native app version
-* `disableAutoUpdateBreaking`: Disallow the app to self upgrade to a major
-
 ## Available native API
 
 #### All official plugins are installed and preconfigured
@@ -84,7 +71,7 @@ You have two server-side option for each channel:
 * [Share](https://github.com/ionic-team/capacitor-plugins/tree/main/share) - Provides methods for sharing content in any sharing-enabled apps the user may have installed.
 * [Splash Screen](https://github.com/ionic-team/capacitor-plugins/tree/main/splash-screen) - Provides methods for showing or hiding a Splash image.
 * [Status Bar](https://github.com/ionic-team/capacitor-plugins/tree/main/status-bar) - Provides methods for configuring the style of the Status Bar, along with showing or hiding it.
-* [Storage](https://github.com/ionic-team/capacitor-plugins/tree/main/storage) - Provides a simple key/value persistent store for lightweight data.
+* [Storage](https://github.com/ionic-team/capacitor-plugins/tree/main/preferences)(preferences) - Provides a simple key/value persistent store for lightweight data.
 * [Text Zoom](https://github.com/ionic-team/capacitor-plugins/tree/main/text-zoom) - Provides the ability to change Web View text size for visual accessibility.
 * [Toast](https://github.com/ionic-team/capacitor-plugins/tree/main/toast) - Provides a notification pop up for displaying important information to a user. Just like real toast!
 
@@ -108,3 +95,11 @@ You have two server-side option for each channel:
 > 💡 If you need a capacitor plugin to test your app open issue in [GitHub](https://github.com/Cap-go/capgo) I will add it to the next build.
 
 > ⛔ Cordova plugin are not supported in sandbox test app
+
+## Troubleshooting
+
+
+
+If your app use module, there are not installed in the sandbox app, your app may crash. if that happen, you could be in a situation where you cannot go out back to the app.\
+If that happen, uninstall the sandbox app and install again.\
+I search better solution for the future.\
