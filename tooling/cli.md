@@ -16,7 +16,7 @@ This method is here to remember the `apikey` for you.&#x20;
 use `--apikey=********` in any command to override it
 {% endhint %}
 
-### **Add app**
+#### **Add app to Cloud**
 
 `npx @capgo/cli add [appId]`&#x20;
 
@@ -74,7 +74,7 @@ Optionally, you can give:
 
 * `[appId]` is your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
 
-### **Link version to channel**
+### **Send version to channel**
 
 `npx @capgo/cli set [appId]`&#x20;
 
@@ -103,7 +103,7 @@ To automate your work, I recommend you make GitHub action do the job of pushing 
 
 [GitHub action tutorial](https://capgo.app/blog/automatic-build-and-release-with-github-actions)
 
-### Our demo app
+#### Our demo app
 
 [GitHub - Cap-go/demo-app](https://github.com/Cap-go/demo-app)
 
