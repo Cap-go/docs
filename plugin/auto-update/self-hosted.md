@@ -10,9 +10,9 @@ I made a big bet to open source all the precious code I built here.
 
 I could have kept it for myself and put a high ticket price.
 
-I want to focus on Capgo tooling, and make it an open and transparent business.
+Furthermore, I want to focus on Capgo tooling, and make it an open and transparent business.
 
-I do think it would make our world a better place by opening instead of fighting and hiding.
+Likewise, I do think it would make our world a better place by opening instead of fighting and hiding.
 
 But to make it possible, it is necessary for all of us to do our part, including you 🥹.
 
@@ -26,9 +26,7 @@ You have to configure the plugin to use your own URL like that:
 {
 	"plugins": {
 		"CapacitorUpdater": {
-                        "autoUpdate": true,
-			"autoUpdateUrl": "https://YOURURL",
-                        "statsUrl": "https://YOURURLFORSTATS",
+			"updateUrl": "https://YOURURL",
 		}
 	}
 }
