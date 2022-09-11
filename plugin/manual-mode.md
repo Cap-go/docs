@@ -2,8 +2,7 @@
 
 ## Before start
 
-
-
+{% hint style="info" %}
 If you use this tool for free, take time to support my work with [GitHub sponsor](https://github.com/sponsors/riderx).
 
 I made a bet to open source all the code I built here.
@@ -17,6 +16,7 @@ I do think it would make our world a better place by opening instead of fighting
 To make it possible, it is necessary for all of us to do our part, including you 🥹.
 
 If Capgo cloud offer can't suit you, back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your own terms.
+{% endhint %}
 
 ## Quick install
 
