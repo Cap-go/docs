@@ -90,16 +90,16 @@ The plugin and the back-end are open source and under the LGPL-3.0 License for t
 
 ## Last words
 
-If you use this work for free, I couldn't suggest you more to support my work [here](https://github.com/sponsors/riderx).
+If you use this tool for free, take time to support my work with [GitHub sponsor](https://github.com/sponsors/riderx).
 
-I made a big bet to open source all the precious code I built here.
+I made a bet to open source all the code I built here.
 
 I could have kept it for myself and put a high ticket price.
 
-Furthermore, I want to focus on Capgo tooling, and make it an open and transparent business.
+Instead, I want to make it an open and transparent business.
 
-Likewise, I do think it would make our world a better place by opening instead of fighting and hiding.
+I do think it would make our world a better place by opening instead of fighting and hiding.
 
-But to make it possible, it is necessary for all of us to do our part, including you 🥹.
+To make it possible, it is necessary for all of us to do our part, including you 🥹.
 
-If Capgo cloud offer can't suit you, then put your own price and back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your own terms.
+If Capgo cloud offer can't suit you, back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your own terms.
