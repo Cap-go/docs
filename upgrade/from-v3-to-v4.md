@@ -49,6 +49,8 @@ interface BundleInfo {
 * `versionName` method is deleted, in favor of `getId`
 * list returns now a list of `BundleInfo`
 * Rename `getId` in `getDeviceId`
+* `autoUpdate` become true by default, if you use Manual mode set it to false.
+*
 
 ``
 

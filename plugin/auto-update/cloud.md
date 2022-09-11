@@ -43,6 +43,29 @@ The only restriction is to use [semver](https://semver.org/) in your `package.js
 
 > ℹ️ You can use Capgo Cloud without sending your code to our server. If that not allowed by your company
 
+#### Config
+
+Follow the documentation to upload your first version to the server here:
+
+[Capgo CLI](https://doc.capgo.app/Capgo-CLI-f5919f0578cf4643ac0a20f3a7718b57)
+
+Get in the app, Capgo your link.
+
+After install capacitor-updater to your project, add this to your config:
+
+```tsx
+// capacitor.config.json
+{
+	"appId": "**.***.**",
+	"appName": "Name",
+	"plugins": {
+		"CapacitorUpdater": {
+			"autoUpdate": true
+		}
+	}
+}
+```
+
 `autoUpdate` will use data from your app to self identify into the Capgo server
 
 #### Validate version
