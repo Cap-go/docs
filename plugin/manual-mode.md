@@ -23,6 +23,23 @@ npm install @capgo/capacitor-updater
 npx cap sync
 ```
 
+#### Config
+
+After install capacitor-updater to your project, add this to your config:
+
+```tsx
+// capacitor.config.json
+{
+	"appId": "**.***.**",
+	"appName": "Name",
+	"plugins": {
+		"CapacitorUpdater": {
+			"autoUpdate": false
+		}
+	}
+}
+```
+
 You can add this code to your app to use manual download
 
 ```jsx
