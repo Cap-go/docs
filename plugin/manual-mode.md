@@ -23,7 +23,24 @@ npm install @capgo/capacitor-updater
 npx cap sync
 ```
 
-You can add this code to your app to use manual download
+#### Config
+
+Add this to your config, to disable auto update:
+
+```tsx
+// capacitor.config.json
+{
+	"appId": "**.***.**",
+	"appName": "Name",
+	"plugins": {
+		"CapacitorUpdater": {
+			"autoUpdate": false
+		}
+	}
+}
+```
+
+Then add this code to your app to use manual download
 
 ```jsx
 import { CapacitorUpdater } from '@capgo/capacitor-updater'
@@ -52,7 +69,7 @@ App.addListener('appStateChange', async(state) => {
  
 ```
 
-⚠️ _Be extra careful when you update manually._ If you send a broken update, the app will crash until the user uninstall it. To fix that, use auto-update.
+⚠️ If you send a broken update, the app will revert to the last working version, or the one include with the native build, if none works.
 
 ## Demo app&#x20;
 
