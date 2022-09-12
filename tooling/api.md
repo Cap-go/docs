@@ -101,8 +101,8 @@ Send this
 interface DeviceLink {
   app_id: string
   device_id: string
-  version_id?: string
-  channel_id?: string
+  version_id?: string // version name ( will be migrate to better name)
+  channel?: string // channel name
 }
 ```
 
