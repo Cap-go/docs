@@ -47,7 +47,7 @@ Optionally, you can give:
 * `[appId]` is your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
 * icon with `--path ./www` to send your code to the cloud
 * channel with `--channel prod` to link this version to channel by default, it's `dev`
-* version with `--version 1.0.0` to choose the version number, if not provided it use the one in the `package.json`
+* `bundle` with `--bundle 1.0.0` to choose the `bundle` number, if not provided it use the one in the `` package.json under the key `version` ``
 * external zip link with `--external` to use zipped version from external storage, it should be a zip URL in HTTPS
 
 > ⭐️ External option help to unlock 2 cases: `corporate with privacy concern`, don't send the code to a third part and `app bigger than 30 mbs`. With this setting capgo store only the link to the zip and send the link to all app
@@ -81,7 +81,7 @@ Optionally, you can give:
 Optionally, you can give:
 
 * `[appId]` your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
-* `--version` your app version already sent to the cloud
+* `--bundle` your app `bundle` already sent to the cloud
 * `--channel` the channel you want to link the version, it doesn't exist it will be created
 * `--state` set the channel state, can be private or public. To use in your app, channel need to be public.
 
