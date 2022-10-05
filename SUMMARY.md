@@ -9,7 +9,7 @@
   * [Cloud](plugin/auto-update/cloud.md)
   * [Self-hosted](plugin/auto-update/self-hosted.md)
 * [API](plugin/api.md)
-* [Manual mode](plugin/manual-mode/README.md)
+* [Manual mode](plugin/manual-mode.md)
   * [Cloud](plugin/manual-mode/cloud.md)
   * [Self-hosted](plugin/manual-mode/self-hosted.md)
 * [Debug](plugin/debug.md)

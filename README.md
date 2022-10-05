@@ -67,8 +67,8 @@ In V4 you can use Capgo cloud with manual&#x20;
 
 </details>
 
-{% content-ref url="plugin/manual-mode/" %}
-[manual-mode](plugin/manual-mode/)
+{% content-ref url="plugin/manual-mode.md" %}
+[manual-mode.md](plugin/manual-mode.md)
 {% endcontent-ref %}
 
 ## Roadmap
