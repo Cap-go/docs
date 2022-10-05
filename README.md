@@ -44,8 +44,8 @@ In V4 you can use Capgo cloud with manual&#x20;
 
 </details>
 
-{% content-ref url="plugin/auto-update/cloud.md" %}
-[cloud.md](plugin/auto-update/cloud.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ### Manual

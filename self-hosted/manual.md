@@ -1,4 +1,4 @@
-# Self-hosted
+# Manual
 
 ## Before start
 
@@ -44,7 +44,7 @@ Add this to your config, to disable auto update:
 
 Then add this code to your app to use manual download
 
-```jsx
+```typescript
 import { CapacitorUpdater } from '@capgo/capacitor-updater'
 import { SplashScreen } from '@capacitor/splash-screen'
 import { App } from '@capacitor/app'
@@ -54,6 +54,7 @@ App.addListener('appStateChange', async(state) => {
      if (state.isActive) {
        // Do the download during user active app time to prevent failed download
        data = await CapacitorUpdater.download({
+       version: '0.0.4',
        url: 'https://github.com/Cap-go/demo-app/releases/download/0.0.4/dist.zip',
        })
      }

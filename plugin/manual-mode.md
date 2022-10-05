@@ -1,9 +1,57 @@
 # Manual mode
 
-{% content-ref url="manual-mode/cloud.md" %}
-[cloud.md](manual-mode/cloud.md)
-{% endcontent-ref %}
 
-{% content-ref url="manual-mode/self-hosted.md" %}
-[self-hosted.md](manual-mode/self-hosted.md)
-{% endcontent-ref %}
+
+## Quick install
+
+```
+npm install @capgo/capacitor-updater
+npx cap sync
+```
+
+#### Config
+
+Add this to your config, to disable auto update:
+
+```tsx
+// capacitor.config.json
+{
+	"appId": "**.***.**",
+	"appName": "Name",
+	"plugins": {
+		"CapacitorUpdater": {
+			"autoUpdate": false
+		}
+	}
+}
+```
+
+Then add to your app
+
+```
+import { CapacitorUpdater } from '@capgo/capacitor-updater'
+import { SplashScreen } from '@capacitor/splash-screen'
+import { App } from '@capacitor/app'
+let data = {version: ""}
+CapacitorUpdater.notifyAppReady()
+App.addListener('appStateChange', async(state) => {
+     if (state.isActive) {
+       // Do the download during user active app time to prevent failed download
+       const latest = await CapacitorUpdater.getLatest()
+       data = await CapacitorUpdater.download({
+         url: latest.url,
+       })
+     }
+     if (!state.isActive && data.version !== "") {
+       // Do the switch when user leave app or when you want
+       SplashScreen.show()
+       try {
+         await CapacitorUpdater.set(data)
+       } catch (err) {
+         console.log(err)
+         SplashScreen.hide() // in case the set fail, otherwise the new app will have to hide it
+       }
+     }
+ })
+ 
+```

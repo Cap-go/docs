@@ -1,4 +1,6 @@
-# Cloud
+# Auto update
+
+
 
 It allows developers to use capacitor-updater with auto-update mode link to Capgo channel or equivalent.
 
@@ -86,7 +88,7 @@ CapacitorUpdater.addListener('majorAvailable', (info: any) => {
 
 ### Advanced settings
 
-To have more control over auto-update system, I added 1 settings to allow you:
+To have more control over auto-update system, I added 1 setting to allow you:
 
 * `resetWhenUpdate` : When store update happen, disable force reset to native version
 

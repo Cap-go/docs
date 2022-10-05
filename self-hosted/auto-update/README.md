@@ -1,4 +1,4 @@
-# Self-hosted
+# Auto update
 
 This documentation will explain how to run your own auto-update server.
 
@@ -17,6 +17,13 @@ Likewise, I do think it would make our world a better place by opening instead o
 But to make it possible, it is necessary for all of us to do our part, including you 🥹.
 
 Capgo offer can't suit you, then put your own price and back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your own terms.
+
+## Quick install
+
+```
+npm install @capgo/capacitor-updater
+npx cap sync
+```
 
 ### Configuration
 
@@ -62,6 +69,10 @@ If you add "message" key, the version will not be set and the message will be di
 
 The zip should have `index.html` a file at the root, or only one folder at the root with `index.html` inside
 
+{% content-ref url="update-endpoint.md" %}
+[update-endpoint.md](update-endpoint.md)
+{% endcontent-ref %}
+
 ### Statistics
 
 Starting from version 1.3.0 the update system send stats!
@@ -102,3 +113,7 @@ What your server will receive is :
 ```
 
 You can also totally disable it, with empty string. Keep in mind, statistic are made private friendly and help me to understand how people use the plugin, to resolve issue and improve it.
+
+{% content-ref url="stats-endpoint.md" %}
+[stats-endpoint.md](stats-endpoint.md)
+{% endcontent-ref %}
