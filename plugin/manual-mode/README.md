@@ -1,20 +1,22 @@
 # Manual mode
 
-## Before star
+## Before start
 
-If you use this work on your own, I couldn't suggest you more to support my work [here](https://github.com/sponsors/riderx).
+{% hint style="info" %}
+If you use this tool for free, take time to support my work with [GitHub sponsor](https://github.com/sponsors/riderx).
 
-I made a big bet to open source all the precious code I built here.
+I made a bet to open source all the code I built here.
 
 I could have kept it for myself and put a high ticket price.
 
-I want to focus on Capgo tooling, and make it an open and transparent business.
+Instead, I want to make it an open and transparent business.
 
 I do think it would make our world a better place by opening instead of fighting and hiding.
 
-But to make it possible, it is necessary for all of us to do our part, including you 🥹.
+To make it possible, it is necessary for all of us to do our part, including you 🥹.
 
-Capgo offer can't suit you, then put your own price and back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your own terms.
+If Capgo cloud offer can't suit you, back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your own terms.
+{% endhint %}
 
 ## Quick install
 
@@ -23,7 +25,24 @@ npm install @capgo/capacitor-updater
 npx cap sync
 ```
 
-You can add this code to your app to use manual download
+#### Config
+
+Add this to your config, to disable auto update:
+
+```tsx
+// capacitor.config.json
+{
+	"appId": "**.***.**",
+	"appName": "Name",
+	"plugins": {
+		"CapacitorUpdater": {
+			"autoUpdate": false
+		}
+	}
+}
+```
+
+Then add this code to your app to use manual download
 
 ```jsx
 import { CapacitorUpdater } from '@capgo/capacitor-updater'
@@ -52,7 +71,7 @@ App.addListener('appStateChange', async(state) => {
  
 ```
 
-⚠️ _Be extra careful when you update manually._ If you send a broken update, the app will crash until the user uninstall it. To fix that, use auto-update.
+⚠️ If you send a broken update, the app will revert to the last working version, or the one include with the native build, if none works.
 
 ## Demo app&#x20;
 
