@@ -4,7 +4,9 @@ It allows developers to use capacitor-updater with auto-update mode link to Capg
 
 ### Prerequisite
 
-The only, thing you need to do before using Capgo auto-update is using https://semver.org/ for your app versioning. This is the convention it used to manage version. This convention should be use in 3 files in your project:
+The only, thing you need to do before using Capgo auto-update is using [https://semver.org/](https://semver.org/) for your app versioning.
+
+This is the convention it used to manage version. This convention should be use in 3 files in your project:
 
 * `package.json` in **version**
 * `android/app/build.gradle` in **versionName**
@@ -12,11 +14,11 @@ The only, thing you need to do before using Capgo auto-update is using https://s
 
 ### Tutorial
 
-Setup all in 5 mins
+Setup your app in 5 mins
 
 [Update your capacitor apps seamlessly using capacitor updater](https://capgo.app/blog/update-your-capacitor-apps-seamlessly-using-capacitor-updater)
 
-Setup all in 5 mins
+Setup your CI in 5 mins
 
 [Automatic build and release with GitHub actions](https://capgo.app/blog/automatic-build-and-release-with-github-actions)
 
@@ -35,36 +37,13 @@ The recommended usage is to use our current update server
 
 Click on [register](https://capgo.app) to create your account
 
-The server is super simple but allow you to manage channel and version.
+The server allows you to manage channel and version and much more.
 
 The only restriction is to use [semver](https://semver.org/) in your `package.json` and in iOS and Android
 
 > 💡 Documentation for self-host server will come, current focus is on Cloud solution
 
 > ℹ️ You can use Capgo Cloud without sending your code to our server. If that not allowed by your company
-
-#### Config
-
-Follow the documentation to upload your first version to the server here:
-
-[Capgo CLI](https://doc.capgo.app/Capgo-CLI-f5919f0578cf4643ac0a20f3a7718b57)
-
-Get in the app, Capgo your link.
-
-After install capacitor-updater to your project, add this to your config:
-
-```tsx
-// capacitor.config.json
-{
-	"appId": "**.***.**",
-	"appName": "Name",
-	"plugins": {
-		"CapacitorUpdater": {
-			"autoUpdate": true
-		}
-	}
-}
-```
 
 `autoUpdate` will use data from your app to self identify into the Capgo server
 
