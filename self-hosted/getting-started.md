@@ -4,7 +4,7 @@ This documentation will explain how to run your own auto-update server.
 
 ## Before start
 
-If you use this work on your own, I couldn't suggest you more to support my work thought [this](https://github.com/sponsors/riderx).
+If you use this work on your own, I couldn't suggest you more to support my work thought [Github support](https://github.com/sponsors/riderx).
 
 I made a big bet to open source all the precious code I built here.
 
