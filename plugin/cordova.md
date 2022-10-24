@@ -18,4 +18,4 @@ We have many solutions to solve that :
 
 * [Support me](https://github.com/sponsors/riderx) on GitHub and I can prioritize that. This will need at least 1 month of work.
 * Hire me as Consultant, I used to help big company migrate to capacitor, it usually takes from 10 to 20 days, and the [benefit](https://ionic.io/resources/articles/capacitor-vs-cordova-modern-hybrid-app-development) is huge for the team
-* Wait until this come out, I think this summer I can probably have a beta
+* Wait until this come out, it is very low in the to-do for now.
