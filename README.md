@@ -39,8 +39,7 @@ In V4 you can use Capgo cloud with manual&#x20;
 <summary>Bad 🥲</summary>
 
 * Need to use SemVer
-* Can be problematic to use Capgo cloud for big corporate
-* Long to handle if you need on-premise server
+*
 
 </details>
 
@@ -64,6 +63,7 @@ In V4 you can use Capgo cloud with manual&#x20;
 <summary>Bad 🥲</summary>
 
 * Long to handle all scenario yourself
+* Long to handle if you need on-premise server
 
 </details>
 

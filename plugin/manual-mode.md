@@ -1,6 +1,10 @@
 # Manual mode
 
+If you want to use manual mode without Capgo cloud, please refer to self-hosted section
 
+{% content-ref url="../self-hosted/manual.md" %}
+[manual.md](../self-hosted/manual.md)
+{% endcontent-ref %}
 
 ## Quick install
 
