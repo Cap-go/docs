@@ -32,30 +32,39 @@ Add this to your config, to disable auto update:
 
 Then add to your app
 
-```
+```typescript
 import { CapacitorUpdater } from '@capgo/capacitor-updater'
+import type { BundleInfo } from '@capgo/capacitor-updater'
 import { SplashScreen } from '@capacitor/splash-screen'
 import { App } from '@capacitor/app'
-let data = {version: ""}
 CapacitorUpdater.notifyAppReady()
-App.addListener('appStateChange', async(state) => {
-     if (state.isActive) {
-       // Do the download during user active app time to prevent failed download
-       const latest = await CapacitorUpdater.getLatest()
-       data = await CapacitorUpdater.download({
-         url: latest.url,
-       })
-     }
-     if (!state.isActive && data.version !== "") {
-       // Do the switch when user leave app or when you want
-       SplashScreen.show()
-       try {
-         await CapacitorUpdater.set(data)
-       } catch (err) {
-         console.log(err)
-         SplashScreen.hide() // in case the set fail, otherwise the new app will have to hide it
-       }
-     }
- })
- 
+App.addListener('appStateChange', async (state: any) => {
+  let data: BundleInfo | null = null
+  console.log('appStateChange', state)
+  if (state.isActive) {
+    console.log('getLatest')
+    // Do the download during user active app time to prevent failed download
+    const latest = await CapacitorUpdater.getLatest()
+    console.log('latest', latest)
+    if (latest.url) {
+      data = await CapacitorUpdater.download({
+        url: latest.url,
+        version: latest.version,
+      })
+      console.log('download', data)
+    }
+  }
+  if (!state.isActive && data) {
+    console.log('set')
+    // Do the switch when user leave app or when you want
+    SplashScreen.show()
+    try {
+      await CapacitorUpdater.set({ id: data.id })
+    }
+    catch (err) {
+      console.log(err)
+      SplashScreen.hide() // in case the set fail, otherwise the new app will have to hide it
+    }
+  }
+})
 ```
