@@ -2,14 +2,6 @@
 
 Here is an example of code in JavaScript to save stats of the plugin
 
-## Actions:
-
-* delete : when a bundle is deleted locally
-* reset : when the app reset to the builtin bundle
-* set : when app set a new bundle
-* set\_fail : when app couldn't find the ID of the bundle set
-* update\_fail : send after the delay and \`notifyAppReady\` never called
-
 ```typescript
 interface AppInfos {
   version_name: string
@@ -49,3 +41,11 @@ export const handler: Handler = async (event) => {
   return {}
 }
 ```
+
+## Actions:
+
+* delete : when a bundle is deleted locally
+* reset : when the app reset to the builtin bundle
+* set : when app set a new bundle
+* set\_fail : when app couldn't find the ID of the bundle set
+* update\_fail : send after the delay and \`notifyAppReady\` never called
