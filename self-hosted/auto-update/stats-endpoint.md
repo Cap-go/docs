@@ -5,7 +5,7 @@ Here is an example of code in JavaScript to save stats of the plugin
 ```typescript
 interface AppInfos {
   version_name: string
-  action: 'delete' | 'reset' | 'set' | 'set_fail' | 'update_fail'
+  action: 'delete' | 'reset' | 'set' | 'set_fail' | 'update_fail' | 'download_fail'
   version_build: string
   version_code: string
   version_os: string
@@ -49,3 +49,4 @@ export const handler: Handler = async (event) => {
 * set : when app set a new bundle
 * set\_fail : when app couldn't find the ID of the bundle set
 * update\_fail : send after the delay and \`notifyAppReady\` never called
+* download\_fail : when download never finished
