@@ -38,8 +38,8 @@ import type { BundleInfo } from '@capgo/capacitor-updater'
 import { SplashScreen } from '@capacitor/splash-screen'
 import { App } from '@capacitor/app'
 CapacitorUpdater.notifyAppReady()
+let data: BundleInfo | null = null
 App.addListener('appStateChange', async (state: any) => {
-  let data: BundleInfo | null = null
   console.log('appStateChange', state)
   if (state.isActive) {
     console.log('getLatest')
