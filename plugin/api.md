@@ -1,5 +1,9 @@
 # API
 
+## The best way for the most up-to-date&#x20;
+
+{% embed url="https://github.com/Cap-go/capacitor-updater#api" %}
+
 ## API
 
 ### notifyAppReady()
