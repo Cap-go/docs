@@ -134,7 +134,17 @@ Set delay to skip updates in the next time the app goes into the background
 | ------------- | --------------------- |
 | **`options`** | `{ delay: boolean; }` |
 
-***
+### setChannel()
+
+```typescript
+setChannel() => Promise<channelRes>
+```
+
+Set Channel for this device
+
+**Returns:** `Promise<channelRes>`
+
+**Since:** 4.7.0
 
 ### addListener('download', ...)
 
