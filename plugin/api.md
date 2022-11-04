@@ -371,7 +371,8 @@ After install capacitor-updater to your project, you can configure some behavior
 * `autoUpdateUrl` the target URL to get updates
 * `autoUpdate` true or false depend on if you want manual or auto
 * `statsUrl` the target URL for stats set it to "" to disable stats
-* \`allowEmulatorProd\` if you have CI/CD and too many devices are registers in Capgo, set it to false.
+* `channelUrl` the target URL for letting device self assign to a channel (min 4.8.0)
+* `allowEmulatorProd` if you have CI/CD and too many devices are registers in Capgo, set it to false. (min 4.6.0)
 
 
 
