@@ -74,16 +74,25 @@ Optionally, you can give:
 
 * `[appId]` is your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
 
-### **Link version to channel**
+### **Configure channel**
 
-`npx @capgo/cli set [appId]`&#x20;
+`npx @capgo/cli set [appId] --channel dev`&#x20;
 
 Optionally, you can give:
 
 * `[appId]` your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
-* `--bundle` your app `bundle` already sent to the cloud
-* `--channel` the channel you want to link the version, it doesn't exist it will be created
-* `--state` set the channel state, can be private or public. To use in your app, channel need to be public.
+* `--bundle` your app `bundle` already sent to the cloud to
+* `--state` set the channel state, can be normal or default. To use in your app, one channel need to be "default".
+* `--downgrade` allow the channel to send downgrade version to devices.
+* `--no-downgrade` disallow the channel to send downgrade version to devices.
+* `--upgrade` allow the channel to send upgrade (major) version to devices.
+* `--no-upgrade` disallow the channel to send upgrade (major) version to devices.
+* `--ios` allow the channel to send version to iOS devices.
+* `--no-ios` disallow the channel to send version to iOS devices.
+* `--android` allow the channel to send version to android devices.
+* `--no-android` disallow the channel to send version to android devices.
+* `--self-assign` allow devices to self assign to this channel.
+* `--no-self-assign` disallow devices to self assign to this channel.
 
 ### **Delete package or version to Cloud**
 
