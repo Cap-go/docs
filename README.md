@@ -4,6 +4,13 @@
 
 [Join the Capacitor-updater Discord Server!](https://discord.gg/VnYRvBfgA6)
 
+## Maintenance
+
+| Plugin version | Capacitor compatibility | Maintained        |
+| -------------- | ----------------------- | ----------------- |
+| v4.\*.\*       | v4.\*.\*                | ✅                 |
+| v3.\*.\*       | v3.\*.\*                | only critical bug |
+
 ## Choose between Auto and Manual
 
 {% hint style="warning" %}
