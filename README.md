@@ -36,7 +36,7 @@ In V4 you can use Capgo cloud with manual&#x20;
 * Auto-revert is handle for you
 * Statistics of updates available
 * Possibility to revert user
-* Channels to share version to your team
+* Channels to share version to your team or users
 * Define advanced strategies like AB test or partial deploy
 
 </details>
@@ -46,12 +46,12 @@ In V4 you can use Capgo cloud with manual&#x20;
 <summary>Bad 🥲</summary>
 
 * Need to use SemVer
-*
+* Only one way to update users
 
 </details>
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="plugin/auto-update.md" %}
+[auto-update.md](plugin/auto-update.md)
 {% endcontent-ref %}
 
 ### Manual
@@ -61,7 +61,7 @@ In V4 you can use Capgo cloud with manual&#x20;
 <summary>Good ✅</summary>
 
 * Full control of the update logic
-* No need of version server
+* Version server optional
 
 </details>
 
@@ -71,6 +71,7 @@ In V4 you can use Capgo cloud with manual&#x20;
 
 * Long to handle all scenario yourself
 * Long to handle if you need on-premise server
+* You spend time on something not related to your core business
 
 </details>
 
@@ -86,14 +87,22 @@ The roadmap is handle in GitHub&#x20;
 
 ## Open source
 
-The plugin and the back-end are open source and under the LGPL-3.0 License for the plugin and AGPL-3.0 License for the back-end.
+The plugin is under the LGPL-3.0 License and the back-end is AGPL-3.0 License.
 
-> 💡 LGPL-3.0 mean if someone modify the code of the project, it’s mandatory to publish it, in open-source with same licensing. If you use the code without modification, that doesn’t concern you. See issue below for more details : https://github.com/Cap-go/capacitor-updater/issues/7
+> 💡 LGPL-3.0 mean if someone modify the code of the plugin, it’s mandatory to publish it, in open-source with same licensing. If you use the code without modification, that doesn’t concern you. See issue below for more details check the link 👇
+>
+>
+
+{% embed url="https://github.com/Cap-go/capacitor-updater/issues/7" %}
+
+> You can include it in your app without worring
+
+
 
 ## Know issues
 
 * When you develop, if you use the Ionic live reload feature from the CLI, it will override the plugin, so you will never see your update.
-* Same issue with Quasar live reload
+* Same issue with Quasar live reload.
 * Big app update (> 20mb) will have a big percentage of user who doesn't get the last version.  Users need to keep the app open until download is done.
 
 ## Last words
