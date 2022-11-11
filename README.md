@@ -4,6 +4,11 @@
 
 [Join the Capacitor-updater Discord Server!](https://discord.gg/VnYRvBfgA6)
 
+{% hint style="warning" %}
+⚠️ Update OTA(Over the Air) only works on HTML, CSS, JS changes.\
+When you update native code (capacitor plugin), you must resubmit to the app store.
+{% endhint %}
+
 ## Maintenance
 
 | Plugin version | Capacitor compatibility | Maintained        |
@@ -11,22 +16,19 @@
 | v4.\*.\*       | v4.\*.\*                | ✅                 |
 | v3.\*.\*       | v3.\*.\*                | only critical bug |
 
-## Choose between Auto and Manual
+## Choose between all modes
 
-{% hint style="warning" %}
-⚠️ Update OTA(Over the Air) only works on HTML, CSS, JS changes.\
-When you update native code (capacitor plugin), you must resubmit to the app store.
-{% endhint %}
+In **cloud auto mode,** logic is handled by **Capgo** backend, updates are decided server side, this is more secure and allow fine grain update, partial deploy to one device or group and more.\
+In **cloud manual mode** the logic of when update is handled by your **JS**, the **Capgo** backend still handle the what to update.
 
-In auto mode, part of logic is handled by the Native code, updates are decided server side, this is more secure and allow fine grain update Partial deploy to one device or group and more.
+In **self-hosted** **auto mode**, you have to recreate the update logic in your backend.\
+In **self-hosted manual mode** the logic of when update is handled by your **JS,** the server still handle the what to update.\
+Or lastly you can go in **manual mode without backend**, all the logic have to be handled by your **JS.**
 
-In manual mode, all the logic is handled by the JS, that some good and some bad in both scenario.
+****\
+**Manual mode** can lead to very complex issue since you ship the code for update withing the update itself.
 
-{% hint style="info" %}
-In V4 you can use Capgo cloud with manual&#x20;
-{% endhint %}
-
-### Auto
+### Cloud Auto
 
 <details>
 
@@ -38,6 +40,7 @@ In V4 you can use Capgo cloud with manual&#x20;
 * Possibility to revert user
 * Channels to share version to your team or users
 * Define advanced strategies like AB test or partial deploy
+* 5 min to configure and then you forgot about it
 
 </details>
 
