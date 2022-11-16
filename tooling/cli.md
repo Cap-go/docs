@@ -100,13 +100,11 @@ Optionally, you can give:
 
 ### **Delete package or version to Cloud**
 
-`npx @capgo/cli delete [appId]`&#x20;
+`npx @capgo/cli delete [appId]`
 
-Optionally, you can give:
+Optionally, you can give:&#x20;
 
-`[appId]` your app ID present in the Cloud
-
-Optionally, you can give:
+* `[appId]` is your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
 
 `--bundle` with the version number will only delete this version
 
@@ -114,13 +112,11 @@ Optionally, you can give:
 
 ### Cleanup older packages in a SemVer range for a major version to Cloud
 
-`npx @capgo/cli cleanup [appId] --bundle=[majorVersion] --keep=[numberToKeep]` `[appId]`&#x20;
+`npx @capgo/cli cleanup [appId] --bundle=[majorVersion] --keep=[numberToKeep]`
 
-your app ID present in the Cloud&#x20;
-
-`[majorVersion]` a version you wish to remove previous packages for, it will keep the last one + numberToKeep&#x20;
-
-`[numberToKeep]` the number of packages you wish to keep
+* `[appId]` your app ID present in the Cloud&#x20;
+* `[majorVersion]` a version you wish to remove previous packages for, it will keep the last one + numberToKeep&#x20;
+* `[numberToKeep]` the number of packages you wish to keep
 
 For example: If you have 10 versions, from 10.0.1 to 10.0.11, and you use `npx @capgo/cli cleanup [appId] --bundle=10.0.0` it will remove 10.0.1 to 10.0.6. 10.0.7 untill 10.0.11 will be kept
 
