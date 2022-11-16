@@ -45,7 +45,10 @@ Send `appid` as URL parameter and receive array of channel:
     created_at: string;
     name: string;
     app_id: string;
-    version: number;
+    version: {
+        id: number,
+        name: string
+    };
     created_by: string;
     updated_at: string;
     public: boolean;
@@ -123,7 +126,10 @@ Send `appid` as URL parameter and receive array of channel:
     created_at?: string | undefined;
     updated_at?: string | undefined;
     device_id: string;
-    version: number;
+    version: {
+        id: number,
+        name: string
+    };
     app_id: string;
     platform?: "ios" | "android" | undefined;
     plugin_version: string;
@@ -131,14 +137,17 @@ Send `appid` as URL parameter and receive array of channel:
 }[]
 ```
 
-and optionally `channel` name as URL parameter to receive one:
+and optionally `device_id` name as URL parameter to receive one:
 
 ```javascript
 {
     created_at?: string | undefined;
     updated_at?: string | undefined;
     device_id: string;
-    version: number;
+    version: {
+        id: number,
+        name: string
+    };
     app_id: string;
     platform?: "ios" | "android" | undefined;
     plugin_version: string;

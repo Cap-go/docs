@@ -20,3 +20,15 @@ With Capgo and capacitor-updater come a powerful channel system.\
 You can also for specific case assign device directly to a bundle, in debug purpose for exemple.
 {% endhint %}
 
+## Channel options
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Meaning of each:
+
+* **Disable auto downgrade under native** => capgo channel don't send update if the app native version is bigger than the channel one
+* **Disable auto upgrade above major** => capgo channel don't send update if the app native version is lower from a Major (**1**.2.3) than the channel one
+* **Allow device to self assign** => let a device use the setChannel method to this channel
+* **IOS** => allow ios devices to download update from this channel
+* **Android** => Allow android devices to download update from this channel
+
