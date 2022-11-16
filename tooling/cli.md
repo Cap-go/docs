@@ -16,6 +16,10 @@ This method is here to remember the `apikey` for you.&#x20;
 use `--apikey=********` in any command to override it
 {% endhint %}
 
+**Optionnaly you can give:**
+
+`--local` This will store your **apikey** in the local repo and git ignore it.&#x20;
+
 ### **Add app**
 
 `npx @capgo/cli add [appId]`&#x20;
@@ -81,7 +85,7 @@ Optionally, you can give:
 Optionally, you can give:
 
 * `[appId]` your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
-* `--bundle` your app `bundle` already sent to the cloud to
+* `--bundle` your app `bundle` already sent to the cloud to link to channel
 * `--state` set the channel state, can be normal or default. To use in your app, one channel need to be "default".
 * `--downgrade` allow the channel to send downgrade version to devices.
 * `--no-downgrade` disallow the channel to send downgrade version to devices.
@@ -104,7 +108,7 @@ Optionally, you can give:
 
 Optionally, you can give:
 
-`--local` This will store your login in the local repo and git ignore it. `--version` with the version number will only delete this version
+`--bundle` with the version number will only delete this version
 
 ### Ci integration
 
