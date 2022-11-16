@@ -110,6 +110,22 @@ Optionally, you can give:
 
 `--bundle` with the version number will only delete this version
 
+
+
+### Cleanup older packages in a SemVer range for a major version to Cloud
+
+`npx @capgo/cli cleanup [appId] --bundle=[majorVersion] --keep=[numberToKeep]` `[appId]`&#x20;
+
+your app ID present in the Cloud&#x20;
+
+`[majorVersion]` a version you wish to remove previous packages for, it will keep the last one + numberToKeep&#x20;
+
+`[numberToKeep]` the number of packages you wish to keep
+
+For example: If you have 10 versions, from 10.0.1 to 10.0.11, and you use `npx @capgo/cli cleanup [appId] --bundle=10.0.0` it will remove 10.0.1 to 10.0.6. 10.0.7 untill 10.0.11 will be kept
+
+This command will show a list of what it will be removing and ask for confirmation
+
 ### Ci integration
 
 To automate your work, I recommend you make GitHub action do the job of pushing to our server
