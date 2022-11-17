@@ -39,7 +39,7 @@ You have to configure the plugin to use your own URL like that:
 }
 ```
 
-### Update API
+### Server API
 
 The plugin will do POST call to your API each time the app is open, with this body:
 
@@ -78,7 +78,7 @@ The zip should have `index.html` a file at the root, or only one folder at the r
 [update-endpoint.md](update-endpoint.md)
 {% endcontent-ref %}
 
-### Statistics API
+### Statistics
 
 Starting from version 1.3.0 the update system send stats!
 
@@ -126,7 +126,3 @@ You can also totally disable it, with empty string. Keep in mind, statistic are 
 {% content-ref url="stats-endpoint.md" %}
 [stats-endpoint.md](stats-endpoint.md)
 {% endcontent-ref %}
-
-### Channel API
-
-To be documented
