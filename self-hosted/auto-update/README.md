@@ -41,16 +41,21 @@ You have to configure the plugin to use your own URL like that:
 
 ### Server API
 
-The plugin will call the API each time the app is open your URL with these headers:
+The plugin will do POST call to your API each time the app is open, with this body:
 
-```json
-{
-            "cap_platform": "ios" | "android",
-            "cap_device_id": "UNIQUE_DEVICE_ID",
-            "cap_app_id": "APPID_FROM_CAPACITOR_CONFIG",
-            "cap_version_build": "VERSION_NUMBER_FROM_STORE",
-            "cap_plugin_version":"PLUGIN_VERSION,
-            "cap_version_name": "LAST_DOWNLOADER_VERSION" || "builtin"
+```typescript
+interface {
+    "platform": "ios" | "android",
+    "device_id": "UUID_of_device_unique_by_install",
+    "app_id": "APPID_FROM_CAPACITOR_CONFIG",
+    "custom_id": "your_custom_id_set_on_runtime",
+    "plugin_version": "PLUGIN_VERSION",
+    "version_build": "VERSION_NUMBER_FROM_NATIVE_CODE",
+    "version_code": "VERSION_CODE_FROM_NATIVE_CODE",
+    "version_name": "LAST_DOWNLOADER_VERSION" | "builtin"
+    "version_os": "VERSION_OF_SYSYEM_OS",
+    "is_emulator": boolean,
+    "is_prod": boolean,
 }
 ```
 
@@ -99,16 +104,19 @@ If you want to send data to your server instead, change the config below:
 What your server will receive is :
 
 ```tsx
-{
+interface {
 	"app_id": "**.***.**", // app identifier in the store
 	"device_id": "*******", // unique id per app install
 	"platform": "ios", // or android
+	"custom_id": "user_1", // represent your user
 	"action": "set", // can be set, delete, set_fail, reset, revert
         "version_name": "1.2.3", // version of the web build
         "version_build": "1.2.0", // version of the native build
         "version_code": "120", // build number of the native build
 	"version_os": "16", // OS version of the device
         "plugin_version": "4.0.0"// to make your api behave differently with different plugins
+        "is_emulator": false,
+    	"is_prod": false,
 }
 ```
 
