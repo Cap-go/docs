@@ -13,9 +13,6 @@ interface AppInfos {
   platform: string
   app_id: string
   device_id: string
-  custom_id?: string
-  is_prod?: boolean
-  is_emulator?: boolean
 }
 
 export const handler: Handler = async (event) => {
@@ -47,13 +44,9 @@ export const handler: Handler = async (event) => {
 
 ## Actions:
 
-* **delete** : when a bundle is deleted locally
-* **reset** : when the app reset to the builtin bundle
-* **set** : when app set a new bundle
-* **set\_fail** : when app couldn't find the ID of the bundle set
-* **update\_fail** : send after the delay and \`notifyAppReady\` never called
-* **download\_fail** : when download never finished
-* **download\_complete:** When **** download **** finish
-* **download\_xx:** Send every 10% of download ex : download\_20, download\_70
-* **update\_fail:** when the bundle fail to do notifyAppReady in the timeframe
-*
+* delete : when a bundle is deleted locally
+* reset : when the app reset to the builtin bundle
+* set : when app set a new bundle
+* set\_fail : when app couldn't find the ID of the bundle set
+* update\_fail : send after the delay and \`notifyAppReady\` never called
+* download\_fail : when download never finished
