@@ -1,6 +1,40 @@
-# Debug
+# Debugging
 
-## iOS
+## Understanding cloud logs:
+
+### Send from the backend
+
+* **InvalidIp** => the user is located in Google data center and the update is less than 4 hours old, this have been made to prevent Google bots device to count as device in your account
+* **needPlanUpgrade** (previously **needUpgrade**) => Mean you have reach the limit of your plan, and device will not receive update until you upgrade or next month.
+* **noNew** => The device has the latest version available
+* **disablePlatformIos** => The device is on ios platform but that disable in channel settings
+* **disablePlatformAndroid** => The device is on android platform but that disable in channel settings
+* **disableAutoUpdateToMajor** => The device has a version (**1**.2.3) and the channel has major update (**2**.0.0) to send but that disable in channel settings
+* **disableAutoUpdateUnderNative** =>The device has a version (1.2.**3**) and the channel has  update (1.2.**2**) under the device version to send but that disable in channel settings
+* **disableDevBuild** => The device has a dev build but that disable in channel settings
+* **disableEmulator** => The device is an emulator but that disable in channel settings
+
+### Send from the device
+
+* **get** => Info for download new version has been send to device
+* **delete** => one bundle has been delete in the device
+* **set** => bundle has been set on the device
+* **set\_fail** => bundle failed to set&#x20;
+* **reset** => device reset ton **builtin** bundle
+* **download\_XX** => new bundle has been downloat from xx % ( every 10%)
+* **download\_complete** => new bundle finish download
+* **download\_fail** => new bundle fail download
+* **update\_fail** => new bundle has been installed but failed to call notifyAppReady&#x20;
+
+## Understanding  device logs:
+
+* `Failed to download from` **=>** same as **download\_fail**
+* `notifyAppReady was not called, roll back current bundle` => as as **update\_fail**
+* ****
+
+## Finding the downloaded bundle in your devide
+
+### iOS
 
 To debug on iOS, you need to dump the app on your computer, you can do it like that :
 
@@ -16,7 +50,7 @@ Then you will find version in 2 folders:
 
 and `documents/versions` for hot reload
 
-## Android
+### Android
 
 To debug on Android, you just need to access the device from Android Studio:
 

@@ -26,9 +26,11 @@ You can also for specific case assign device directly to a bundle, in debug purp
 
 Meaning of each:
 
-* **Disable auto downgrade under native** => capgo channel don't send update if the app native version is bigger than the channel one
-* **Disable auto upgrade above major** => capgo channel don't send update if the app native version is lower from a Major (**1**.2.3) than the channel one
-* **Allow device to self assign** => let a device use the setChannel method to this channel
-* **IOS** => allow ios devices to download update from this channel
+* **Disable auto downgrade under native** => Don't send update if the app native version is bigger than the channel one
+* **Disable auto upgrade above major** => Don't send update if the app native version is lower from a Major (**1**.2.3) than the channel one
+* **Allow device to self assign** => Let a device use the setChannel method to this channel
+* **IOS** => Allow ios devices to download update from this channel
 * **Android** => Allow android devices to download update from this channel
+* **Allow Emulator** => Allow emulator to receive update
+* **Allow development build** => Allow development build to receive update
 
