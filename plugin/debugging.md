@@ -24,13 +24,13 @@
 * **download\_XX** => new bundle has been downloat from xx % ( every 10%)
 * **download\_complete** => new bundle finish download
 * **download\_fail** => new bundle fail download
-* **update\_fail** => new bundle has been installed but failed to call notifyAppReady&#x20;
+* **update\_fail** => new bundle has been installed but failed to call notifyAppReady
+* **checksum\_fail** => new bundle fail to validate checksum
 
-## Understanding  device logs:
+## Understanding device logs:
 
 * `Failed to download from` **=>** same as **download\_fail**
 * `notifyAppReady was not called, roll back current bundle` => as as **update\_fail**
-* ****
 
 ## Finding the downloaded bundle in your devide
 
