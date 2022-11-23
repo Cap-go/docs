@@ -138,13 +138,17 @@ Set delay to skip updates in the next time the app goes into the background
 | ------------- | --------------------- |
 | **`options`** | `{ delay: boolean; }` |
 
-### setChannel()
+### setChannel(...)
 
 ```typescript
-setChannel() => Promise<channelRes>
+setChannel(options: { channel: string; }) => Promise<channelRes>
 ```
 
 Set Channel for this device
+
+| Param         | Type                  |
+| ------------- | --------------------- |
+| **`options`** | `{ channel: string; }` |
 
 **Returns:** `Promise<channelRes>`
 
