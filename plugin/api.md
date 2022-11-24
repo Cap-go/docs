@@ -1,12 +1,44 @@
 # API
 
-## The best way for the most up-to-date&#x20;
+## The best way for the most up-to-date
 
 {% embed url="https://github.com/Cap-go/capacitor-updater#api" %}
 
 ## API
 
-### notifyAppReady()
+
+
+* `notifyAppReady()`
+* `download(...)`
+* `next(...)`
+* `set(...)`
+* `delete(...)`
+* `list()`
+* `reset(...)`
+* `current()`
+* `reload()`
+* `setMultiDelay(...)`
+* `setDelay(...)`
+* `cancelDelay()`
+* `getLatest()`
+* `setChannel(...)`
+* `getChannel()`
+* `setCustomId(...)`
+* `addListener('download', ...)`
+* `addListener('noNeedUpdate', ...)`
+* `addListener('updateAvailable', ...)`
+* `addListener('downloadComplete', ...)`
+* `addListener('majorAvailable', ...)`
+* `addListener('updateFailed', ...)`
+* `addListener('downloadFailed', ...)`
+* `addListener('appReloaded', ...)`
+* `getDeviceId()`
+* `getPluginVersion()`
+* `isAutoUpdateEnabled()`
+* Interfaces
+* Type Aliases
+
+#### notifyAppReady()
 
 ```typescript
 notifyAppReady() => Promise<BundleInfo>
@@ -18,23 +50,23 @@ Notify Capacitor Updater that the current bundle is working (a rollback will occ
 
 ***
 
-### download(...)
+#### download(...)
 
 ```typescript
-download(options: { url: string; version?: string; }) => Promise<BundleInfo>
+download(options: { url: string; version: string; }) => Promise<BundleInfo>
 ```
 
-Download a new version from the provided URL, it should be a zip file, with files inside or with a unique id inside with all your files
+Download a new bundle from the provided URL, it should be a zip file, with files inside or with a unique id inside with all your files
 
-| Param         | Type                                 |
-| ------------- | ------------------------------------ |
-| **`options`** | `{ url: string; version?: string; }` |
+| Param         | Type                                |
+| ------------- | ----------------------------------- |
+| **`options`** | `{ url: string; version: string; }` |
 
 **Returns:** `Promise<BundleInfo>`
 
 ***
 
-### next(...)
+#### next(...)
 
 ```typescript
 next(options: { id: string; }) => Promise<BundleInfo>
@@ -50,7 +82,7 @@ Set the next bundle to be used when the app is reloaded.
 
 ***
 
-### set(...)
+#### set(...)
 
 ```typescript
 set(options: { id: string; }) => Promise<void>
@@ -64,7 +96,7 @@ Set the current bundle and immediately reloads the app.
 
 ***
 
-### delete(...)
+#### delete(...)
 
 ```typescript
 delete(options: { id: string; }) => Promise<void>
@@ -78,25 +110,25 @@ Delete bundle in storage
 
 ***
 
-### list()
+#### list()
 
 ```typescript
 list() => Promise<{ bundles: BundleInfo[]; }>
 ```
 
-Get all available versions
+Get all available bundles
 
 **Returns:** `Promise<{ bundles: BundleInfo[]; }>`
 
 ***
 
-### reset(...)
+#### reset(...)
 
 ```typescript
 reset(options?: { toLastSuccessful?: boolean | undefined; } | undefined) => Promise<void>
 ```
 
-Set the `builtin` version (the one sent to Apple store / Google play store ) as current version
+Set the `builtin` bundle (the one sent to Apple store / Google play store ) as current bundle
 
 | Param         | Type                              |
 | ------------- | --------------------------------- |
@@ -104,7 +136,7 @@ Set the `builtin` version (the one sent to Apple store / Google play store ) as 
 
 ***
 
-### current()
+#### current()
 
 ```typescript
 current() => Promise<{ bundle: BundleInfo; native: string; }>
@@ -116,7 +148,7 @@ Get the current bundle, if none are set it returns `builtin`, currentNative is t
 
 ***
 
-### reload()
+#### reload()
 
 ```typescript
 reload() => Promise<void>
@@ -126,35 +158,113 @@ Reload the view
 
 ***
 
-### setDelay(...)
+#### setMultiDelay(...)
 
 ```typescript
-setDelay(options: { delay: boolean; }) => Promise<void>
+setMultiDelay(options: { delayConditions: DelayCondition[]; }) => Promise<void>
 ```
 
-Set delay to skip updates in the next time the app goes into the background
+Set DelayCondition, skip updates until one of the conditions is met
 
-| Param         | Type                  |
-| ------------- | --------------------- |
-| **`options`** | `{ delay: boolean; }` |
+| Param         | Type                                     | Description                                |
+| ------------- | ---------------------------------------- | ------------------------------------------ |
+| **`options`** | `{ delayConditions: DelayCondition[]; }` | are the {@link DelayCondition} list to set |
 
-### setChannel(...)
+**Since:** 4.3.0
+
+***
+
+#### setDelay(...)
 
 ```typescript
-setChannel(options: { channel: string; }) => Promise<channelRes>
+setDelay(options: DelayCondition) => Promise<void>
+```
+
+Set DelayCondition, skip updates until the condition is met
+
+| Param         | Type             | Description                          |
+| ------------- | ---------------- | ------------------------------------ |
+| **`options`** | `DelayCondition` | is the {@link DelayCondition} to set |
+
+**Since:** 4.0.0
+
+***
+
+#### cancelDelay()
+
+```typescript
+cancelDelay() => Promise<void>
+```
+
+Cancel delay to updates as usual
+
+**Since:** 4.0.0
+
+***
+
+#### getLatest()
+
+```typescript
+getLatest() => Promise<latestVersion>
+```
+
+Get Latest bundle available from update Url
+
+**Returns:** `Promise<latestVersion>`
+
+**Since:** 4.0.0
+
+***
+
+#### setChannel(...)
+
+```typescript
+setChannel(options: SetChannelOptions) => Promise<channelRes>
 ```
 
 Set Channel for this device
 
-| Param         | Type                  |
-| ------------- | --------------------- |
-| **`options`** | `{ channel: string; }` |
+| Param         | Type                | Description                                     |
+| ------------- | ------------------- | ----------------------------------------------- |
+| **`options`** | `SetChannelOptions` | is the {@link SetChannelOptions} channel to set |
 
 **Returns:** `Promise<channelRes>`
 
 **Since:** 4.7.0
 
-### addListener('download', ...)
+***
+
+#### getChannel()
+
+```typescript
+getChannel() => Promise<getChannelRes>
+```
+
+get Channel for this device
+
+**Returns:** `Promise<getChannelRes>`
+
+**Since:** 4.8.0
+
+***
+
+#### setCustomId(...)
+
+```typescript
+setCustomId(options: SetCustomIdOptions) => Promise<void>
+```
+
+Set Channel for this device
+
+| Param         | Type                 | Description                                       |
+| ------------- | -------------------- | ------------------------------------------------- |
+| **`options`** | `SetCustomIdOptions` | is the {@link SetCustomIdOptions} customId to set |
+
+**Since:** 4.9.0
+
+***
+
+#### addListener('download', ...)
 
 ```typescript
 addListener(eventName: 'download', listenerFunc: DownloadChangeListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -173,7 +283,45 @@ Listen for download event in the App, let you know when the download is started,
 
 ***
 
-### addListener('downloadComplete', ...)
+#### addListener('noNeedUpdate', ...)
+
+```typescript
+addListener(eventName: 'noNeedUpdate', listenerFunc: NoNeedListener) => Promise<PluginListenerHandle> & PluginListenerHandle
+```
+
+Listen for no need to update event, usefull when you want force check every time the app is launched
+
+| Param              | Type             |
+| ------------------ | ---------------- |
+| **`eventName`**    | `'noNeedUpdate'` |
+| **`listenerFunc`** | `NoNeedListener` |
+
+**Returns:** `Promise<PluginListenerHandle> & PluginListenerHandle`
+
+**Since:** 4.0.0
+
+***
+
+#### addListener('updateAvailable', ...)
+
+```typescript
+addListener(eventName: 'updateAvailable', listenerFunc: UpdateAvailabledListener) => Promise<PluginListenerHandle> & PluginListenerHandle
+```
+
+Listen for availbale update event, usefull when you want to force check every time the app is launched
+
+| Param              | Type                       |
+| ------------------ | -------------------------- |
+| **`eventName`**    | `'updateAvailable'`        |
+| **`listenerFunc`** | `UpdateAvailabledListener` |
+
+**Returns:** `Promise<PluginListenerHandle> & PluginListenerHandle`
+
+**Since:** 4.0.0
+
+***
+
+#### addListener('downloadComplete', ...)
 
 ```typescript
 addListener(eventName: 'downloadComplete', listenerFunc: DownloadCompleteListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -192,7 +340,7 @@ Listen for download event in the App, let you know when the download is started,
 
 ***
 
-### addListener('majorAvailable', ...)
+#### addListener('majorAvailable', ...)
 
 ```typescript
 addListener(eventName: 'majorAvailable', listenerFunc: MajorAvailableListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -211,13 +359,13 @@ Listen for Major update event in the App, let you know when major update is bloc
 
 ***
 
-### addListener('updateFailed', ...)
+#### addListener('updateFailed', ...)
 
 ```typescript
 addListener(eventName: 'updateFailed', listenerFunc: UpdateFailedListener) => Promise<PluginListenerHandle> & PluginListenerHandle
 ```
 
-Listen for update event in the App, let you know when update is ready to install at next app start
+Listen for update fail event in the App, let you know when update has fail to install at next app start
 
 | Param              | Type                   |
 | ------------------ | ---------------------- |
@@ -230,19 +378,57 @@ Listen for update event in the App, let you know when update is ready to install
 
 ***
 
-### getId()
+#### addListener('downloadFailed', ...)
 
 ```typescript
-getId() => Promise<{ id: string; }>
+addListener(eventName: 'downloadFailed', listenerFunc: DownloadFailedListener) => Promise<PluginListenerHandle> & PluginListenerHandle
+```
+
+Listen for download fail event in the App, let you know when download has fail finished
+
+| Param              | Type                     |
+| ------------------ | ------------------------ |
+| **`eventName`**    | `'downloadFailed'`       |
+| **`listenerFunc`** | `DownloadFailedListener` |
+
+**Returns:** `Promise<PluginListenerHandle> & PluginListenerHandle`
+
+**Since:** 4.0.0
+
+***
+
+#### addListener('appReloaded', ...)
+
+```typescript
+addListener(eventName: 'appReloaded', listenerFunc: AppReloadedListener) => Promise<PluginListenerHandle> & PluginListenerHandle
+```
+
+Listen for download fail event in the App, let you know when download has fail finished
+
+| Param              | Type                  |
+| ------------------ | --------------------- |
+| **`eventName`**    | `'appReloaded'`       |
+| **`listenerFunc`** | `AppReloadedListener` |
+
+**Returns:** `Promise<PluginListenerHandle> & PluginListenerHandle`
+
+**Since:** 4.3.0
+
+***
+
+#### getDeviceId()
+
+```typescript
+getDeviceId() => Promise<{ deviceId: string; }>
 ```
 
 Get unique ID used to identify device (sent to auto update server)
 
-**Returns:** `Promise<{ id: string; }>`
+**Returns:** `Promise<{ deviceId: string; }>`
 
 ***
 
-### getPluginVersion()
+#### getPluginVersion()
 
 ```typescript
 getPluginVersion() => Promise<{ version: string; }>
@@ -254,7 +440,7 @@ Get the native Capacitor Updater plugin version (sent to auto update server)
 
 ***
 
-### isAutoUpdateEnabled()
+#### isAutoUpdateEnabled()
 
 ```typescript
 isAutoUpdateEnabled() => Promise<{ enabled: boolean; }>
@@ -266,92 +452,153 @@ Get the state of auto update config. This will return `false` in manual mode.
 
 ***
 
-### addListener(string, ...)
+#### Interfaces
 
-```typescript
-addListener(eventName: string, listenerFunc: (...args: any[]) => any) => Promise<PluginListenerHandle>
-```
-
-| Param              | Type                      |
-| ------------------ | ------------------------- |
-| **`eventName`**    | `string`                  |
-| **`listenerFunc`** | `(...args: any[]) => any` |
-
-**Returns:** `Promise<PluginListenerHandle>`
-
-***
-
-### removeAllListeners()
-
-```typescript
-removeAllListeners() => Promise<void>
-```
-
-***
-
-## Interfaces
-
-### **BundleInfo**
+**BundleInfo**
 
 | Prop             | Type           |
 | ---------------- | -------------- |
 | **`id`**         | `string`       |
 | **`version`**    | `string`       |
 | **`downloaded`** | `string`       |
+| **`checksum`**   | `string`       |
 | **`status`**     | `BundleStatus` |
 
-### **PluginListenerHandle**
+**DelayCondition**
+
+| Prop        | Type             | Description                              |
+| ----------- | ---------------- | ---------------------------------------- |
+| **`kind`**  | `DelayUntilNext` | Set up delay conditions in setMultiDelay |
+| **`value`** | `string`         |                                          |
+
+**latestVersion**
+
+| Prop          | Type      | Description             | Since |
+| ------------- | --------- | ----------------------- | ----- |
+| **`version`** | `string`  | Res of getLatest method | 4.0.0 |
+| **`major`**   | `boolean` |                         |       |
+| **`message`** | `string`  |                         |       |
+| **`old`**     | `string`  |                         |       |
+| **`url`**     | `string`  |                         |       |
+
+**channelRes**
+
+| Prop         | Type     | Description                   | Since |
+| ------------ | -------- | ----------------------------- | ----- |
+| **`status`** | `string` | Current status of set channel | 4.7.0 |
+| **`error`**  | `any`    |                               |       |
+
+**SetChannelOptions**
+
+| Prop          | Type     |
+| ------------- | -------- |
+| **`channel`** | `string` |
+
+**getChannelRes**
+
+| Prop           | Type      | Description                   | Since |
+| -------------- | --------- | ----------------------------- | ----- |
+| **`channel`**  | `string`  | Current status of get channel | 4.8.0 |
+| **`error`**    | `any`     |                               |       |
+| **`status`**   | `string`  |                               |       |
+| **`allowSet`** | `boolean` |                               |       |
+
+**SetCustomIdOptions**
+
+| Prop           | Type     |
+| -------------- | -------- |
+| **`customId`** | `string` |
+
+**PluginListenerHandle**
 
 | Prop         | Type                  |
 | ------------ | --------------------- |
 | **`remove`** | `() => Promise<void>` |
 
-### **DownloadEvent**
+**DownloadEvent**
 
 | Prop          | Type         | Description                                    | Since |
 | ------------- | ------------ | ---------------------------------------------- | ----- |
 | **`percent`** | `number`     | Current status of download, between 0 and 100. | 4.0.0 |
 | **`bundle`**  | `BundleInfo` |                                                |       |
 
-### **DownloadCompleteEvent**
+**noNeedEvent**
+
+| Prop         | Type         | Description                                    | Since |
+| ------------ | ------------ | ---------------------------------------------- | ----- |
+| **`bundle`** | `BundleInfo` | Current status of download, between 0 and 100. | 4.0.0 |
+
+**updateAvailableEvent**
+
+| Prop         | Type         | Description                                    | Since |
+| ------------ | ------------ | ---------------------------------------------- | ----- |
+| **`bundle`** | `BundleInfo` | Current status of download, between 0 and 100. | 4.0.0 |
+
+**DownloadCompleteEvent**
 
 | Prop         | Type         | Description                          | Since |
 | ------------ | ------------ | ------------------------------------ | ----- |
 | **`bundle`** | `BundleInfo` | Emit when a new update is available. | 4.0.0 |
 
-### **MajorAvailableEvent**
+**MajorAvailableEvent**
 
-| Prop          | Type     | Description                                 | Since |
-| ------------- | -------- | ------------------------------------------- | ----- |
-| **`version`** | `string` | Emit when a new major version is available. | 4.0.0 |
+| Prop          | Type     | Description                                | Since |
+| ------------- | -------- | ------------------------------------------ | ----- |
+| **`version`** | `string` | Emit when a new major bundle is available. | 4.0.0 |
 
-### **UpdateFailedEvent**
+**UpdateFailedEvent**
 
 | Prop         | Type         | Description                           | Since |
 | ------------ | ------------ | ------------------------------------- | ----- |
 | **`bundle`** | `BundleInfo` | Emit when a update failed to install. | 4.0.0 |
 
-## Type Aliases
+**DownloadFailedEvent**
 
-### **BundleStatus**
+| Prop          | Type     | Description                | Since |
+| ------------- | -------- | -------------------------- | ----- |
+| **`version`** | `string` | Emit when a download fail. | 4.0.0 |
+
+#### Type Aliases
+
+**BundleStatus**
 
 `'success' | 'error' | 'pending' | 'downloading'`
 
-### **DownloadChangeListener**
+**DelayUntilNext**
+
+`'background' | 'kill' | 'nativeVersion' | 'date'`
+
+**DownloadChangeListener**
 
 `(state: DownloadEvent): void`
 
-### **DownloadCompleteListener**
+**NoNeedListener**
+
+`(state: noNeedEvent): void`
+
+**UpdateAvailabledListener**
+
+`(state: updateAvailableEvent): void`
+
+**DownloadCompleteListener**
 
 `(state: DownloadCompleteEvent): void`
 
-### **MajorAvailableListener**
+**MajorAvailableListener**
 
 `(state: MajorAvailableEvent): void`
 
-### **UpdateFailedListener**
+**UpdateFailedListener**
 
 `(state: UpdateFailedEvent): void`
+
+**DownloadFailedListener**
+
+`(state: DownloadFailedEvent): void`
+
+**AppReloadedListener**
+
+`(state: void): void`
 
 #### Listen to download events
 
@@ -365,8 +612,6 @@ CapacitorUpdater.addListener('download', (info: any) => {
 
 On iOS, Apple don't allow you to show a message when the app is updated, so you can't show a progress bar.
 
-
-
 ## Settings
 
 After install capacitor-updater to your project, you can configure some behavior:
@@ -377,8 +622,6 @@ After install capacitor-updater to your project, you can configure some behavior
 * `statsUrl` the target URL for stats set it to "" to disable stats
 * `channelUrl` the target URL for letting device self assign to a channel (min 4.8.0)
 * `allowEmulatorProd` if you have CI/CD and too many devices are registers in Capgo, set it to false. (min 4.6.0)
-
-
 
 ```
 {
