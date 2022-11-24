@@ -41,6 +41,8 @@ On iOS, Apple don't allow you to show a message when the app is updated, so you 
 
 ## API
 
+<docgen-api>
+	
 #### notifyAppReady()
 
 ```typescript
@@ -603,4 +605,4 @@ Get the state of auto update config. This will return `false` in manual mode.
 
 `(state: void): void`
 
-###
+</docgen-api>
