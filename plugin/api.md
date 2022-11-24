@@ -230,10 +230,10 @@ Listen for update event in the App, let you know when update is ready to install
 
 ***
 
-### getId()
+### getDeviceId()
 
 ```typescript
-getId() => Promise<{ id: string; }>
+getDeviceId() => Promise<{ id: string; }>
 ```
 
 Get unique ID used to identify device (sent to auto update server)
