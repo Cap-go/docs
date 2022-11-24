@@ -4,39 +4,42 @@
 
 {% embed url="https://github.com/Cap-go/capacitor-updater#api" %}
 
+## Settings
+
+After install capacitor-updater to your project, you can configure some behavior:
+
+* `resetWhenUpdate` set it false to disable the reset version when update
+* `autoUpdateUrl` the target URL to get updates
+* `autoUpdate` true or false depend on if you want manual or auto
+* `statsUrl` the target URL for stats set it to "" to disable stats
+* `channelUrl` the target URL for letting device self assign to a channel (min 4.8.0)
+* `allowEmulatorProd` if you have CI/CD and too many devices are registers in Capgo, set it to false. (min 4.6.0)
+
+```
+{
+	"appId": "**.***.**",
+	"appName": "Name",
+	"plugins": {
+		"CapacitorUpdater": {
+			"resetWhenUpdate": false
+		}
+	}
+}
+```
+
+#### Listen to download events
+
+```javascript
+  import { CapacitorUpdater } from '@capgo/capacitor-updater';
+
+CapacitorUpdater.addListener('download', (info: any) => {
+  console.log('download was fired', info.percent);
+});
+```
+
+On iOS, Apple don't allow you to show a message when the app is updated, so you can't show a progress bar.
+
 ## API
-
-
-
-* `notifyAppReady()`
-* `download(...)`
-* `next(...)`
-* `set(...)`
-* `delete(...)`
-* `list()`
-* `reset(...)`
-* `current()`
-* `reload()`
-* `setMultiDelay(...)`
-* `setDelay(...)`
-* `cancelDelay()`
-* `getLatest()`
-* `setChannel(...)`
-* `getChannel()`
-* `setCustomId(...)`
-* `addListener('download', ...)`
-* `addListener('noNeedUpdate', ...)`
-* `addListener('updateAvailable', ...)`
-* `addListener('downloadComplete', ...)`
-* `addListener('majorAvailable', ...)`
-* `addListener('updateFailed', ...)`
-* `addListener('downloadFailed', ...)`
-* `addListener('appReloaded', ...)`
-* `getDeviceId()`
-* `getPluginVersion()`
-* `isAutoUpdateEnabled()`
-* Interfaces
-* Type Aliases
 
 #### notifyAppReady()
 
@@ -599,40 +602,5 @@ Get the state of auto update config. This will return `false` in manual mode.
 **AppReloadedListener**
 
 `(state: void): void`
-
-#### Listen to download events
-
-```javascript
-  import { CapacitorUpdater } from '@capgo/capacitor-updater';
-
-CapacitorUpdater.addListener('download', (info: any) => {
-  console.log('download was fired', info.percent);
-});
-```
-
-On iOS, Apple don't allow you to show a message when the app is updated, so you can't show a progress bar.
-
-## Settings
-
-After install capacitor-updater to your project, you can configure some behavior:
-
-* `resetWhenUpdate` set it false to disable the reset version when update
-* `autoUpdateUrl` the target URL to get updates
-* `autoUpdate` true or false depend on if you want manual or auto
-* `statsUrl` the target URL for stats set it to "" to disable stats
-* `channelUrl` the target URL for letting device self assign to a channel (min 4.8.0)
-* `allowEmulatorProd` if you have CI/CD and too many devices are registers in Capgo, set it to false. (min 4.6.0)
-
-```
-{
-	"appId": "**.***.**",
-	"appName": "Name",
-	"plugins": {
-		"CapacitorUpdater": {
-			"resetWhenUpdate": false
-		}
-	}
-}
-```
 
 ###
