@@ -157,6 +157,8 @@ and optionally `device_id` name as URL parameter to receive one:
 
 ### DELETE
 
+This endpoint is for unlink channel and version override. You can't delete a device from capgo
+
 `https://api.capgo.app/device`
 
 Send this
