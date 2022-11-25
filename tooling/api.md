@@ -37,10 +37,11 @@ receive this:
 
 `https://api.capgo.app/channel`
 
-Send `app_id` as URL parameter and receive array of channel:
+Send `app_id` as URL parameter and receive array of 50 first channel.\
+You can get next one by sending `page=1`
 
-```javascript
-{
+```typescript
+interface Channel {
     id: number;
     created_at: string;
     name: string;
@@ -51,26 +52,33 @@ Send `app_id` as URL parameter and receive array of channel:
     };
     created_by: string;
     updated_at: string;
-    public: boolean;
+    public: boolean; // default or not
     disableAutoUpdateUnderNative: boolean;
     disableAutoUpdateToMajor: boolean;
+    allow_emulator: boolean;
+    allow_dev: boolean;
 }[]
 ```
 
 and optionally `channel` name as URL parameter to receive one:
 
-```javascript
-{
+```typescript
+interface Channel {
     id: number;
     created_at: string;
     name: string;
     app_id: string;
-    version: number;
+    version: {
+        id: number,
+        name: string
+    };
     created_by: string;
     updated_at: string;
-    public: boolean;
+    public: boolean; // default or not
     disableAutoUpdateUnderNative: boolean;
     disableAutoUpdateToMajor: boolean;
+    allow_emulator: boolean;
+    allow_dev: boolean;
 }
 ```
 
@@ -119,13 +127,15 @@ receive this:
 
 `https://api.capgo.app/device`
 
-Send `app_id` as URL parameter and receive array of channel:
+Send `app_id` as URL parameter and receive array of 50 first devices.\
+You can get next one by sending `page=1`
 
-```javascript
-{
+```typescript
+interface Device{
     created_at?: string | undefined;
     updated_at?: string | undefined;
     device_id: string;
+    custom_id: string;
     version: {
         id: number,
         name: string
@@ -134,13 +144,16 @@ Send `app_id` as URL parameter and receive array of channel:
     platform?: "ios" | "android" | undefined;
     plugin_version: string;
     os_version?: string | undefined;
-}[]
+    version_build: string;
+    is_prod: boolean;
+    is_emulator: boolean;
+}[]       
 ```
 
 and optionally `device_id` name as URL parameter to receive one:
 
-```javascript
-{
+```typescript
+interface Device {
     created_at?: string | undefined;
     updated_at?: string | undefined;
     device_id: string;
