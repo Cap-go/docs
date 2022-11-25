@@ -37,7 +37,7 @@ receive this:
 
 `https://api.capgo.app/channel`
 
-Send `appid` as URL parameter and receive array of channel:
+Send `app_id` as URL parameter and receive array of channel:
 
 ```javascript
 {
@@ -119,7 +119,7 @@ receive this:
 
 `https://api.capgo.app/device`
 
-Send `appid` as URL parameter and receive array of channel:
+Send `app_id` as URL parameter and receive array of channel:
 
 ```javascript
 {
