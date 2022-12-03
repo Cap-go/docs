@@ -140,7 +140,7 @@ For example: If you have 10 versions, from 10.0.1 to 10.0.11, and you use `npx @
 
 This command will show a list of what it will be removing and ask for confirmation.
 
-## End-to-End encryption (Zero trust)
+## End-to-End encryption (Trustless)
 
 Capgo support end-to-end encryption, this mean that your code is encrypted before send to the cloud and decrypted on the device. For that, you need to generate an RSA key pair, you can use the following command to generate it.
 
