@@ -156,6 +156,8 @@ See below for more information about the encryption system.
 
 Optionally, you can give: `--force` to overwrite the existing key. This command will create for you a key pair in your app, and will ask you to save the private key in a safe place. It's recommended to not git commit the private and public key, and to not share it with anyone.
 
+> After your local test remove the key from config file and add it on CI step with `key save`
+
 ### Save key in your app config
 
 `npx @capgo/cli key save`
