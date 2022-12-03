@@ -88,9 +88,9 @@ Example of package.json for version
 
 Optionally, you can give:
 
-* `--bundle` your app `bundle` already sent to the cloud to link to channel.
-* `--latest` get the bundle version from `package.json:version`, cannot be use with --bundle.
-* `--state` set the channel state, can be normal or default. To use in your app, one channel need to be "default".
+* `--bundle [1.2.3]` your app bundle already sent to the cloud, to link it to a channel.
+* `--latest` get the bundle version from `package.json:version`, cannot be used with `--bundle`.
+* `--state [ normal | default ]` set the channel state, can be `normal` or `default`. One channel need to be `default`.
 * `--downgrade` allow the channel to send downgrade version to devices.
 * `--no-downgrade` disallow the channel to send downgrade version to devices.
 * `--upgrade` allow the channel to send upgrade (major) version to devices.
@@ -101,6 +101,7 @@ Optionally, you can give:
 * `--no-android` disallow the channel to send version to android devices.
 * `--self-assign` allow devices to self assign to this channel.
 * `--no-self-assign` disallow devices to self assign to this channel.
+* `--apikey [key]` API key to link to your account.
 
 ### **List versions**
 
