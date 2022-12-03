@@ -24,7 +24,7 @@ use `--apikey=********` in any command to override it
 
 `npx @capgo/cli add [appId]`&#x20;
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init)
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
 
 > 💡 All option will be guessed in your config if not provided.
 
@@ -48,7 +48,9 @@ Example of capacitor.config.json for appId and AppName, the icon is guess in the
 
 `npx @capgo/cli upload [appId]`&#x20;
 
-`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init) Optionally, you can give:
+`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init).
+
+Optionally, you can give:
 
 * `--apikey [key]` API key to link to your account.
 * `--path [/path/to/my/app]` to upload a specific folder.
@@ -64,7 +66,7 @@ Example of capacitor.config.json for appId and AppName, the icon is guess in the
 
 > 👀 Capgo cloud never look of what is in the link (for external option), or in the code when stored.&#x20;
 
-> 🔑 You can add a second layer of security by using encryption, then Capgo will not be able to look or modify anything, it become zero-trust.
+> 🔑 You can add a second layer of security by using encryption, then Capgo will not be able to look or modify anything, it becomes zero-trust.
 
 Example of package.json for version
 
@@ -82,11 +84,12 @@ Example of package.json for version
 
 `npx @capgo/cli set [appId] --channel dev`&#x20;
 
+`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init).
+
 Optionally, you can give:
 
-* `[appId]` your app ID the format is explained [**here**](https://capacitorjs.com/docs/cli/commands/init)****
-* `--bundle` your app `bundle` already sent to the cloud to link to channel
-* `--latest` get the bundle version from `package.json:version`, cannot be use with --bundle
+* `--bundle` your app `bundle` already sent to the cloud to link to channel.
+* `--latest` get the bundle version from `package.json:version`, cannot be use with --bundle.
 * `--state` set the channel state, can be normal or default. To use in your app, one channel need to be "default".
 * `--downgrade` allow the channel to send downgrade version to devices.
 * `--no-downgrade` disallow the channel to send downgrade version to devices.
@@ -103,7 +106,7 @@ Optionally, you can give:
 
 `npx @capgo/cli list [appId]`&#x20;
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init)
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
 
 Optionally, you can give:
 
@@ -113,18 +116,18 @@ Optionally, you can give:
 
 `npx @capgo/cli delete [appId]`
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init)
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
 
 Optionally, you can give:
 
 * `--apikey [key]` API key to link to your account.
-* `--bundle` with the version number will only delete this version
+* `--bundle` with the version number will only delete this version.
 
 ### Cleanup older packages in a SemVer range for a major version to Cloud
 
 `npx @capgo/cli cleanup [appId] --bundle=[majorVersion] --keep=[numberToKeep]`
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init)
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
 
 Optionally, you can give:
 
