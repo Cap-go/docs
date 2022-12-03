@@ -66,7 +66,7 @@ Optionally, you can give:
 
 > 👀 Capgo cloud never look of what is in the link (for external option), or in the code when stored.&#x20;
 
-> 🔑 You can add a second layer of security by using encryption, then Capgo will not be able to look or modify anything, it becomes zero-trust.
+> 🔑 You can add a second layer of security by using encryption, then Capgo will not be able to look or modify anything, it becomes “trustless”.
 
 Example of package.json for version
 
