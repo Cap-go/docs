@@ -1,7 +1,5 @@
 # API
 
-
-
 ## Intro
 
 This is the documentation of the backend API of Capgo cloud
@@ -29,8 +27,8 @@ interface ChannelSet {
 
 receive this:
 
-```javascript
-{ status: 'ok' }
+```json
+{ "status": "ok" }
 ```
 
 ### GET
@@ -96,15 +94,17 @@ interface Channel {
 
 receive this:
 
-```javascript
-{ status: 'ok' }
+```json
+{ "status": "ok" }
 ```
 
 ## Devices
 
 This endpoint allows you to check and modify all devices link to your app
 
-\##POST `https://api.capgo.app/device`
+### POST&#x20;
+
+`https://api.capgo.app/device`
 
 Send this
 
@@ -119,8 +119,8 @@ interface DeviceLink {
 
 receive this:
 
-```javascript
-{ status: 'ok' }
+```json
+{ "status": "ok" }
 ```
 
 ### GET
@@ -177,29 +177,32 @@ This endpoint is for unlink channel and version override. You can't delete a dev
 Send this
 
 ```typescript
-interface Version {
+interface Device {
   device_id: string
 }
 ```
 
 receive this:
 
-```javascript
-{ status: 'ok' }
+```json
+{ "status": "ok" }
 ```
 
-## Versions
+## Bundles&#x20;
 
-This endpoint allows you to check and modify all versions link to your app
+This endpoint allows you to check and delete all bundles link to your app.
+
+> legacy name version the URL will be remove in january 2023
 
 ### GET
 
-`https://api.capgo.app/versions`
+`https://api.capgo.app/bundle`
 
-Send `app_id` as URL parameter and receive array of channel:
+Send `app_id` as URL parameter and receive array of 50 first bunles.\
+You can get next one by sending `page=1`
 
-```javascript
-{
+```typescript
+interface Bundle {
     id: number;
     created_at: string;
     name: string;
@@ -215,18 +218,18 @@ Send `app_id` as URL parameter and receive array of channel:
 
 ### DELETE
 
-`https://api.capgo.app/versions`
+`https://api.capgo.app/bundle`
 
 Send this
 
 ```typescript
-interface Version {
+interface Bundle {
   app_id: string
 }
 ```
 
 receive this:
 
-```javascript
-{ status: 'ok' }
+```json
+{ "status": "ok" }
 ```
