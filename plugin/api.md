@@ -1,4 +1,8 @@
-# API
+---
+description: All available method of the plugin
+---
+
+# Methods
 
 ## The best way for the most up-to-date
 
@@ -41,9 +45,7 @@ On iOS, Apple don't allow you to show a message when the app is updated, so you 
 
 ## API
 
-<docgen-api>
-	
-#### notifyAppReady()
+**notifyAppReady()**
 
 ```typescript
 notifyAppReady() => Promise<BundleInfo>
@@ -55,7 +57,7 @@ Notify Capacitor Updater that the current bundle is working (a rollback will occ
 
 ***
 
-#### download(...)
+**download(...)**
 
 ```typescript
 download(options: { url: string; version: string; }) => Promise<BundleInfo>
@@ -71,7 +73,7 @@ Download a new bundle from the provided URL, it should be a zip file, with files
 
 ***
 
-#### next(...)
+**next(...)**
 
 ```typescript
 next(options: { id: string; }) => Promise<BundleInfo>
@@ -87,7 +89,7 @@ Set the next bundle to be used when the app is reloaded.
 
 ***
 
-#### set(...)
+**set(...)**
 
 ```typescript
 set(options: { id: string; }) => Promise<void>
@@ -101,7 +103,7 @@ Set the current bundle and immediately reloads the app.
 
 ***
 
-#### delete(...)
+**delete(...)**
 
 ```typescript
 delete(options: { id: string; }) => Promise<void>
@@ -115,7 +117,7 @@ Delete bundle in storage
 
 ***
 
-#### list()
+**list()**
 
 ```typescript
 list() => Promise<{ bundles: BundleInfo[]; }>
@@ -127,7 +129,7 @@ Get all available bundles
 
 ***
 
-#### reset(...)
+**reset(...)**
 
 ```typescript
 reset(options?: { toLastSuccessful?: boolean | undefined; } | undefined) => Promise<void>
@@ -141,7 +143,7 @@ Set the `builtin` bundle (the one sent to Apple store / Google play store ) as c
 
 ***
 
-#### current()
+**current()**
 
 ```typescript
 current() => Promise<{ bundle: BundleInfo; native: string; }>
@@ -153,7 +155,7 @@ Get the current bundle, if none are set it returns `builtin`, currentNative is t
 
 ***
 
-#### reload()
+**reload()**
 
 ```typescript
 reload() => Promise<void>
@@ -163,7 +165,7 @@ Reload the view
 
 ***
 
-#### setMultiDelay(...)
+**setMultiDelay(...)**
 
 ```typescript
 setMultiDelay(options: { delayConditions: DelayCondition[]; }) => Promise<void>
@@ -179,7 +181,7 @@ Set DelayCondition, skip updates until one of the conditions is met
 
 ***
 
-#### setDelay(...)
+**setDelay(...)**
 
 ```typescript
 setDelay(options: DelayCondition) => Promise<void>
@@ -195,7 +197,7 @@ Set DelayCondition, skip updates until the condition is met
 
 ***
 
-#### cancelDelay()
+**cancelDelay()**
 
 ```typescript
 cancelDelay() => Promise<void>
@@ -207,7 +209,7 @@ Cancel delay to updates as usual
 
 ***
 
-#### getLatest()
+**getLatest()**
 
 ```typescript
 getLatest() => Promise<latestVersion>
@@ -221,7 +223,7 @@ Get Latest bundle available from update Url
 
 ***
 
-#### setChannel(...)
+**setChannel(...)**
 
 ```typescript
 setChannel(options: SetChannelOptions) => Promise<channelRes>
@@ -239,7 +241,7 @@ Set Channel for this device
 
 ***
 
-#### getChannel()
+**getChannel()**
 
 ```typescript
 getChannel() => Promise<getChannelRes>
@@ -253,7 +255,7 @@ get Channel for this device
 
 ***
 
-#### setCustomId(...)
+**setCustomId(...)**
 
 ```typescript
 setCustomId(options: SetCustomIdOptions) => Promise<void>
@@ -269,7 +271,7 @@ Set Channel for this device
 
 ***
 
-#### addListener('download', ...)
+**addListener('download', ...)**
 
 ```typescript
 addListener(eventName: 'download', listenerFunc: DownloadChangeListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -288,7 +290,7 @@ Listen for download event in the App, let you know when the download is started,
 
 ***
 
-#### addListener('noNeedUpdate', ...)
+**addListener('noNeedUpdate', ...)**
 
 ```typescript
 addListener(eventName: 'noNeedUpdate', listenerFunc: NoNeedListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -307,7 +309,7 @@ Listen for no need to update event, usefull when you want force check every time
 
 ***
 
-#### addListener('updateAvailable', ...)
+**addListener('updateAvailable', ...)**
 
 ```typescript
 addListener(eventName: 'updateAvailable', listenerFunc: UpdateAvailabledListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -326,7 +328,7 @@ Listen for availbale update event, usefull when you want to force check every ti
 
 ***
 
-#### addListener('downloadComplete', ...)
+**addListener('downloadComplete', ...)**
 
 ```typescript
 addListener(eventName: 'downloadComplete', listenerFunc: DownloadCompleteListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -345,7 +347,7 @@ Listen for download event in the App, let you know when the download is started,
 
 ***
 
-#### addListener('majorAvailable', ...)
+**addListener('majorAvailable', ...)**
 
 ```typescript
 addListener(eventName: 'majorAvailable', listenerFunc: MajorAvailableListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -364,7 +366,7 @@ Listen for Major update event in the App, let you know when major update is bloc
 
 ***
 
-#### addListener('updateFailed', ...)
+**addListener('updateFailed', ...)**
 
 ```typescript
 addListener(eventName: 'updateFailed', listenerFunc: UpdateFailedListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -383,7 +385,7 @@ Listen for update fail event in the App, let you know when update has fail to in
 
 ***
 
-#### addListener('downloadFailed', ...)
+**addListener('downloadFailed', ...)**
 
 ```typescript
 addListener(eventName: 'downloadFailed', listenerFunc: DownloadFailedListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -402,7 +404,7 @@ Listen for download fail event in the App, let you know when download has fail f
 
 ***
 
-#### addListener('appReloaded', ...)
+**addListener('appReloaded', ...)**
 
 ```typescript
 addListener(eventName: 'appReloaded', listenerFunc: AppReloadedListener) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -421,7 +423,7 @@ Listen for download fail event in the App, let you know when download has fail f
 
 ***
 
-#### getDeviceId()
+**getDeviceId()**
 
 ```typescript
 getDeviceId() => Promise<{ deviceId: string; }>
@@ -433,7 +435,7 @@ Get unique ID used to identify device (sent to auto update server)
 
 ***
 
-#### getPluginVersion()
+**getPluginVersion()**
 
 ```typescript
 getPluginVersion() => Promise<{ version: string; }>
@@ -445,7 +447,7 @@ Get the native Capacitor Updater plugin version (sent to auto update server)
 
 ***
 
-#### isAutoUpdateEnabled()
+**isAutoUpdateEnabled()**
 
 ```typescript
 isAutoUpdateEnabled() => Promise<{ enabled: boolean; }>
@@ -457,7 +459,7 @@ Get the state of auto update config. This will return `false` in manual mode.
 
 ***
 
-#### Interfaces
+**Interfaces**
 
 **BundleInfo**
 
@@ -563,7 +565,7 @@ Get the state of auto update config. This will return `false` in manual mode.
 | ------------- | -------- | -------------------------- | ----- |
 | **`version`** | `string` | Emit when a download fail. | 4.0.0 |
 
-#### Type Aliases
+**Type Aliases**
 
 **BundleStatus**
 
@@ -604,5 +606,3 @@ Get the state of auto update config. This will return `false` in manual mode.
 **AppReloadedListener**
 
 `(state: void): void`
-
-</docgen-api>

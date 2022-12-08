@@ -5,12 +5,12 @@
 
 ## Plugin
 
+* [Methods](plugin/api.md)
 * [Auto update](plugin/auto-update.md)
-* [API](plugin/api.md)
 * [Manual mode](plugin/manual-mode.md)
+* [Channel system](plugin/channel-system.md)
 * [Debugging](plugin/debugging.md)
 * [Cordova](plugin/cordova.md)
-* [Channel system](plugin/channel-system.md)
 
 ## Tooling
 
