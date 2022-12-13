@@ -218,6 +218,8 @@ interface Bundle {
 
 ### DELETE
 
+Delete one bundle in the Cloud
+
 `https://api.capgo.app/bundle`
 
 Send this
@@ -225,6 +227,7 @@ Send this
 ```typescript
 interface Bundle {
   app_id: string
+  version: string
 }
 ```
 
@@ -233,3 +236,13 @@ receive this:
 ```json
 { "status": "ok" }
 ```
+
+Alternatively you can send&#x20;
+
+```typescript
+interface Bundle {
+  app_id: string
+}
+```
+
+To delete all bundle.
