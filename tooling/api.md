@@ -14,7 +14,7 @@ This endpoint allows you to check and modify all available Channels of your app
 
 `https://api.capgo.app/channel`
 
-Send this
+Send this to create or update channel
 
 ```typescript
 interface ChannelSet {
@@ -22,6 +22,13 @@ interface ChannelSet {
   channel: string
   version?: string
   public?: boolean
+  disableAutoUpdateUnderNative?: boolean
+  disableAutoUpdateToMajor?: boolean
+  ios?: boolean
+  android?: boolean
+  allow_device_self_set?: boolean
+  allow_emulator?: boolean
+  allow_dev?: boolean
 }
 ```
 
