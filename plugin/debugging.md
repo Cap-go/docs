@@ -29,8 +29,22 @@
 
 ## Understanding device logs:
 
+### Ios
+
+to find your logs on Xcode&#x20;
+
+{% embed url="https://intercom.help/deploygate/en/articles/4682692-getting-the-device-log-in-xcode" %}
+
+### Android:
+
+to find your logs on Android studio
+
+{% embed url="https://developer.android.com/studio/debug/am-logcat" %}
+
+### Explainations
+
 * `Failed to download from` **=>** same as **download\_fail**
-* `notifyAppReady was not called, roll back current bundle` => as as **update\_fail**
+* `notifyAppReady was not called, roll back current bundle` => same as as **update\_fail**
 
 ## Finding the downloaded bundle in your devide
 
