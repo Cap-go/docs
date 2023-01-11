@@ -68,15 +68,30 @@ The server API should respond, in JSON, to the capacitor-updater plugin. with th
 }
 ```
 
-In Auto-update the server should do the work of compares the version and return the right one, if returned the plugin, start the download process.
+In Auto-update the server should do the work of compares the version and return the right one, if url key is present, the plugin start the download process.
 
-If you add "message" key, the version will not be set and the message will be display in logs instead.
+If you add "message" and "error" key, the version will not be set and the message will be display in logs instead.
 
 The zip should have `index.html` a file at the root, or only one folder at the root with `index.html` inside
 
 {% content-ref url="update-endpoint.md" %}
 [update-endpoint.md](update-endpoint.md)
 {% endcontent-ref %}
+
+#### End-to-end Encryption
+
+Starting with version 4.15.0 the plugin allow you to send encrypted updates.
+
+You can use this feature by creating a private key \``npx @capgo/cli key create`\`
+
+Then you encrypt your zip file with \``npx @capgo/cli encrypt [path/to/zip]`\`
+
+The command will print you an `ivSessionKey` it has to be send with your update payload in the key `session_key`.\
+Then your app will be able to use the private key to decrypt the `session_key` and use the decrypted `session_key` to decrypt the update.
+
+Learn more about it here:
+
+{% embed url="https://capgo.app/blog/self-hosted-live-updates/" %}
 
 ### Statistics API
 
