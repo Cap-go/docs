@@ -80,7 +80,21 @@ Example of package.json for version
 
 > 💡 Don't forget to update the version number each time you send one, or device will don't see the update.
 
-### **Configure channel**
+## Channel
+
+### **Create**
+
+`npx @capgo/cli channel create [channelId] [appId]`&#x20;
+
+`[channelId]` the name of your new channel. `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+
+### **Delete**
+
+`npx @capgo/cli channel delete [channelId] [appId]`&#x20;
+
+`[channelId]` the name of your channel you want to delete. `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+
+### **Configure**
 
 `npx @capgo/cli set [appId] --channel dev`&#x20;
 
@@ -103,7 +117,7 @@ Optionally, you can give:
 * `--no-self-assign` disallow devices to self assign to this channel.
 * `--apikey [key]` API key to link to your account.
 
-### **List versions**
+## **List versions**
 
 `npx @capgo/cli list [appId]`&#x20;
 
@@ -115,7 +129,7 @@ Optionally, you can give:
 
 
 
-### **Delete package or version to Cloud**
+## **Delete package or version**
 
 `npx @capgo/cli delete [appId]`
 
@@ -126,7 +140,9 @@ Optionally, you can give:
 * `--apikey [key]` API key to link to your account.
 * `--bundle` with the version number will only delete this version.
 
-### Cleanup older packages in a SemVer range for a major version to Cloud
+## Cleanup older packages
+
+in a SemVer range for a major version to Cloud
 
 `npx @capgo/cli cleanup [appId] --bundle=[majorVersion] --keep=[numberToKeep]`
 
