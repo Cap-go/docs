@@ -70,7 +70,9 @@ The server API should respond, in JSON, to the capacitor-updater plugin. with th
 
 In Auto-update the server should do the work of compares the version and return the right one, if url key is present, the plugin start the download process.
 
-If you add "message" and "error" key, the version will not be set and the message will be display in logs instead.
+If you add "message" and "error" key, the version will not be set and the message will be display in logs instead.\
+\
+\`version\` key should be in [`semver`](https://semver.org/) format .
 
 The zip should have `index.html` a file at the root, or only one folder at the root with `index.html` inside
 
