@@ -39,6 +39,8 @@ You have to configure the plugin to use your own URL like that:
 }
 ```
 
+> 🚧 In android it's not allowed to request to http, for testing purposes [allow it](https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted)
+
 ### Update API
 
 The plugin will do POST call to your API each time the app is open, with this body:
