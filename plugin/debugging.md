@@ -27,6 +27,16 @@
 * **update\_fail** => new bundle has been installed but failed to call notifyAppReady
 * **checksum\_fail** => new bundle fail to validate checksum
 
+### Bundle status
+
+* SUCCESS: install bundle done
+* ERROR: install or download failed
+* PENDING: Download done, pending release
+* DELETED: Bundle deleted still present for stats
+* DOWNLOADING: Curently downloading a bundle
+
+
+
 ## Understanding device logs:
 
 ### Ios
