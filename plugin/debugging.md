@@ -90,4 +90,10 @@ data/data/app\_name/
 
 Then Find the `versions` folder to see all the folder versions
 
-on android only one folder is enough
+on android only one folder is enough.
+
+
+
+## Understand ios production crash
+
+{% embed url="https://developer.apple.com/news/?id=nra79npr" %}
