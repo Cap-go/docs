@@ -22,7 +22,7 @@ You can also for specific case assign device directly to a bundle, in debug purp
 
 ## Channel options
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Meaning of each:
 
