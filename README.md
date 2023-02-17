@@ -100,14 +100,6 @@ The plugin is under the LGPL-3.0 License and the back-end is AGPL-3.0 License.
 
 > You can include it in your app without worring
 
-
-
-## Know issues
-
-* When you develop, if you use the Ionic live reload feature from the CLI, it will override the plugin, so you will never see your update.
-* Same issue with Quasar live reload.
-* Big app update (> 20mb) will have a big percentage of user who doesn't get the last version.  Users need to keep the app open until download is done.
-
 ## Last words
 
 If you use this tool for free, take time to support my work with [GitHub sponsor](https://github.com/sponsors/riderx).
