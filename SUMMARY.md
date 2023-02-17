@@ -10,6 +10,7 @@
 * [Manual mode](plugin/manual-mode.md)
 * [Channel system](plugin/channel-system.md)
 * [Debugging](plugin/debugging.md)
+* [Know issues](plugin/know-issues.md)
 * [Cordova](plugin/cordova.md)
 
 ## Tooling
