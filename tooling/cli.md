@@ -20,9 +20,19 @@ use `--apikey=********` in any command to override it
 
 `--local` This will store your **apikey** in the local repo and git ignore it.&#x20;
 
-### **Add app**
+## **Doctor**
 
-`npx @capgo/cli add [appId]`&#x20;
+`npx @capgo/cli app doctor`&#x20;
+
+Command to check if your are up to date with capgo packages.&#x20;
+
+This command will also be usefull for bug report.
+
+## App
+
+### **Add**
+
+`npx @capgo/cli app add [appId]`&#x20;
 
 `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
 
@@ -44,9 +54,32 @@ Example of capacitor.config.json for appId and AppName, the icon is guess in the
 }
 ```
 
+### **List**
+
+`npx @capgo/cli app list [appId]`&#x20;
+
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+
+Optionally, you can give:
+
+* `--apikey [key]` API key to link to your account.
+
+### **Delete**
+
+`npx @capgo/cli app delete [appId]`
+
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+
+Optionally, you can give:
+
+* `--apikey [key]` API key to link to your account.
+* `--bundle` with the version number will only delete this version.
+
+## Bundle
+
 ### Upload **version**
 
-`npx @capgo/cli upload [appId]`&#x20;
+`npx @capgo/cli app upload [appId]`&#x20;
 
 `[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init).
 
@@ -80,6 +113,71 @@ Example of package.json for version
 
 > 💡 Don't forget to update the version number each time you send one, or device will don't see the update.
 
+### **List**
+
+`npx @capgo/cli bundle list [appId]`&#x20;
+
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+
+Optionally, you can give:
+
+* `--apikey [key]` API key to link to your account.
+
+### **Delete**
+
+`npx @capgo/cli bundle delete [appId]`
+
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+
+Optionally, you can give:
+
+* `--apikey [key]` API key to link to your account.
+* `--bundle` with the version number will only delete this version.
+
+### Cleanup
+
+in a SemVer range for a major version to Cloud
+
+`npx @capgo/cli bundle cleanup [appId] --bundle=[majorVersion] --keep=[numberToKeep]`
+
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+
+Optionally, you can give:
+
+* `--apikey [key]` API key to link to your account.
+* `--bundle [majorVersion]` a version you wish to remove previous packages for, it will keep the last one + numberToKeep.
+* `--keep [numberToKeep]` the number of packages you wish to keep (default 4).
+
+For example: If you have 10 versions from 10.0.1 to 10.0.11, and you use `npx @capgo/cli cleanup [appId] --bundle=10.0.0` it will remove 10.0.1 to 10.0.6. 10.0.7 until 10.0.11 will be kept.
+
+If you have 20 versions in total, and you don't provide a bundle number like this: `npx @capgo/cli cleanup [appId] --keep=2` It will remove 18 versions, and keep the last 2.
+
+> This command will ask for confirmation, it shows a table of what it will be keeping and removing.
+
+### **Encrypt**
+
+`npx @capgo/cli bundle encrypt [path/to/zip]`&#x20;
+
+Optionally, you can give:&#x20;
+
+`--key [/path/to/my/private_key]` the path of your private key.&#x20;
+
+`--key-data [privateKey]` the private key data, if you want to use inline. This command is use when you use external source to store your code or for test purpose. The command will print your ivSessionKey and the encrypted zip, you can use it with the&#x20;
+
+`--iv-session-key` and `--external` option of the `upload` command, or for decrypting the zip.
+
+
+
+### **Decrypt**
+
+`npx @capgo/cli bundle decrypt [path/to/zip] [ivSessionKey]`
+
+Optionally, you can give:&#x20;
+
+`--key [/path/to/my/private_key]` the path of your private key.&#x20;
+
+`--key-data [privateKey]` the private key data, if you want to use inline. This command is mainly used for test purpose, it will decrypt the zip and print the base64 decrypted session key in the console.
+
 ## Channel
 
 ### **Create**
@@ -94,9 +192,19 @@ Example of package.json for version
 
 `[channelId]` the name of your channel you want to delete. `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
 
+### **List**
+
+`npx @capgo/cli channel list [appId]`&#x20;
+
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+
+Optionally, you can give:
+
+* `--apikey [key]` API key to link to your account.
+
 ### **Configure**
 
-`npx @capgo/cli set [appId] --channel dev`&#x20;
+`npx @capgo/cli channel set [appId] --channel dev`&#x20;
 
 `[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init).
 
@@ -116,49 +224,6 @@ Optionally, you can give:
 * `--self-assign` allow devices to self assign to this channel.
 * `--no-self-assign` disallow devices to self assign to this channel.
 * `--apikey [key]` API key to link to your account.
-
-## **List versions**
-
-`npx @capgo/cli list [appId]`&#x20;
-
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
-
-Optionally, you can give:
-
-* `--apikey [key]` API key to link to your account.
-
-
-
-## **Delete package or version**
-
-`npx @capgo/cli delete [appId]`
-
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
-
-Optionally, you can give:
-
-* `--apikey [key]` API key to link to your account.
-* `--bundle` with the version number will only delete this version.
-
-## Cleanup older packages
-
-in a SemVer range for a major version to Cloud
-
-`npx @capgo/cli cleanup [appId] --bundle=[majorVersion] --keep=[numberToKeep]`
-
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
-
-Optionally, you can give:
-
-* `--apikey [key]` API key to link to your account.
-* `--bundle [majorVersion]` a version you wish to remove previous packages for, it will keep the last one + numberToKeep.
-* `--keep [numberToKeep]` the number of packages you wish to keep (default 4).
-
-For example: If you have 10 versions from 10.0.1 to 10.0.11, and you use `npx @capgo/cli cleanup [appId] --bundle=10.0.0` it will remove 10.0.1 to 10.0.6. 10.0.7 until 10.0.11 will be kept.
-
-If you have 20 versions in total, and you don't provide a bundle number like this: `npx @capgo/cli cleanup [appId] --keep=2` It will remove 18 versions, and keep the last 2.
-
-> This command will ask for confirmation, it shows a table of what it will be keeping and removing.
 
 ## End-to-End encryption (Trustless)
 
@@ -182,17 +247,13 @@ Optionally, you can give: `--force` to overwrite the existing key. This command 
 
 `npx @capgo/cli key save`
 
-Optionally, you can give: `--key [/path/to/my/private_key]` the path of your private key. `--key-data [privateKey]` the private key data, if you want to use inline. This command is useful if you followed the recommendation and didn't commit the key in your app, and in the config.
+Optionally, you can give:&#x20;
 
-### Encrypt zip with your key
+`--key [/path/to/my/private_key]` the path of your private key.&#x20;
 
-`npx @capgo/cli encrypt [path/to/zip]` Optionally, you can give: `--key [/path/to/my/private_key]` the path of your private key. `--key-data [privateKey]` the private key data, if you want to use inline. This command is use when you use external source to store your code or for test purpose. The command will print your ivSessionKey and the encrypted zip, you can use it with the `--iv-session-key` and `--external` option of the `upload` command, or for decrypting the zip.
+`--key-data [privateKey]` the private key data, if you want to use inline. This command is useful if you followed the recommendation and didn't commit the key in your app, and in the config.
 
-### Decrypt zip with your key
 
-`npx @capgo/cli encrypt [path/to/zip] [ivSessionKey]`
-
-Optionally, you can give: `--key [/path/to/my/private_key]` the path of your private key. `--key-data [privateKey]` the private key data, if you want to use inline. This command is mainly used for test purpose, it will decrypt the zip and print the base64 decrypted session key in the console.
 
 ### Ci integration
 
