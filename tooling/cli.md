@@ -77,9 +77,9 @@ Optionally, you can give:
 
 ## Bundle
 
-### Upload **version**
+### Upload
 
-`npx @capgo/cli app upload [appId]`&#x20;
+`npx @capgo/cli bundle upload [appId]`&#x20;
 
 `[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init).
 
