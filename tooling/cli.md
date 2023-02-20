@@ -255,13 +255,13 @@ Optionally, you can give:&#x20;
 
 
 
-### Ci integration
+## Ci integration
 
 To automate your work, I recommend you make GitHub action do the job of pushing to our server
 
 [GitHub action tutorial](https://capgo.app/blog/automatic-build-and-release-with-github-actions)
 
-### Our demo app
+## Our demo app
 
 [GitHub - Cap-go/demo-app](https://github.com/Cap-go/demo-app)
 
