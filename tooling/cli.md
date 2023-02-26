@@ -202,9 +202,9 @@ Optionally, you can give:
 
 * `--apikey [key]` API key to link to your account.
 
-### **Configure**
+### **Set**
 
-`npx @capgo/cli channel set [appId] --channel dev`&#x20;
+`npx @capgo/cli channel set [channelId] [appId]`
 
 `[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init).
 
