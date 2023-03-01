@@ -5,6 +5,7 @@
 
 ## Plugin
 
+* [Installation](plugin/installation.md)
 * [Methods](plugin/api.md)
 * [Auto update](plugin/auto-update.md)
 * [Manual mode](plugin/manual-mode.md)
