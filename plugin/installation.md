@@ -12,4 +12,6 @@ import { CapacitorUpdater } from '@capgo/capacitor-updater'
 CapacitorUpdater.notifyAppReady();
 ```
 
-Then you are all set.
+Then you are all set.\
+\
+\`notifyAppReady\` is important for your app it allow the plugin to validate your update run properly.
