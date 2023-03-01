@@ -178,6 +178,17 @@ Optionally, you can give:&#x20;
 
 `--key-data [privateKey]` the private key data, if you want to use inline. This command is mainly used for test purpose, it will decrypt the zip and print the base64 decrypted session key in the console.
 
+### **Zip**
+
+`npx @capgo/cli bundle zip [appId]`
+
+`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init).
+
+Optionally, you can give:
+
+* `--path [/path/to/my/app]` to upload a specific folder.
+* `--bundle [1.0.0]` to set the bundle version number of the fileName.
+
 ## Channel
 
 ### **Create**
