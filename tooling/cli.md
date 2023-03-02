@@ -88,7 +88,7 @@ Optionally, you can give:
 * `--apikey [key]` API key to link to your account.
 * `--path [/path/to/my/app]` to upload a specific folder.
 * `--channel [test]` to upload to a specific channel.
-* `--external [https://mydomain.com/myapp.zip]` to link to an external URL instead of upload to Capgo cloud, it should be a zip URL in HTTPS.
+* `--external="https://mydomain.com/myapp.zip"` to link to an external URL instead of upload to Capgo cloud, it should be a zip URL in HTTPS.
 * `--key [/path/to/my/private_key]` the path of your private key.
 * `--key-data [privateKey]` the private key data, if you want to use inline.
 * `--no-key` to ignore signing key and send clear update.
