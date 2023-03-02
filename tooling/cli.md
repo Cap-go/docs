@@ -238,7 +238,7 @@ Optionally, you can give:
 
 ## End-to-End encryption (Trustless)
 
-Capgo support end-to-end encryption, this mean that your code is encrypted before send to the cloud and decrypted on the device. For that, you need to generate an RSA key pair, you can use the following command to generate it.
+Capgo support end-to-end encryption, this mean that your bundle(code) is encrypted before send to the cloud and decrypted on the device. For that, you need to generate an RSA key pair, you can use the following command to generate it.
 
 The encryption system is a combination of RSA and AES, the RSA key is used to encrypt the AES key, and the AES key is used to encrypt the file.
 
