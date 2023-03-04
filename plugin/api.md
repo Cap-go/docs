@@ -2,6 +2,11 @@
 description: All available method of the plugin
 ---
 
-# Methods
+<docgen-index>
 
-{% embed url="https://github.com/Cap-go/capacitor-updater/blob/main/README.md" %}
+</docgen-index>
+
+<docgen-api>
+
+
+</docgen-api>
