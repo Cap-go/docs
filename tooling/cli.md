@@ -34,7 +34,7 @@ This command will also be usefull for bug report.
 
 `npx @capgo/cli app add [appId]`&#x20;
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 > 💡 All option will be guessed in your config if not provided.
 
@@ -58,7 +58,7 @@ Example of capacitor.config.json for appId and AppName, the icon is guess in the
 
 `npx @capgo/cli app list [appId]`&#x20;
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 Optionally, you can give:
 
@@ -68,7 +68,7 @@ Optionally, you can give:
 
 `npx @capgo/cli app delete [appId]`
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 Optionally, you can give:
 
@@ -81,7 +81,7 @@ Optionally, you can give:
 
 `npx @capgo/cli bundle upload [appId]`&#x20;
 
-`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init).
+`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 Optionally, you can give:
 
@@ -117,7 +117,7 @@ Example of package.json for version
 
 `npx @capgo/cli bundle list [appId]`&#x20;
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 Optionally, you can give:
 
@@ -127,7 +127,7 @@ Optionally, you can give:
 
 `npx @capgo/cli bundle delete [appId]`
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 Optionally, you can give:
 
@@ -140,7 +140,7 @@ in a SemVer range for a major version to Cloud
 
 `npx @capgo/cli bundle cleanup [appId] --bundle=[majorVersion] --keep=[numberToKeep]`
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 Optionally, you can give:
 
@@ -182,7 +182,7 @@ Optionally, you can give:&#x20;
 
 `npx @capgo/cli bundle zip [appId]`
 
-`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init).
+`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 Optionally, you can give:
 
@@ -195,19 +195,19 @@ Optionally, you can give:
 
 `npx @capgo/cli channel create [channelId] [appId]`&#x20;
 
-`[channelId]` the name of your new channel. `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+`[channelId]` the name of your new channel. `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 ### **Delete**
 
 `npx @capgo/cli channel delete [channelId] [appId]`&#x20;
 
-`[channelId]` the name of your channel you want to delete. `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+`[channelId]` the name of your channel you want to delete. `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 ### **List**
 
 `npx @capgo/cli channel list [appId]`&#x20;
 
-`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/init).
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 Optionally, you can give:
 
@@ -217,7 +217,7 @@ Optionally, you can give:
 
 `npx @capgo/cli channel set [channelId] [appId]`
 
-`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/init).
+`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 Optionally, you can give:
 
