@@ -16,13 +16,13 @@ This method is here to remember the `apikey` for you.&#x20;
 use `--apikey=********` in any command to override it
 {% endhint %}
 
-**Optionnaly you can give:**
+**Optionaly you can give:**
 
 `--local` This will store your **apikey** in the local repo and git ignore it.&#x20;
 
 ## **Doctor**
 
-`npx @capgo/cli app doctor`&#x20;
+`npx @capgo/cli doctor`&#x20;
 
 Command to check if your are up to date with capgo packages.&#x20;
 
