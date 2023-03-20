@@ -64,7 +64,19 @@ To debug on iOS, you need to dump the app on your computer, you can do it like t
 
 Xcode has a built-in feature for inspecting the file system of developer installed apps on an iOS device.
 
-To achieve this, connect your device to your Mac and select Window > Devices in the Xcode menubar. Then select your device in the left pane under the Devices section. This will show a list of developer installed apps for that device. Select the app you want to inspect and then the select the gear icon near the bottom of the screen. Here you can view the current file system by selecting Show Container or download a snapshot of it. Selecting Download Container... will download and export a snapshot of the file system as a .xcappdata file that you can browse through. Right-click on this file and select Show Package Contents to open the folder. Open the App Data folder, and you should now see a few folders like Documents, Library, tmp, etc.
+To achieve this:
+
+* Connect your device to your Mac and select Window > Devices in the Xcode menubar.
+* Select your device in the left pane under the Devices section.
+* &#x20;This will show a list of developer installed apps for that device.&#x20;
+* Select the app you want to inspect and then the select the gear icon near the bottom of the screen.
+* &#x20;Here you can view the current file system by selecting Show Container or download a snapshot of it.&#x20;
+
+Selecting Download Container... will download and export a snapshot of the file system as a .xcappdata file that you can browse through.
+
+Right-click on this file and select Show Package Contents to open the folder.
+
+Open the App Data folder, and you should now see a few folders like Documents, Library, tmp, etc.
 
 ![image](https://user-images.githubusercontent.com/4084527/166708589-8d500351-e140-41c3-bea2-a037fe35243e.png)
 
