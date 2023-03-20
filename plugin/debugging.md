@@ -76,21 +76,19 @@ and `documents/versions` for hot reload
 
 ### Android
 
-To debug on Android, you just need to access the device from Android Studio:
+To debug on Android, you need to access the device from Android Studio:
 
-Click View > Tool Windows > Device File Explorer or click the Device File Explorer button in the tool window bar to open the Device File Explorer. Select a device from the drop down list. Interact with the device content in the file explorer window. Right-click on a file or directory to create a new file or directory, save the selected file or directory to your machine, upload, delete, or synchronize. Double-click a file to open it in Android Studio.
-
-Android Studio saves files you open this way in a temporary directory outside your project. If you make modifications to a file you opened using the Device File Explorer, and would like to save your changes back to the device, you must manually upload the modified version of the file to the device.
+* Click View > Tool Windows > Device File Explorer or click the Device File Explorer button in the tool window bar to open the Device File Explorer.&#x20;
+* Select a device from the drop down list.
+* Open the path **data/data/APP\_NAME/** where **APP\_NAME is your app ID.**
 
 ![image](https://user-images.githubusercontent.com/4084527/166708728-8f96fc73-5d90-426f-8d27-301697347a5f.png)
 
-When exploring a device's files, the following directories are particularly useful:
-
-data/data/app\_name/
-
 Then Find the `versions` folder to see all the folder versions
 
-on android only one folder is enough.
+{% hint style="info" %}
+On android all version are stored in one folder, unlike IOS where it has to be duplicated in two location.
+{% endhint %}
 
 
 
