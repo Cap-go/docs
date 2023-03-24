@@ -88,7 +88,7 @@ CapacitorUpdater.addListener('majorAvailable', (info: any) => {
 
 ### Advanced settings
 
-To have more control over auto-update system, I added 1 setting to allow you:
+To have more control over auto-update system, I added 2 setting to allow you:
 
 * `resetWhenUpdate` : When store update happen, disable force reset to native version
 
@@ -107,5 +107,19 @@ To configure the plugin, use these settings:
 			"resetWhenUpdate": false
 		}
 	}
+}
+```
+
+* `version` : Send this version to server to identify your version at the first download. This setting disable the plugin to read version in your native code.
+```tsx
+// capacitor.config.json
+{
+    "appId": "**.***.**",
+    "appName": "Name",
+    "plugins": {
+        "CapacitorUpdater": {
+            "version": "1.2.3"
+        }
+    }
 }
 ```
