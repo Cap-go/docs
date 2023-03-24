@@ -6,6 +6,18 @@ All command should be run in your app folder with capacitor project ignited. See
 
 [Capacitor: Cross-platform native runtime for web apps](https://capacitorjs.com/docs/getting-started)
 
+### **Init**
+
+`npx @capgo/cli init [apikey]`&#x20;
+
+This method is here to onboard you step by step.&#x20;
+
+It will add your app to Capgo.&#x20;
+It will add the code to your app to validate update.&#x20;
+It will build your app.&#x20;
+It will upload your app to Capgo.&#x20;
+And it will help you to check if update works.&#x20;
+
 ### **Login**
 
 `npx @capgo/cli login [apikey]`&#x20;
