@@ -62,6 +62,8 @@ download(options: { url: string; version: string; sessionKey?: string; checksum?
 
 Download a new bundle from the provided URL, it should be a zip file, with files inside or with a unique id inside with all your files
 
+If you are using encryption on the bundle, you **have** to indicate the sessionKey to be able to decrypt the zip File. You can get it in the <a href="#latestversion">latestVersion</a> object.
+
 | Param         | Type                                                                                   |
 | ------------- | -------------------------------------------------------------------------------------- |
 | **`options`** | <code>{ url: string; version: string; sessionKey?: string; checksum?: string; }</code> |
