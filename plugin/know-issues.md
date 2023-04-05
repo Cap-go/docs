@@ -20,6 +20,8 @@ Then you self-hoest update, be mindfull you cannot use "http" endpoint it's agai
 
 {% embed url="https://stackoverflow.com/a/51902630/5511370" %}
 
+Unzip issue. if you zipped your bundle with window the format could be incorect, please use the CLI command or ZIP with linux.
+
 ## Build
 
 ### Clearfix issue
