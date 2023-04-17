@@ -57,7 +57,7 @@ export const handler: Handler = async (event) => {
     version_build,
     plugin_version)
   // save it in your database
-  return {}
+  return { status: 'ok' }
 }
 ```
 
@@ -69,7 +69,9 @@ export const handler: Handler = async (event) => {
 * **set\_fail** : when app couldn't find the ID of the bundle set
 * **update\_fail** : send after the delay and \`notifyAppReady\` never called
 * **download\_fail** : when download never finished
-* **download\_complete:** When **** download **** finish
+* **download\_complete:** When download finish
 * **download\_xx:** Send every 10% of download ex : download\_20, download\_70
 * **update\_fail:** when the bundle fail to do notifyAppReady in the timeframe
-*
+
+
+
