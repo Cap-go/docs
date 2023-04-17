@@ -61,6 +61,12 @@ export const handler: Handler = async (event) => {
 }
 ```
 
+This endpoint should return a JSON:
+
+```json
+{ "status": "ok" }
+```
+
 ## Actions:
 
 * **delete** : when a bundle is deleted locally
