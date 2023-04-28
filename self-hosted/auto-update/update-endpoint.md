@@ -56,3 +56,20 @@ export const handler: Handler = async (event) => {
 }
 ```
 
+This endpoint should return a JSON:
+
+```json
+{
+      "version": "1.0.2",
+      "url": "https://apiurl.com/mybuild_102.zip",
+}
+```
+
+And if no update or error:
+
+<pre class="language-json"><code class="lang-json">{
+<strong>      "message": "Error version not found",
+</strong>      "version": "1.0.2",
+      "url": "https://apiurl.com/mybuild_102.zip",
+}
+</code></pre>

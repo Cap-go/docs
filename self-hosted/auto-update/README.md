@@ -76,7 +76,9 @@ If you add "message" and "error" key, the version will not be set and the messag
 \
 \`version\` key should be in [`semver`](https://semver.org/) format .
 
-The zip should have `index.html` a file at the root, or only one folder at the root with `index.html` inside
+The zip should have `index.html` a file at the root, or only one folder at the root with `index.html` inside.\
+You can use the command of the CLI to zip your bundle:\
+\``npx @capgo/cli bundle zip --path [/path/to/my/bundle]`\`
 
 {% content-ref url="update-endpoint.md" %}
 [update-endpoint.md](update-endpoint.md)

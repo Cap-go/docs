@@ -8,21 +8,17 @@ All command should be run in your app folder with capacitor project ignited. See
 
 ### **Init**
 
-`npx @capgo/cli init [apikey]`&#x20;
+`npx @capgo/cli init [apikey]`
 
-This method is here to onboard you step by step.&#x20;
+This method is here to onboard you step by step.
 
-It will add your app to Capgo.&#x20;
-It will add the code to your app to validate update.&#x20;
-It will build your app.&#x20;
-It will upload your app to Capgo.&#x20;
-And it will help you to check if update works.&#x20;
+It will add your app to Capgo. It will add the code to your app to validate update. It will build your app. It will upload your app to Capgo. And it will help you to check if update works.
 
 ### **Login**
 
-`npx @capgo/cli login [apikey]`&#x20;
+`npx @capgo/cli login [apikey]`
 
-This method is here to remember the `apikey` for you.&#x20;
+This method is here to remember the `apikey` for you.
 
 {% hint style="info" %}
 use `--apikey=********` in any command to override it
@@ -30,13 +26,13 @@ use `--apikey=********` in any command to override it
 
 **Optionaly you can give:**
 
-`--local` This will store your **apikey** in the local repo and git ignore it.&#x20;
+`--local` This will store your **apikey** in the local repo and git ignore it.
 
 ## **Doctor**
 
-`npx @capgo/cli doctor`&#x20;
+`npx @capgo/cli doctor`
 
-Command to check if your are up to date with capgo packages.&#x20;
+Command to check if your are up to date with capgo packages.
 
 This command will also be usefull for bug report.
 
@@ -44,7 +40,7 @@ This command will also be usefull for bug report.
 
 ### **Add**
 
-`npx @capgo/cli app add [appId]`&#x20;
+`npx @capgo/cli app add [appId]`
 
 `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
@@ -68,7 +64,7 @@ Example of capacitor.config.json for appId and AppName, the icon is guess in the
 
 ### **List**
 
-`npx @capgo/cli app list [appId]`&#x20;
+`npx @capgo/cli app list [appId]`
 
 `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
@@ -91,14 +87,14 @@ Optionally, you can give:
 
 ### Upload
 
-`npx @capgo/cli bundle upload [appId]`&#x20;
+`npx @capgo/cli bundle upload [appId]`
 
 `[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 Optionally, you can give:
 
 * `--apikey [key]` API key to link to your account.
-* `--path [/path/to/my/app]` to upload a specific folder.
+* `--path [/path/to/my/bundle]` to upload a specific folder.
 * `--channel [test]` to upload to a specific channel.
 * `--external="https://mydomain.com/myapp.zip"` to link to an external URL instead of upload to Capgo cloud, it should be a zip URL in HTTPS.
 * `--key [/path/to/my/private_key]` the path of your private key.
@@ -109,7 +105,7 @@ Optionally, you can give:
 
 > ⭐️ External option help to unlock 2 cases: corporate with privacy concern, don't send the code to a third part and app bigger than 200 MB. With this setting, Capgo store only the link to the zip and send the link to all app.
 
-> 👀 Capgo cloud never look of what is in the link (for external option), or in the code when stored.&#x20;
+> 👀 Capgo cloud never look of what is in the link (for external option), or in the code when stored.
 
 > 🔑 You can add a second layer of security by using encryption, then Capgo will not be able to look or modify anything, it becomes “trustless”.
 
@@ -127,7 +123,7 @@ Example of package.json for version
 
 ### **List**
 
-`npx @capgo/cli bundle list [appId]`&#x20;
+`npx @capgo/cli bundle list [appId]`
 
 `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
@@ -168,25 +164,23 @@ If you have 20 versions in total, and you don't provide a bundle number like thi
 
 ### **Encrypt**
 
-`npx @capgo/cli bundle encrypt [path/to/zip]`&#x20;
+`npx @capgo/cli bundle encrypt [path/to/zip]`
 
-Optionally, you can give:&#x20;
+Optionally, you can give:
 
-`--key [/path/to/my/private_key]` the path of your private key.&#x20;
+`--key [/path/to/my/private_key]` the path of your private key.
 
-`--key-data [privateKey]` the private key data, if you want to use inline. This command is use when you use external source to store your code or for test purpose. The command will print your ivSessionKey and the encrypted zip, you can use it with the&#x20;
+`--key-data [privateKey]` the private key data, if you want to use inline. This command is use when you use external source to store your code or for test purpose. The command will print your ivSessionKey and the encrypted zip, you can use it with the
 
 `--iv-session-key` and `--external` option of the `upload` command, or for decrypting the zip.
-
-
 
 ### **Decrypt**
 
 `npx @capgo/cli bundle decrypt [path/to/zip] [ivSessionKey]`
 
-Optionally, you can give:&#x20;
+Optionally, you can give:
 
-`--key [/path/to/my/private_key]` the path of your private key.&#x20;
+`--key [/path/to/my/private_key]` the path of your private key.
 
 `--key-data [privateKey]` the private key data, if you want to use inline. This command is mainly used for test purpose, it will decrypt the zip and print the base64 decrypted session key in the console.
 
@@ -198,26 +192,26 @@ Optionally, you can give:&#x20;
 
 Optionally, you can give:
 
-* `--path [/path/to/my/app]` to upload a specific folder.
+* `--path [/path/to/my/bundle]` to upload a specific folder.
 * `--bundle [1.0.0]` to set the bundle version number of the fileName.
 
 ## Channel
 
 ### **Create**
 
-`npx @capgo/cli channel create [channelId] [appId]`&#x20;
+`npx @capgo/cli channel create [channelId] [appId]`
 
 `[channelId]` the name of your new channel. `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 ### **Delete**
 
-`npx @capgo/cli channel delete [channelId] [appId]`&#x20;
+`npx @capgo/cli channel delete [channelId] [appId]`
 
 `[channelId]` the name of your channel you want to delete. `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
 ### **List**
 
-`npx @capgo/cli channel list [appId]`&#x20;
+`npx @capgo/cli channel list [appId]`
 
 `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
@@ -270,13 +264,11 @@ Optionally, you can give: `--force` to overwrite the existing key. This command 
 
 `npx @capgo/cli key save`
 
-Optionally, you can give:&#x20;
+Optionally, you can give:
 
-`--key [/path/to/my/private_key]` the path of your private key.&#x20;
+`--key [/path/to/my/private_key]` the path of your private key.
 
 `--key-data [privateKey]` the private key data, if you want to use inline. This command is useful if you followed the recommendation and didn't commit the key in your app, and in the config.
-
-
 
 ## Ci integration
 
