@@ -48,7 +48,7 @@ This command will also be usefull for bug report.
 
 Optionally, you can give:
 
-* `--icon [/path/to/my/icon]` to have a custom icon in the list.
+* `--icon [/path/to/my/icon]` to have a custom icon display in Capgo webapp.
 * `--name [test]` to have a custom name in the list.
 * `--apikey [key]` API key to link to your account.
 
@@ -61,6 +61,18 @@ Example of capacitor.config.json for appId and AppName, the icon is guess in the
   "webDir": "dist",
 }
 ```
+
+### **Set**
+
+`npx @capgo/cli app set [appId]`
+
+`[appId]` is your app ID the format is explained [here](https://capacitorjs.com/docs/cli/commands/init).
+
+Optionally, you can give:
+
+* `--icon [/path/to/my/icon]` to have a custom icon display in Capgo webapp.
+* `--name [test]` to have a custom name in the list.
+* `--apikey [key]` API key to link to your account.
 
 ### **List**
 
