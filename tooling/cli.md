@@ -209,9 +209,9 @@ Optionally, you can give:
 
 ## Channel
 
-### **Create**
+### **Add**
 
-`npx @capgo/cli channel create [channelId] [appId]`
+`npx @capgo/cli channel add [channelId] [appId]`
 
 `[channelId]` the name of your new channel. `[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
 
