@@ -65,11 +65,13 @@ This endpoint should return a JSON:
 }
 ```
 
-And if no update or error:
+And if no update or error, add the `message` key and optionally an `error`
 
-<pre class="language-json"><code class="lang-json">{
-<strong>      "message": "Error version not found",
-</strong>      "version": "1.0.2",
-      "url": "https://apiurl.com/mybuild_102.zip",
+```json
+{
+    "message": "Version not found",
+    "error": "The backend crashed",
+    "version": "1.0.2",
+     "url": "https://apiurl.com/mybuild_102.zip",
 }
-</code></pre>
+```
