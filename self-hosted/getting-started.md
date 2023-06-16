@@ -18,6 +18,31 @@ But to make it possible, it is necessary for all of us to do our part, including
 
 Capgo offer can't suit you, then put your own price and back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your own terms.
 
+## Features parity
+
+If you choose to go with your own server, you lose the 5-min setup flow.\
+You  need to implement yourself all features.\
+\
+Here is the list:
+
+| Features                 | Capgo | Self hosted |
+| ------------------------ | ----- | ----------- |
+| Updates                  | ✅     | 🚧          |
+| Auto revert              | ✅     | 🚧          |
+| Channel                  | ✅     | 🚧          |
+| Channel Override         | ✅     | 🚧          |
+| Device Override          | ✅     | 🚧          |
+| Channel settings         | ✅     | 🚧          |
+| Device settings          | ✅     | 🚧          |
+| Custom ID                | ✅     | 🚧          |
+| Auto set channel         | ✅     | 🚧          |
+| API Channels             | ✅     | 🚧          |
+| Updates Statistics       | ✅     | 🚧          |
+| Fail Download Statistics | ✅     | 🚧          |
+| App Usage Statistics     | ✅     | 🚧          |
+| Update encryption        | ✅     | 🚧          |
+|                          |       |             |
+
 ## Choose between Auto and Manual
 
 {% hint style="warning" %}
@@ -28,6 +53,18 @@ When you update native code (capacitor plugin), you must resubmit to the app sto
 In auto mode, part of logic is handled by the Native code, updates are decided server side, this is more secure and allow fine grain update, partial deploy to one device or group and more.
 
 In manual mode, all the logic is handled by the JS, that some good and some bad in both scenario.
+
+
+
+### Prepare your bundle
+
+To send updates to your app, you need to zip it.\
+\
+The best way to be sure your zip is good is to use the Capgo CLI for zipping.
+
+`npx @capgo/cli/latest bundle zip` will create your zip ready to be uploaded in your backend.
+
+
 
 {% content-ref url="auto-update/" %}
 [auto-update](auto-update/)
