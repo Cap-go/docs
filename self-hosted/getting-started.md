@@ -29,6 +29,7 @@ Here is the list:
 | ------------------------ | ----- | ----------- |
 | Updates                  | ✅     | 🚧          |
 | Auto revert              | ✅     | 🚧          |
+| Email alert on fail      | ✅     | 🚧          |
 | Channel                  | ✅     | 🚧          |
 | Channel Override         | ✅     | 🚧          |
 | Device Override          | ✅     | 🚧          |
@@ -41,7 +42,6 @@ Here is the list:
 | Fail Download Statistics | ✅     | 🚧          |
 | App Usage Statistics     | ✅     | 🚧          |
 | Update encryption        | ✅     | 🚧          |
-|                          |       |             |
 
 ## Choose between Auto and Manual
 
