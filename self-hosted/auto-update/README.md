@@ -43,7 +43,7 @@ You have to configure the plugin to use your URL like that:
 
 ### Update API
 
-The plugin will do POST call to your API each time the app is open, with this body:
+The plugin will do a POST call to your API each time the app is open, with this body:
 
 ```typescript
 interface AppInfos {
@@ -70,7 +70,7 @@ The server API should respond, in JSON, to the capacitor-updater plugin. With th
 }
 ```
 
-In Auto-update the server should do the work of compares the version and return the right one, if URL key is present, the plugin starts the download process.
+In Auto-update the server should do the work of compares the version and return the right one, if the URL key is present, the plugin starts the download process.
 
 If you add "message" and "error" key, the version will not be set, and the message will be displayed in logs instead.\
 \

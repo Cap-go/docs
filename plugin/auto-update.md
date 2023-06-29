@@ -61,7 +61,7 @@ CapacitorUpdater.notifyAppReady()
 
 * When User open app, it calls the server to check for update, if found it download in the background.
 * When the user leaves the app, the new version is set as active
-* When the user open again, he sees the new app
+* When the user opens again, he sees the new app
   * If `notifyAppReady()` is called, when the user leaves, the past version is deleted.
   * If not called, when the user leaves, the version is reset to past one and marked as invalid.
 * User Continue normal flow until the next update process.
@@ -80,7 +80,7 @@ To upload version at each commit setup CI/CD with this guide
 
 #### Major Available event
 
-When `disableAutoUpdateBreaking` is true, you can listen to event to know when app refuse to do major braking update.
+When `disableAutoUpdateBreaking` is true, you can listen to event to know when the app refuses to do a major braking update.
 
 ```jsx
 import { CapacitorUpdater } from '@capgo/capacitor-updater';

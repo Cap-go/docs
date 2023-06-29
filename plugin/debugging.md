@@ -24,7 +24,7 @@
 * **download\_XX** => new bundle has been download from xx % (every 10%)
 * **download\_complete** => new bundle finish download
 * **download\_fail** => new bundle fail download
-* **update\_fail** => new bundle has been installed but failed to call notifyAppReady
+* **update\_fail** => new bundle has been installed but failed to call \`notifyAppReady\`
 * **checksum\_fail** => new bundle fail to validate checksum
 
 ### Bundle status

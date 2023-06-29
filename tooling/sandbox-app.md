@@ -6,9 +6,9 @@ Capgo sandbox app goal:
 
 * Manage your version and channel
 * test versions directly in it.
-* allow other teammates to test versions
+* Allow other teammates to test versions.
 
-It’s the same code as the webapp.
+It’s the same code as the web app.
 
 ## Install
 
@@ -23,7 +23,7 @@ Download the app:
 
 https://user-images.githubusercontent.com/4084527/163660659-df47248e-ebfb-4c54-846e-281fe3248dac.mov
 
-### Test your own app
+### Test your app
 
 Connect your account.
 
@@ -33,7 +33,7 @@ Like below
 
 ![](https://user-images.githubusercontent.com/4084527/163660693-fb5446ea-ec37-48c4-b6a7-f3a9d1870bf5.png)
 
-#### Then click to it to see all version uploaded:
+#### Then click on it to see all versions uploaded:
 
 ![](https://user-images.githubusercontent.com/4084527/163660706-71d10686-a576-4dc4-be2c-a42ce813a198.png)
 
@@ -100,6 +100,6 @@ Shake your phone at any time to see the menu below
 
 
 
-If your app use module, there are not installed in the sandbox app, your app may crash. if that happen, you could be in a situation where you cannot go out back to the app.\
-If that happen, uninstall the sandbox app and install again.\
-I search better solution for the future.\
+If your app uses module, there are not installed in the sandbox app, your app may crash. If that happens, you could be in a situation where you cannot go out back to the app.\
+If that happens, uninstall the sandbox app and install again.\
+I am searching better solution for the future.\

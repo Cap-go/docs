@@ -20,8 +20,8 @@ Capgo offer can't suit you, then put your price and back a bootstrapped Maker [H
 
 ## Features parity
 
-If you choose to go with your own server, you lose the 5-min setup flow.\
-You  need to implement yourself all features.\
+If you choose to go with your server, you lose the 5-min setup flow.\
+You need to implement yourself all features.\
 \
 Here is the list:
 
@@ -43,6 +43,10 @@ Here is the list:
 | App Usage Statistics     | ✅     | 🚧          |
 | Update encryption        | ✅     | 🚧          |
 
+> If you send a wrong update to your users you can break their app.
+
+> Be mindful that you can't use the Capgo cloud and your server at the same time.
+
 ## Choose between Auto and Manual
 
 {% hint style="warning" %}
@@ -54,13 +58,11 @@ In auto mode, part of the logic is handled by the Native code, updates are decid
 
 In manual mode, all the logic is handled by the JS, that some good and some bad in both scenarios.
 
-
-
 ### Prepare your bundle
 
 To send updates to your app, you need to zip it.\
 \
-The best way to be sure your zip is good is to use the Capgo CLI for zipping.
+The best way to be certain your zip is good is to use the Capgo CLI for zipping.
 
 `npx @capgo/cli/latest bundle zip` will create your zip ready to be uploaded in your backend.
 

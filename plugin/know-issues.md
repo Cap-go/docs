@@ -16,11 +16,11 @@
 
 ### Self-hosted
 
-Then you self-hoest update, be mindful you cannot use "http" endpoint it's again the security rule of Android apps, if you want to try it, follow this guide:
+Then you self-host update, be mindful you cannot use "HTTP" endpoint it's again the security rule of Android apps, if you want to try it, follow this guide:
 
 {% embed url="https://stackoverflow.com/a/51902630/5511370" %}
 
-Unzip issue. If you zipped your bundle with window the format could be incorrect, please use the CLI command or ZIP with linux.
+Unzip issue. If you zipped your bundle with Window, the format could be incorrect, please use the CLI command or ZIP with Linux.
 
 ## Build
 

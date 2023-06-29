@@ -17,5 +17,5 @@ The Android version is easier to do since both use java, but iOS needs a full re
 We have many solutions to solve that :
 
 * [Support me](https://github.com/sponsors/riderx) on GitHub and I can prioritize that. This will need at least 1 month of work.
-* Hire me as Consultant, I used to help big company migrate to capacitor, it usually takes from 10 to 20 days, and the [benefit](https://ionic.io/resources/articles/capacitor-vs-cordova-modern-hybrid-app-development) is huge for the team
-* Wait until this come out, it is very low in the to-do for now.
+* Hire me as a Consultant, I used to help big company migrate to capacitor, it usually takes from 10 to 20 days, and the [benefit](https://ionic.io/resources/articles/capacitor-vs-cordova-modern-hybrid-app-development) is huge for the team
+* Wait until this comes out, it is very low on the to-do for now.

@@ -24,7 +24,7 @@ Download a new version from the provided URL, it should be a zip file, with file
 set(options: { version: string; versionName?: string; }) => Promise<void>
 ```
 
-Set version as current version, set will return an error if there are is no index.html file inside the version folder. `versionName` is optional, and it's a custom value that will be saved for you
+Set version as current version, set will return an error if there are is no index.html file inside the version folder. `versionName` is optional, and it's a custom value that will be saved for you.
 
 | Param         | Type                                         |
 | ------------- | -------------------------------------------- |
@@ -38,7 +38,7 @@ Set version as current version, set will return an error if there are is no inde
 getId() => Promise<{ id: string; }>
 ```
 
-Get unique ID used to identify device into auto update server
+Get unique ID used to identify device into auto-update server
 
 **Returns:** `Promise<{ id: string; }>`
 
@@ -76,7 +76,7 @@ Get all available versions
 reset(options?: { toAutoUpdate?: boolean | undefined; } | undefined) => Promise<void>
 ```
 
-Set the `builtin` version (the one sent to Apple store / Google play store ) as current version
+Set the `builtin` version (the one sent to Apple Store / Google Play Store ) as the current version
 
 | Param         | Type                          |
 | ------------- | ----------------------------- |
@@ -90,7 +90,7 @@ Set the `builtin` version (the one sent to Apple store / Google play store ) as 
 current() => Promise<{ current: string; currentNative: string; }>
 ```
 
-Get the current version, if none are set it returns `builtin`, currentNative is the original version install on the device
+Get the current version, if none is set it returns `builtin`, `currentNative` is the original version install on the device
 
 **Returns:** `Promise<{ current: string; currentNative: string; }>`
 
@@ -158,7 +158,7 @@ CapacitorUpdater.addListener('download', (info: any) => {
 });
 ```
 
-On iOS, Apple don't allow you to show a message when the app is updated, so you can't show a progress bar.
+On iOS, Apple doesn't allow you to show a message when the app is updated, so you can't show a progress bar.
 
 ### Angular specific
 
@@ -203,7 +203,7 @@ Listen for download event in the App, let you know when the download is started,
 addListener(eventName: 'majorAvailable', listenerFunc: MajorAvailableListener) => Promise<PluginListenerHandle> & PluginListenerHandle
 ```
 
-Listen for Major update event in the App, let you know when major update is blocked by setting disableAutoUpdateBreaking
+Listen for Major update events in the App, let you know when a major update is blocked by setting `disableAutoUpdateBreaking`
 
 | Param              | Type                     |
 | ------------------ | ------------------------ |
@@ -222,7 +222,7 @@ Listen for Major update event in the App, let you know when major update is bloc
 addListener(eventName: 'updateAvailable', listenerFunc: UpdateAvailableListener) => Promise<PluginListenerHandle> & PluginListenerHandle
 ```
 
-Listen for update event in the App, let you know when update is ready to install at next app start
+Listen for update event in the App, let you know when the update is ready to install at next app start
 
 | Param              | Type                      |
 | ------------------ | ------------------------- |
@@ -307,7 +307,7 @@ After install capacitor-updater to your project, you can configure some behavior
 * `resetWhenUpdate` set it false to disable the reset version when update
 * `autoUpdateUrl` the target URL to get updates
 * `autoUpdate` true or false depend on if you want manual or auto
-* `statsUrl` the target URL for stats set it to "" to disable stats
+* `statsUrl` the target URL for stats, set it to "" to disable stats
 
 
 
