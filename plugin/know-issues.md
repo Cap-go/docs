@@ -6,29 +6,29 @@
 
 ## Quasar live reload
 
-* it use the same system as ionic under the hood, so you will not see your updates.
+* It uses the same system as ionic under the hood, so you will not see your updates.
 
 ## Update fail
 
-* Big app update (> 20mb) will have a big percentage of user who doesn't get the last version.  In the past Users need to keep the app open until download is done, now we use background download, but it's still limited to few seconds.
+* Big app update (> 20mb) will have a big percentage of users who doesn't get the last version.  In the past, users needed to keep the app open until the download was done, now we use background download, but it's still limited to a few seconds.
 
 ## Android
 
 ### Self-hosted
 
-Then you self-hoest update, be mindfull you cannot use "http" endpoint it's again the security rule of Android apps, if you wan to try it follow this guide:
+Then you self-hoest update, be mindful you cannot use "http" endpoint it's again the security rule of Android apps, if you want to try it, follow this guide:
 
 {% embed url="https://stackoverflow.com/a/51902630/5511370" %}
 
-Unzip issue. if you zipped your bundle with window the format could be incorect, please use the CLI command or ZIP with linux.
+Unzip issue. If you zipped your bundle with window the format could be incorrect, please use the CLI command or ZIP with linux.
 
 ## Build
 
 ### Clearfix issue
 
-* if you have issue with usesCleartextTraffic, it's because the plugin follow the good practice recommended by sonar cloud, in 90 % of the case it will work, but with some plugin that cause issue.
+* If you have issue with usesCleartextTraffic, it's because the plugin follows the good practice recommended by sonar cloud, in 90% of the case it will work, but with some plugins that cause issue.
 
-To fix it add in `android/app/src/main/AndroidManifest.xml` in the `<application>` key :
+To fix it, add in `android/app/src/main/AndroidManifest.xml` in the `<application>` key :
 
 ```xml
 tools:replace="android:usesCleartextTraffic"
@@ -41,13 +41,13 @@ xmlns:tools="http://schemas.android.com/tools"
 
 ### GetConfig
 
-This problem happen when your app use capacitor 3 with Capgo 4, upgrade your app to v4 or use Capgo v3 ( not recommended it's deprecated and soon will not work)
+This problem happens when your app uses capacitor 3 with Capgo 4, upgrade your app to v4 or use Capgo v3 (not recommended it's deprecated and soon will not work)
 
 <figure><img src="../.gitbook/assets/issue_get_config.png" alt=""><figcaption></figcaption></figure>
 
 ## CLI
 
-if your CLI has trouble to do the basic action,
+if your CLI has trouble doing the basic action,
 
 Check if **appId** and **appName** are present in your **capacitor.config.ts**
 

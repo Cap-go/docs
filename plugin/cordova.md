@@ -10,7 +10,7 @@ I have stared R\&D repository for that, but it's a huge work.
 
 I know I can do it. For that, I have to read all the code of Cordova codebase as I did for Capacitor, to understand how to make it work.
 
-The Android version is easier to do since both use java, but iOS need a full rewrite, Swift it's still not well-supported in Cordova.
+The Android version is easier to do since both use java, but iOS needs a full rewrite, Swift it's still not well-supported in Cordova.
 
 ## Solution
 

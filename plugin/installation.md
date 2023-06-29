@@ -14,4 +14,4 @@ CapacitorUpdater.notifyAppReady();
 
 Then you are all set.\
 \
-\`notifyAppReady\` is important for your app it allow the plugin to validate your update run properly.
+\`notifyAppReady\` is important for your app, it allows the plugin to validate your update run properly.

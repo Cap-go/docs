@@ -8,7 +8,7 @@ It allows developers to use capacitor-updater with auto-update mode link to Capg
 
 The only, thing you need to do before using Capgo auto-update is using [https://semver.org/](https://semver.org/) for your app versioning.
 
-This is the convention it used to manage version. This convention should be use in 3 files in your project:
+This is the convention it used to manage versions. This convention should be used in 3 files in your project:
 
 * `package.json` in **version**
 * `android/app/build.gradle` in **versionName**
@@ -37,15 +37,15 @@ npx cap sync
 
 Click on [register](https://capgo.app) to create your account if you don't have one.
 
-The server allows you to manage channel and version and much more.
+The server allows you to manage channel and versions and much more.
 
 `autoUpdate` will use data from \`capacitor.config\` to identify into the Capgo server
 
-> ℹ️ You can use Capgo Cloud without sending your code to our server. If that not allowed by your company
+> ℹ️ You can use Capgo Cloud without sending your code to our server. If that not allowed by your company.
 
 #### Validate version
 
-When auto-update is setup you have to send signal from JS that your app is alive
+When auto-update is setup you have to send a signal from JS that your app is alive
 
 This can be done by calling within your app `notifyAppReady`.
 
@@ -59,16 +59,20 @@ CapacitorUpdater.notifyAppReady()
 
 #### User flow
 
-* When User open app, it calls server to check for update, if found it download in background.
-* When user leave the app, new version is set as active
-* When user open again, he sees new app
-  * If `notifyAppReady()` is call, when user leave, past version is delete.
-  * If not call, when user leave, version is reset to past one and marked as invalid.
-* User Continue normal flow until next update process
+* When User open app, it calls the server to check for update, if found it download in the background.
+* When the user leaves the app, the new version is set as active
+* When the user open again, he sees the new app
+  * If `notifyAppReady()` is called, when the user leaves, the past version is deleted.
+  * If not called, when the user leaves, the version is reset to past one and marked as invalid.
+* User Continue normal flow until the next update process.
 
 #### Dev flow
 
-When you develop, be sure to remove `autoUpdate` from your config or set it to false. Otherwise, you will not see your change after app grounding. If you forget to do so, remove it and remove the app before building. Otherwise, you will stay stuck on the downloaded code.
+When you develop new features, be sure to block `autoUpdate`, otherwise you will not see your work but the updates.
+ Set `autoUpdate` to false in your config. 
+ If you are stuck on an update, you can delete the app and reinstall it.
+ Be sure to set `autoUpdate` to false in your config before doing that.
+ And then build it again with Xcode or Android studio.
 
 To upload version at each commit setup CI/CD with this guide
 
@@ -90,7 +94,7 @@ CapacitorUpdater.addListener('majorAvailable', (info: any) => {
 
 To have more control over auto-update system, I added 2 setting to allow you:
 
-* `resetWhenUpdate` : When store update happen, disable force reset to native version
+* `resetWhenUpdate` : When store update happens, disable force reset to the native version
 
 You have also other config available only on the [web app](https://web.capgo.app/login)
 
@@ -110,7 +114,7 @@ To configure the plugin, use these settings:
 }
 ```
 
-* `version` : Send this version to server to identify your version at the first download. This setting disable the plugin to read version in your native code.
+* `version` : Send this version to the server to identify your version at the first download. This setting disables the plugin to read the version in your native code.
 ```tsx
 // capacitor.config.json
 {

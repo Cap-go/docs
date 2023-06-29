@@ -16,7 +16,7 @@ Likewise, I do think it would make our world a better place by opening instead o
 
 But to make it possible, it is necessary for all of us to do our part, including you 🥹.
 
-Capgo offer can't suit you, then put your own price and back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your own terms.
+Capgo offer can't suit you, then put your price and back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your terms.
 
 ## Choose between Auto and Manual
 
@@ -25,9 +25,9 @@ Capgo offer can't suit you, then put your own price and back a bootstrapped Make
 When you update native code (capacitor plugin), you must resubmit to the app store.
 {% endhint %}
 
-In auto mode, part of logic is handled by the Native code, updates are decided server side, this is more secure and allow fine grain update, partial deploy to one device or group and more.
+In auto mode, part of the logic is handled by the Native code, updates are decided server side, this is more secure and allows fine grain update, partial deploy to one device or group and more.
 
-In manual mode, all the logic is handled by the JS, that some good and some bad in both scenario.
+In manual mode, all the logic is handled by the JS, that some good and some bad in both scenarios.
 
 {% content-ref url="auto-update/" %}
 [auto-update](auto-update/)

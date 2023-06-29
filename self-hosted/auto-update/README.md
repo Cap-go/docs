@@ -1,4 +1,4 @@
-# Auto update
+# Auto-update
 
 This documentation will explain how to run your own auto-update server.
 
@@ -16,9 +16,9 @@ Likewise, I do think it would make our world a better place by opening instead o
 
 But to make it possible, it is necessary for all of us to do our part, including you 🥹.
 
-Capgo offer can't suit you, then put your own price and back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your own terms.
+Capgo offer can't suit you, then put your price and back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your terms.
 
-## Quick install
+## Quick installs
 
 ```
 npm install @capgo/capacitor-updater
@@ -27,7 +27,7 @@ npx cap sync
 
 ### Configuration
 
-You have to configure the plugin to use your own URL like that:
+You have to configure the plugin to use your URL like that:
 
 ```json
 {
@@ -39,7 +39,7 @@ You have to configure the plugin to use your own URL like that:
 }
 ```
 
-> 🚧 In android it's not allowed to request to http, for testing purposes [allow it](https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted)
+> 🚧 In android it's not allowed to request to HTTP, for testing purposes [allow it](https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted)
 
 ### Update API
 
@@ -61,7 +61,7 @@ interface AppInfos {
 }
 ```
 
-The server API should respond, in JSON, to the capacitor-updater plugin. with this data if update is necessary:
+The server API should respond, in JSON, to the capacitor-updater plugin. With this data if update is necessary:
 
 ```json
 {
@@ -70,9 +70,9 @@ The server API should respond, in JSON, to the capacitor-updater plugin. with th
 }
 ```
 
-In Auto-update the server should do the work of compares the version and return the right one, if url key is present, the plugin start the download process.
+In Auto-update the server should do the work of compares the version and return the right one, if URL key is present, the plugin starts the download process.
 
-If you add "message" and "error" key, the version will not be set and the message will be display in logs instead.\
+If you add "message" and "error" key, the version will not be set, and the message will be displayed in logs instead.\
 \
 \`version\` key should be in [`semver`](https://semver.org/) format .
 
@@ -86,13 +86,13 @@ You can use the command of the CLI to zip your bundle:\
 
 #### End-to-end Encryption
 
-Starting with version 4.15.0 the plugin allow you to send encrypted updates.
+Starting with version 4.15.0 the plugin allows you to send encrypted updates.
 
 You can use this feature by creating a private key \``npx @capgo/cli key create`\`
 
 Then you encrypt your zip file with \``npx @capgo/cli encrypt [path/to/zip]`\`
 
-The command will print you an `ivSessionKey` it has to be send with your update payload in the key `session_key`.\
+The command will print you a `ivSessionKey` it has to be sent with your update payload in the key `session_key`.\
 Then your app will be able to use the private key to decrypt the `session_key` and use the decrypted `session_key` to decrypt the update.
 
 Learn more about it here:
@@ -101,11 +101,11 @@ Learn more about it here:
 
 ### Statistics API
 
-Starting from version 1.3.0 the update system send stats!
+Starting from version 1.3.0 the update system sends stats!
 
 By default, all stats are sent to our server, to understand usage.
 
-> 💡 No private data are sent for stats, only random UUID, version update, version native app, platform, action, and app ID.
+> 💡 No private data is sent for stats, only random UUID, version update, version native app, platform, action, and app ID.
 
 If you want to send data to your server instead, change the config below:
 
@@ -142,7 +142,7 @@ interface AppInfosStats {
 }
 ```
 
-You can also totally disable it, with empty string. Keep in mind, statistic are made private friendly and help me to understand how people use the plugin, to resolve issue and improve it.
+You can also totally disable it, with an empty string. Keep in mind, statistics are made private friendly and help me to understand how people use the plugin, to resolve issues and improve it.
 
 {% content-ref url="stats-endpoint.md" %}
 [stats-endpoint.md](stats-endpoint.md)

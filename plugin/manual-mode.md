@@ -6,7 +6,7 @@ If you want to use manual mode without Capgo cloud, please refer to self-hosted 
 [manual.md](../self-hosted/manual.md)
 {% endcontent-ref %}
 
-## Quick install
+## Quick installs
 
 ```
 npm install @capgo/capacitor-updater
@@ -15,7 +15,7 @@ npx cap sync
 
 #### Config
 
-Add this to your config, to disable auto update:
+Add this to your config, to disable auto-update:
 
 ```tsx
 // capacitor.config.json

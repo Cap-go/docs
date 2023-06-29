@@ -4,24 +4,24 @@
 
 ### Send from the backend
 
-* **InvalidIp** => the user is located in Google data center and the update is less than 4 hours old, this have been made to prevent Google bots device to count as device in your account
-* **needPlanUpgrade** (previously **needUpgrade**) => Mean you have reach the limit of your plan, and device will not receive update until you upgrade or next month.
+* **InvalidIp** => the user is located in Google data center and the update is less than 4 hours old, this has been made to prevent Google bots device to count as device in your account
+* **needPlanUpgrade** (previously **needUpgrade**) => Mean you have reached the limit of your plan, and device will not receive update until you upgrade or next month.
 * **noNew** => The device has the latest version available
-* **disablePlatformIos** => The device is on ios platform but that disable in channel settings
-* **disablePlatformAndroid** => The device is on android platform but that disable in channel settings
+* **disablePlatformIos** => The device is on iOS platform but that disabled in channel settings
+* **disablePlatformAndroid** => The device is on android platform but that disabled in channel settings
 * **disableAutoUpdateToMajor** => The device has a version (**1**.2.3) and the channel has major update (**2**.0.0) to send but that disable in channel settings
-* **disableAutoUpdateUnderNative** =>The device has a version (1.2.**3**) and the channel has  update (1.2.**2**) under the device version to send but that disable in channel settings
+* **disableAutoUpdateUnderNative** => The device has a version (1.2.**3**) and the channel has updated (1.2.**2**) under the device version to send but that disable in channel settings
 * **disableDevBuild** => The device has a dev build but that disable in channel settings
-* **disableEmulator** => The device is an emulator but that disable in channel settings
+* **disableEmulator** => The device is an emulator but that disable in channel settings.
 
 ### Send from the device
 
-* **get** => Info for download new version has been send to device
-* **delete** => one bundle has been delete in the device
+* **get** => Info for download new version has been sent to device
+* **delete** => one bundle has been deleted in the device
 * **set** => bundle has been set on the device
 * **set\_fail** => bundle failed to set&#x20;
 * **reset** => device reset ton **builtin** bundle
-* **download\_XX** => new bundle has been downloat from xx % ( every 10%)
+* **download\_XX** => new bundle has been download from xx % (every 10%)
 * **download\_complete** => new bundle finish download
 * **download\_fail** => new bundle fail download
 * **update\_fail** => new bundle has been installed but failed to call notifyAppReady
@@ -33,13 +33,13 @@
 * ERROR: install or download failed
 * PENDING: Download done, pending release
 * DELETED: Bundle deleted still present for stats
-* DOWNLOADING: Curently downloading a bundle
+* DOWNLOADING: Currently downloading a bundle
 
 
 
 ## Understanding device logs:
 
-### Ios
+### IOS
 
 to find your logs on Xcode&#x20;
 
@@ -56,7 +56,7 @@ to find your logs on Android studio
 * `Failed to download from` **=>** same as **download\_fail**
 * `notifyAppReady was not called, roll back current bundle` => same as as **update\_fail**
 
-## Finding the downloaded bundle in your devide
+## Finding the downloaded bundle in your device
 
 ### iOS
 
@@ -91,7 +91,7 @@ and `documents/versions` for hot reload
 To debug on Android, you need to access the device from Android Studio:
 
 * Click View > Tool Windows > Device File Explorer or click the Device File Explorer button in the tool window bar to open the Device File Explorer.&#x20;
-* Select a device from the drop down list.
+* Select a device from the dropdown list.
 * Open the path **data/data/APP\_NAME/** where **APP\_NAME is your app ID.**
 
 ![image](https://user-images.githubusercontent.com/4084527/166708728-8f96fc73-5d90-426f-8d27-301697347a5f.png)

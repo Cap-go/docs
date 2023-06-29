@@ -4,7 +4,7 @@
 
 This is the documentation of the backend API of Capgo cloud
 
-You can access to the API you need to add in the headers your API key as `authorization` you get it [there](https://web.capgo.app/dashboard/apikeys)
+You can access to the API. You need to add in the headers your API key as `authorization`. You get it [there](https://web.capgo.app/dashboard/apikeys)
 
 ## Channels
 
@@ -42,8 +42,8 @@ receive this:
 
 `https://api.capgo.app/channel`
 
-Send `app_id` as URL parameter and receive array of 50 first channel.\
-You can get next one by sending `page=1`
+Send `app_id` as URL parameter and receive array of 50 first channels.\
+You can get the next one by sending `page=1`
 
 ```typescript
 interface Channel {
@@ -135,7 +135,7 @@ receive this:
 `https://api.capgo.app/device`
 
 Send `app_id` as URL parameter and receive array of 50 first devices.\
-You can get next one by sending `page=1`
+You can get the next one by sending `page=1`
 
 ```typescript
 interface Device{
@@ -177,7 +177,7 @@ interface Device {
 
 ### DELETE
 
-This endpoint is for unlink channel and version override. You can't delete a device from capgo
+This endpoint is for unlink channel and version override. You can't delete a device from Capgo
 
 `https://api.capgo.app/device`
 
@@ -199,14 +199,12 @@ receive this:
 
 This endpoint allows you to check and delete all bundles link to your app.
 
-> legacy name version the URL will be remove in january 2023
-
 ### GET
 
 `https://api.capgo.app/bundle`
 
-Send `app_id` as URL parameter and receive array of 50 first bunles.\
-You can get next one by sending `page=1`
+Send `app_id` as URL parameter and receive array of 50 first bundles.\
+You can get the next one by sending `page=1`
 
 ```typescript
 interface Bundle {

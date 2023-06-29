@@ -15,7 +15,7 @@ I do think it would make our world a better place by opening instead of fighting
 
 To make it possible, it is necessary for all of us to do our part, including you 🥹.
 
-If Capgo cloud offer can't suit you, back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your own terms.
+If Capgo cloud offer can't suit you, back a bootstrapped Maker [HERE](https://github.com/sponsors/riderx) on your terms.
 {% endhint %}
 
 ## Quick install
@@ -27,7 +27,7 @@ npx cap sync
 
 #### Config
 
-Add this to your config, to disable auto update:
+Add this to your config, to disable auto-update:
 
 ```tsx
 // capacitor.config.json
