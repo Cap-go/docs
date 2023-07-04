@@ -1,10 +1,9 @@
 # Manual mode
 
-If you want to use manual mode without Capgo cloud, please refer to the self-hosted section
+If you want to manage yourself when update is applied.\
+Use manual mode with Capgo cloud.
 
-{% content-ref url="../self-hosted/manual.md" %}
-[manual.md](../self-hosted/manual.md)
-{% endcontent-ref %}
+Here is what you need to do:
 
 ## Quick installs
 
@@ -30,15 +29,19 @@ Add this to your config, to disable auto-update:
 }
 ```
 
-Then add to your app
+Then add manage update yourself.\
+Here is an example on how you can do it:
 
 ```typescript
 import { CapacitorUpdater } from '@capgo/capacitor-updater'
 import type { BundleInfo } from '@capgo/capacitor-updater'
 import { SplashScreen } from '@capacitor/splash-screen'
 import { App } from '@capacitor/app'
+
 CapacitorUpdater.notifyAppReady()
+
 let data: BundleInfo | null = null
+
 App.addListener('appStateChange', async (state: any) => {
   console.log('appStateChange', state)
   if (state.isActive) {
@@ -68,3 +71,11 @@ App.addListener('appStateChange', async (state: any) => {
   }
 })
 ```
+
+Documentation of all Available API in the plugin:
+
+[api.md](api.md "mention")\
+
+
+There are some usecase you can allow users to subscribe to channels and try different version:\
+[https://capgo.app/blog/how-to-send-specific-version-to-users/](https://capgo.app/blog/how-to-send-specific-version-to-users/)
