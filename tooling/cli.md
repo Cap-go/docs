@@ -104,7 +104,7 @@ Optionally, you can give:
 Optionally, you can give:
 
 * `--apikey [key]` API key to link to your account.
-* `--deviceId` with the specific device you want to debug
+* `--device` with the specific device you want to debug
 
 ## Bundle
 
