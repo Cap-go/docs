@@ -95,6 +95,17 @@ Optionally, you can give:
 * `--apikey [key]` API key to link to your account.
 * `--bundle` with the version number will only delete this version.
 
+### Debug
+
+`npx @capgo/cli app debug [appId]`
+
+`[appId]` your app ID the format `com.test.app` is explained [here](https://capacitorjs.com/docs/cli/commands/init).
+
+Optionally, you can give:
+
+* `--apikey [key]` API key to link to your account.
+* `--deviceId` with the specific device you want to debug
+
 ## Bundle
 
 ### Upload
