@@ -19,7 +19,7 @@
 * **get** => Info for download new version has been sent to device
 * **delete** => one bundle has been deleted in the device
 * **set** => bundle has been set on the device
-* **set\_fail** => bundle failed to set&#x20;
+* **set\_fail** => bundle failed to set
 * **reset** => device reset ton **builtin** bundle
 * **download\_XX** => new bundle has been download from xx % (every 10%)
 * **download\_complete** => new bundle finish download
@@ -35,13 +35,20 @@
 * DELETED: Bundle deleted still present for stats
 * DOWNLOADING: Currently downloading a bundle
 
-
-
 ## Understanding device logs:
+
+### Debug command:
+
+There is a debug command for Capgo cloud users.\
+`npx @capgo/cli@latest app debug`
+
+`This will allow you to check all event happening in app and find solution if update don't happen`
+
+
 
 ### IOS
 
-to find your logs on Xcode&#x20;
+to find your logs on Xcode
 
 {% embed url="https://intercom.help/deploygate/en/articles/4682692-getting-the-device-log-in-xcode" %}
 
@@ -68,9 +75,9 @@ To achieve this:
 
 * Connect your device to your Mac and select Window > Devices in the Xcode menubar.
 * Select your device in the left pane under the Devices section.
-* &#x20;This will show a list of developer installed apps for that device.&#x20;
+* This will show a list of developer installed apps for that device.
 * Select the app you want to inspect and then the select the gear icon near the bottom of the screen.
-* &#x20;Here you can view the current file system by selecting Show Container or download a snapshot of it.&#x20;
+* Here you can view the current file system by selecting Show Container or download a snapshot of it.
 
 Selecting Download Container... will download and export a snapshot of the file system as a .xcappdata file that you can browse through.
 
@@ -90,7 +97,7 @@ and `documents/versions` for hot reload
 
 To debug on Android, you need to access the device from Android Studio:
 
-* Click View > Tool Windows > Device File Explorer or click the Device File Explorer button in the tool window bar to open the Device File Explorer.&#x20;
+* Click View > Tool Windows > Device File Explorer or click the Device File Explorer button in the tool window bar to open the Device File Explorer.
 * Select a device from the dropdown list.
 * Open the path **data/data/APP\_NAME/** where **APP\_NAME is your app ID.**
 
@@ -101,8 +108,6 @@ Then Find the `versions` folder to see all the folder versions
 {% hint style="info" %}
 On android all version are stored in one folder, unlike IOS where it has to be duplicated in two location.
 {% endhint %}
-
-
 
 ## Understand ios production crash
 
