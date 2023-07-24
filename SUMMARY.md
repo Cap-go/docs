@@ -8,6 +8,7 @@
 * [Installation](plugin/installation.md)
 * [Methods](plugin/api.md)
 * [Auto update](plugin/auto-update.md)
+* [Force update](plugin/force-update.md)
 * [Manual mode](plugin/manual-mode.md)
 * [Channel system](plugin/channel-system.md)
 * [Debugging](plugin/debugging.md)
