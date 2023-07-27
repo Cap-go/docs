@@ -186,7 +186,7 @@ If you have 20 versions in total, and you don't provide a bundle number like thi
 > This command will ask for confirmation, it shows a table of what it will be keeping and removing.
 
 {% hint style="info" %}
-This command will always keep bundle who are in use in channels.
+This command will ignore bundles which are currently in use in any channel.
 {% endhint %}
 
 ### **Encrypt**
