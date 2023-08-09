@@ -24,6 +24,7 @@
 
 ## Upgrade
 
+* [From V4 to V5](upgrade/from-v4-to-v5.md)
 * [From V3 to V4](upgrade/from-v3-to-v4.md)
 * [From V2 to V3](upgrade/from-v2-to-v3.md)
 * [CLI From 0.x to 1.x](upgrade/cli-from-0.x-to-1.x.md)

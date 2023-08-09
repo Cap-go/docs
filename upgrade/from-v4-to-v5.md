@@ -2,14 +2,18 @@
 
 ## Why this upgrade
 
-This is necessary to switch to capacitor 5,
+This major version is here to follow Capacitor major version
 
-## install
+First follow the migration guide of Capacitor:
 
-`npm i @capgo/capacitor-updater@latest`
+[https://capacitorjs.com/docs/updating/5-0](https://capacitorjs.com/docs/updating/5-0)
 
-## Auto-update cloud
+## Install
 
-If you use the basic example in your app, you are safe to migrate to the new version, enjoy!
+`npm i @capgo/capacitor-updater@5`
 
-There are no significant changes.
+`Then sync the native code update:`
+
+`npx cap sync`
+
+That it ! Pretty easy !
