@@ -1,9 +1,8 @@
 ---
-title: "a"
+title: "Sandbox App"
+sidebar:
+  order: 4
 ---
-# Sandbox App
-
-
 
 Capgo sandbox app goal:
 
@@ -101,8 +100,6 @@ Shake your phone at any time to see the menu below
 
 ## Troubleshooting
 
-
-
 If your app uses module, there are not installed in the sandbox app, your app may crash. If that happens, you could be in a situation where you cannot go out back to the app.\
 If that happens, uninstall the sandbox app and install again.\
-I am searching better solution for the future.\
+I am searching better solution for the future.

@@ -1,7 +1,8 @@
 ---
-title: "a"
+title: "API"
+sidebar:
+  order: 2
 ---
-# API
 
 ## Intro
 

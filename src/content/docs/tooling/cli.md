@@ -1,7 +1,8 @@
 ---
-title: "a"
+title: "CLI"
+sidebar:
+  order: 1
 ---
-# CLI
 
 ### Usage
 
@@ -23,9 +24,9 @@ It will add your app to Capgo. It will add the code to your app to validate the 
 
 This method is here to remember the `apikey` for you.
 
-{% hint style="info" %}
+:::note
 use `--apikey=********` in any command to override it
-{% endhint %}
+:::
 
 **Optionaly you can give:**
 
@@ -188,9 +189,9 @@ If you have 20 versions in total, and you don't provide a bundle number like thi
 
 > This command will ask for confirmation, it shows a table of what it will be keeping and removing.
 
-{% hint style="info" %}
+:::note
 This command will ignore bundles which are currently in use in any channel.
-{% endhint %}
+:::
 
 ### **Encrypt**
 
@@ -280,7 +281,7 @@ The encryption system is a combination of RSA and AES, the RSA key is used to en
 
 See below for more information about the encryption system.
 
-<figure><img src="../.gitbook/assets/crypto_explained.png" alt=""><figcaption><p>Ecryption schema</p></figcaption></figure>
+<figure><img src="/crypto_explained.png" alt=""><figcaption><p>Ecryption schema</p></figcaption></figure>
 
 ### Create key for your app
 

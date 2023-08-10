@@ -19,12 +19,12 @@ export default defineConfig({
           autogenerate: { directory: 'plugin' },
         },
         {
-          label: 'Self Hosted',
-          autogenerate: { directory: 'self-hosted' },
-        },
-        {
           label: 'Tooling',
           autogenerate: { directory: 'tooling' },
+        },
+        {
+          label: 'Self Hosted',
+          autogenerate: { directory: 'self-hosted' },
         },
         {
           label: 'Upgrade',
