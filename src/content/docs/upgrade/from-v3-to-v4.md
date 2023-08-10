@@ -1,7 +1,8 @@
 ---
-title: "a"
+title: "From V3 to V4"
+sidebar:
+  order: 2
 ---
-# From V3 to V4
 
 ## Why this upgrade
 
@@ -53,9 +54,6 @@ interface BundleInfo {
 * list returns now a list of `BundleInfo`
 * Rename `getId` in `getDeviceId`
 * `autoUpdate` becomes true by default, if you use Manual mode, set it to false.
-*
-
-``
 
 ## News
 
@@ -66,7 +64,6 @@ interface BundleInfo {
 * Event `downloadComplete` when download reach 100%
 * Added mandatory field `version` in download method
 * `notifyAppReady` become mandatory in manual mode too, if not call after 10 sec the app reverts to past version.
-*
 
 ## Contributors
 

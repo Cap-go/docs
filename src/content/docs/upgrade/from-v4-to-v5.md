@@ -1,7 +1,8 @@
 ---
-title: "a"
+title: "From V4 to V5"
+sidebar:
+  order: 1
 ---
-# From V4 to V5
 
 ## Why this upgrade
 
@@ -21,14 +22,8 @@ First follow the migration guide of Capacitor:
 
 That it ! Pretty easy !
 
-\
-\
-Manual mode
------------
+## Manual mode
 
-
-
-If you were getting yourself the update with getLatest, there are a tiny change.\
-\
-Now if you are up-to-date already it will go into catch.\
+If you were getting yourself the update with getLatest, there are a tiny change.
+Now if you are up-to-date already it will go into catch.
 Any response different than update available will do that.

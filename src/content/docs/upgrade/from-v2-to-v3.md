@@ -1,9 +1,8 @@
 ---
-title: "a"
+title: "From V2 to V3"
+sidebar:
+  order: 3
 ---
-# From V2 to V3
-
-
 
 This documentation will explain how to upgrade to the version 3 of auto-update.
 
