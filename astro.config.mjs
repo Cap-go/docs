@@ -23,16 +23,16 @@ export default defineConfig({
           autogenerate: { directory: 'tooling' },
         },
         {
-          label: 'Self Hosted',
-          autogenerate: { directory: 'self-hosted' },
-        },
-        {
           label: 'Upgrade',
           autogenerate: { directory: 'upgrade' },
         },
         {
           label: 'v3',
           autogenerate: { directory: 'v3' },
+        },
+        {
+          label: 'Self Hosted',
+          autogenerate: { directory: 'self-hosted' },
         },
       ],
     }),

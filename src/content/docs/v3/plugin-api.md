@@ -1,7 +1,8 @@
 ---
-title: "a"
+title: "Plugin API"
+sidebar:
+  order: 1
 ---
-# Plugin API
 
 ## API
 
