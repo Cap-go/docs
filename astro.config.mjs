@@ -6,6 +6,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Capgo',
+      logo: { src: './logo.svg' },
       customCss: ['./src/styles/custom.css'],
       sidebar: [
         {
