@@ -13,8 +13,9 @@ When you update native code (capacitor plugin), you must resubmit to the app sto
 
 | Plugin version | Capacitor compatibility | Maintained        |
 | -------------- | ----------------------- | ----------------- |
-| v4.\*.\*       | v4.\*.\*                | ✅                 |
-| v3.\*.\*       | v3.\*.\*                | only critical bug |
+| v5.\*.\*       | v5.\*.\*                | ✅                 |
+| v4.\*.\*       | v4.\*.\*                | only critical bug |
+| v3.\*.\*       | v3.\*.\*                | ⚠️ Deprecated     |
 
 ## Choose between all modes
 
@@ -25,7 +26,7 @@ In **self-hosted** **auto mode**, you have to recreate the update logic in your 
 In **self-hosted manual mode** the logic of when update is handled by your **JS,** the server still handle the what to update.\
 Or lastly you can go in **manual mode without backend**, all the logic have to be handled by your **JS.**
 
-****\
+\
 **Manual mode** can lead to very complex issue since you ship the code for update withing the update itself.
 
 ### Cloud Auto

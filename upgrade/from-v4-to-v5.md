@@ -17,3 +17,15 @@ First follow the migration guide of Capacitor:
 `npx cap sync`
 
 That it ! Pretty easy !
+
+\
+\
+Manual mode
+-----------
+
+
+
+If you were getting yourself the update with getLatest, there are a tiny change.\
+\
+Now if you are up-to-date already it will go into catch.\
+Any response different than update available will do that.
