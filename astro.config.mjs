@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
 
 export default defineConfig({
+  site: 'https://docs.capgo.app',
   integrations: [
     starlight({
       title: 'My Docs',
@@ -10,12 +11,24 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: 'Guides',
-          items: [{ label: 'Example Guide', link: '/guides/example/' }],
+          label: 'Plugin',
+          autogenerate: { directory: 'plugin' },
         },
         {
-          label: 'Reference',
-          autogenerate: { directory: 'reference' },
+          label: 'Self Hosted',
+          autogenerate: { directory: 'self-hosted' },
+        },
+        {
+          label: 'Tooling',
+          autogenerate: { directory: 'tooling' },
+        },
+        {
+          label: 'Upgrade',
+          autogenerate: { directory: 'upgrade' },
+        },
+        {
+          label: 'v3',
+          autogenerate: { directory: 'v3' },
         },
       ],
     }),
