@@ -1,9 +1,9 @@
 ---
-title: "a"
-description: install the plugin in your app
+title: "Installation"
+description: "Install the plugin in your app"
+sidebar:
+  order: 1
 ---
-
-# Installation
 
 Add this to your main file.
 
@@ -13,6 +13,6 @@ import { CapacitorUpdater } from '@capgo/capacitor-updater'
 CapacitorUpdater.notifyAppReady();
 ```
 
-Then you are all set.\
-\
-\`notifyAppReady\` is important for your app, it allows the plugin to validate your update run properly.
+Then you are all set.
+
+`notifyAppReady` is important for your app, it allows the plugin to validate your update run properly.

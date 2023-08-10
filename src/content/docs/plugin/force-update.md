@@ -1,13 +1,13 @@
 ---
-title: "a"
-description: Force your user to get the update
+title: "Force update"
+description: "Force your user to get the update"
+sidebar:
+  order: 4
 ---
 
-# Force update
+Add a listener to even `updateAvailable` and then show alert to tell the user the app will update:
 
-Add a listener to even \`updateAvailable\` and then show alert to tell the user the app will update:
-
-```
+```js
 import { CapacitorUpdater } from '@capgo/capacitor-updater';
 import { Dialog } from '@capacitor/dialog';
 
@@ -29,8 +29,7 @@ CapacitorUpdater.addListener('updateAvailable', async (res) => {
 
 You can also let the user decide by showing a dialog to ask the user to update:
 
-```
-
+```js
 import { CapacitorUpdater } from '@capgo/capacitor-updater';
 import { Dialog } from '@capacitor/dialog';
 

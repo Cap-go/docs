@@ -1,7 +1,10 @@
 ---
-title: "a"
+title: "Debugging"
+sidebar:
+  order: 6
 ---
-# Debugging
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 ## Understanding cloud logs:
 
@@ -27,7 +30,7 @@ title: "a"
 * **download\_XX** => new bundle has been download from xx % (every 10%)
 * **download\_complete** => new bundle finish download
 * **download\_fail** => new bundle fail download
-* **update\_fail** => new bundle has been installed but failed to call \`notifyAppReady\`
+* **update\_fail** => new bundle has been installed but failed to call `notifyAppReady`
 * **checksum\_fail** => new bundle fail to validate checksum
 
 ### Bundle status
@@ -42,24 +45,31 @@ title: "a"
 
 ### Debug command:
 
-There is a debug command for Capgo cloud users.\
-`npx @capgo/cli@latest app debug`
+There is a debug command for Capgo cloud users.
 
-`This will allow you to check all event happening in app and find solution if update don't happen`
+```bash
+npx @capgo/cli@latest app debug
+```
 
-
+This will allow you to check all event happening in app and find solution if update don't happen.
 
 ### IOS
 
 to find your logs on Xcode
 
-{% embed url="https://intercom.help/deploygate/en/articles/4682692-getting-the-device-log-in-xcode" %}
+<LinkCard
+    title="Getting the Device Log in Xcode"
+    href="https://intercom.help/deploygate/en/articles/4682692-getting-the-device-log-in-xcode"
+/>
 
 ### Android:
 
 to find your logs on Android studio
 
-{% embed url="https://developer.android.com/studio/debug/am-logcat" %}
+<LinkCard
+    title="View logs with Logcat"
+    href="https://developer.android.com/studio/debug/am-logcat"
+/>
 
 ### Explainations
 
@@ -108,10 +118,13 @@ To debug on Android, you need to access the device from Android Studio:
 
 Then Find the `versions` folder to see all the folder versions
 
-{% hint style="info" %}
+:::tip[Did you know?]
 On android all version are stored in one folder, unlike IOS where it has to be duplicated in two location.
-{% endhint %}
+:::
 
 ## Understand ios production crash
 
-{% embed url="https://developer.apple.com/news/?id=nra79npr" %}
+<LinkCard
+    title="How to review your app’s crash logs"
+    href="https://developer.apple.com/news/?id=nra79npr"
+/>

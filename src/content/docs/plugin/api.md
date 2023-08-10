@@ -1,9 +1,13 @@
 ---
-title: "a"
-description: All available method of the plugin
+title: "Methods"
+description: "All available method of the plugin"
+sidebar:
+  order: 2
 ---
 
 See the Github [Readme](https://github.com/Cap-go/capacitor-updater) for more information.
+
+<br />
 
 <docgen-index>
 

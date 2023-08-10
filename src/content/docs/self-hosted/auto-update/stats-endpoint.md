@@ -76,11 +76,11 @@ This endpoint should return a JSON:
 * **reset** : when the app reset to the built-in bundle
 * **set** : when app sets a new bundle
 * **set\_fail** : when app couldn't find the ID of the bundle set
-* **update\_fail** : send after the delay and \`notifyAppReady\` never called
+* **update\_fail** : send after the delay and `notifyAppReady` never called
 * **download\_fail** : when download never finished
 * **download\_complete:** When download finish
 * **download\_xx:** Send every 10% of download ex : download\_20, download\_70
-* **update\_fail:** when the bundle fails to do \`notifyAppReady\` in the timeframe
+* **update\_fail:** when the bundle fails to do `notifyAppReady` in the timeframe
 
 
 

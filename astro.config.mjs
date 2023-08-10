@@ -11,6 +11,10 @@ export default defineConfig({
       },
       sidebar: [
         {
+          label: 'Getting Started',
+          autogenerate: { directory: 'getting-started' },
+        },
+        {
           label: 'Plugin',
           autogenerate: { directory: 'plugin' },
         },

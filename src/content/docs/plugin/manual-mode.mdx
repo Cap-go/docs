@@ -1,10 +1,12 @@
 ---
-title: "a"
+title: "Manual mode"
+sidebar:
+  order: 5
 ---
-# Manual mode
 
-If you want to manage yourself when update is applied.\
-Use manual mode with Capgo cloud.
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+If you want to manage yourself when update is applied. Use manual mode with Capgo cloud.
 
 Here is what you need to do:
 
@@ -77,8 +79,10 @@ App.addListener('appStateChange', async (state: any) => {
 
 Documentation of all Available API in the plugin:
 
-[api.md](api.md "mention")\
-
+<LinkCard
+	title="Methods"
+	href="/plugin/api/"
+/>
 
 There are some usecase you can allow users to subscribe to channels and try different version:\
 [https://capgo.app/blog/how-to-send-specific-version-to-users/](https://capgo.app/blog/how-to-send-specific-version-to-users/)

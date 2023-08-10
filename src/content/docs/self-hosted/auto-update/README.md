@@ -77,11 +77,11 @@ In Auto-update the server should do the work of compares the version and return 
 
 If you add "message" and "error" key, the version will not be set, and the message will be displayed in logs instead.\
 \
-\`version\` key should be in [`semver`](https://semver.org/) format .
+`version` key should be in [`semver`](https://semver.org/) format .
 
 The zip should have `index.html` a file at the root, or only one folder at the root with `index.html` inside.\
 You can use the command of the CLI to zip your bundle:\
-\``npx @capgo/cli bundle zip --path [/path/to/my/bundle]`\`
+``npx @capgo/cli bundle zip --path [/path/to/my/bundle]``
 
 {% content-ref url="update-endpoint.md" %}
 [update-endpoint.md](update-endpoint.md)
@@ -91,9 +91,9 @@ You can use the command of the CLI to zip your bundle:\
 
 Starting with version 4.15.0 the plugin allows you to send encrypted updates.
 
-You can use this feature by creating a private key \``npx @capgo/cli key create`\`
+You can use this feature by creating a private key ``npx @capgo/cli key create``
 
-Then you encrypt your zip file with \``npx @capgo/cli encrypt [path/to/zip]`\`
+Then you encrypt your zip file with ``npx @capgo/cli encrypt [path/to/zip]``
 
 The command will print you a `ivSessionKey` it has to be sent with your update payload in the key `session_key`.\
 Then your app will be able to use the private key to decrypt the `session_key` and use the decrypted `session_key` to decrypt the update.

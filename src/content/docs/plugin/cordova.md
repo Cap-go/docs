@@ -1,9 +1,8 @@
 ---
-title: "a"
+title: "Cordova"
+sidebar:
+  order: 8
 ---
-# Cordova
-
-
 
 You are many to wonder if this plugin will be available in Cordova.
 

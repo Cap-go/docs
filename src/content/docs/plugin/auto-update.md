@@ -1,10 +1,8 @@
 ---
-title: "a"
+title: "Auto update"
+sidebar:
+  order: 3
 ---
-
-# Auto update
-
-
 
 It allows developers to use capacitor-updater with auto-update mode link to Capgo channel or equivalent.
 
@@ -43,7 +41,7 @@ Click on [register](https://capgo.app) to create your account if you don't have 
 
 The server allows you to manage channel and versions and much more.
 
-`autoUpdate` will use data from \`capacitor.config\` to identify into the Capgo server
+`autoUpdate` will use data from `capacitor.config` to identify into the Capgo server
 
 > ℹ️ You can use Capgo Cloud without sending your code to our server. If that not allowed by your company.
 
