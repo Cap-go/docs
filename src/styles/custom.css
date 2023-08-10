@@ -1,0 +1,13 @@
+:root {
+  --sl-color-bg-nav: rgb(24, 28, 31);
+  --sl-color-bg-sidebar: rgb(24, 28, 31);
+  --sl-color-hairline-shade: rgba(43, 46, 57, 1);
+}
+
+body {
+  background-color: rgb(24, 28, 31);
+}
+
+.site-title {
+  color: white;
+}

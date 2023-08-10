@@ -1,7 +1,8 @@
 ---
-title: "a"
+title: "Stats endpoint"
+sidebar:
+  order: 2
 ---
-# Stats endpoint
 
 Here is an example of code in JavaScript to save stats of the plugin
 
@@ -81,6 +82,3 @@ This endpoint should return a JSON:
 * **download\_complete:** When download finish
 * **download\_xx:** Send every 10% of download ex : download\_20, download\_70
 * **update\_fail:** when the bundle fails to do `notifyAppReady` in the timeframe
-
-
-

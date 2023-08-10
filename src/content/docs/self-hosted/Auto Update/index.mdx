@@ -1,7 +1,10 @@
 ---
-title: "a"
+title: "Introduction - Auto Update"
+sidebar:
+  order: 1
 ---
-# Auto-update
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 This documentation will explain how to run your own auto-update server.
 
@@ -75,17 +78,23 @@ The server API should respond, in JSON, to the capacitor-updater plugin. With th
 
 In Auto-update the server should do the work of compares the version and return the right one, if the URL key is present, the plugin starts the download process.
 
-If you add "message" and "error" key, the version will not be set, and the message will be displayed in logs instead.\
-\
-`version` key should be in [`semver`](https://semver.org/) format .
+If you add "message" and "error" key, the version will not be set, and the message will be displayed in logs instead.
 
-The zip should have `index.html` a file at the root, or only one folder at the root with `index.html` inside.\
-You can use the command of the CLI to zip your bundle:\
-``npx @capgo/cli bundle zip --path [/path/to/my/bundle]``
+`version` key should be in [`semver`](https://semver.org/) format.
 
-{% content-ref url="update-endpoint.md" %}
-[update-endpoint.md](update-endpoint.md)
-{% endcontent-ref %}
+The zip should have `index.html` a file at the root, or only one folder at the root with `index.html` inside.
+
+
+You can use the command of the CLI to zip your bundle:
+
+```bash
+npx @capgo/cli bundle zip --path [/path/to/my/bundle]
+```
+
+<LinkCard
+	title="Update Endppint"
+	href="/self-hosted/auto-update/update-endpoint"
+/>
 
 #### End-to-end Encryption
 
@@ -100,7 +109,10 @@ Then your app will be able to use the private key to decrypt the `session_key` a
 
 Learn more about it here:
 
-{% embed url="https://capgo.app/blog/self-hosted-live-updates/" %}
+<LinkCard
+	title="Self-hosted Live Updates"
+	href="https://capgo.app/blog/self-hosted-live-updates/"
+/>
 
 ### Statistics API
 
@@ -147,9 +159,10 @@ interface AppInfosStats {
 
 You can also totally disable it, with an empty string. Keep in mind, statistics are made private friendly and help me to understand how people use the plugin, to resolve issues and improve it.
 
-{% content-ref url="stats-endpoint.md" %}
-[stats-endpoint.md](stats-endpoint.md)
-{% endcontent-ref %}
+<LinkCard
+	title="Stats Endpoint"
+	href="/self-hosted/auto-update/stats-endpoint"
+/>
 
 ### Channel API
 

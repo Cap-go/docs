@@ -1,0 +1,13 @@
+[build.environment]
+  NODE_VERSION = "19"
+
+[build]
+  publish = "dist"
+  command = "pnpm run build && npx pagefind --source dist"
+
+[dev]
+  command = "pnpm dev"
+  autoLaunch = false
+  targetPort = 3336
+  functionsPort = 3335
+  port = 3000

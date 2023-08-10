@@ -1,13 +1,19 @@
-# Getting started
+---
+title: "Getting started"
+sidebar:
+  order: 1
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 ## Join Discord Community
 
 [Join the Capacitor-updater Discord Server!](https://discord.gg/VnYRvBfgA6)
 
-{% hint style="warning" %}
+:::danger
 ⚠️ Update OTA(Over the Air) only works on HTML, CSS, JS changes.\
 When you update native code (capacitor plugin), you must resubmit to the app store.
-{% endhint %}
+:::
 
 ## Maintenance
 
@@ -54,9 +60,10 @@ Or lastly you can go in **manual mode without backend**, all the logic have to b
 
 </details>
 
-{% content-ref url="plugin/auto-update.md" %}
-[auto-update.md](plugin/auto-update.md)
-{% endcontent-ref %}
+<LinkCard
+	title="Auto Update"
+	href="/plugin/auto-update/"
+/>
 
 ### Manual
 
@@ -79,9 +86,10 @@ Or lastly you can go in **manual mode without backend**, all the logic have to b
 
 </details>
 
-{% content-ref url="plugin/manual-mode.md" %}
-[manual-mode.md](plugin/manual-mode.md)
-{% endcontent-ref %}
+<LinkCard
+	title="Manual Mode"
+	href="/plugin/manual-mode/"
+/>
 
 ## Roadmap
 
@@ -94,10 +102,11 @@ The roadmap is handle in GitHub&#x20;
 The plugin is under the LGPL-3.0 License and the back-end is AGPL-3.0 License.
 
 > 💡 LGPL-3.0 mean if someone modify the code of the plugin, it’s mandatory to publish it, in open-source with same licensing. If you use the code without modification, that doesn’t concern you. See issue below for more details check the link 👇
->
->
 
-{% embed url="https://github.com/Cap-go/capacitor-updater/issues/7" %}
+<LinkCard
+	title="Licencing?"
+	href="https://github.com/Cap-go/capacitor-updater/issues/7"
+/>
 
 > You can include it in your app without worring
 

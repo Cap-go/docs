@@ -1,18 +1,20 @@
-import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
+import { defineConfig } from 'astro/config'
 
 export default defineConfig({
   site: 'https://docs.capgo.app',
   integrations: [
     starlight({
-      title: 'My Docs',
-      social: {
-        github: 'https://github.com/withastro/starlight',
-      },
+      title: 'Capgo',
+      customCss: ['./src/styles/custom.css'],
       sidebar: [
         {
           label: 'Getting Started',
-          autogenerate: { directory: 'getting-started' },
+          link: '/',
+        },
+        {
+          label: 'How To',
+          link: '/how-to',
         },
         {
           label: 'Plugin',
@@ -32,7 +34,11 @@ export default defineConfig({
         },
         {
           label: 'Self Hosted',
-          autogenerate: { directory: 'self-hosted' },
+          items: [
+            { label: 'Getting Started', link: '/self-hosted/getting-started' },
+            { label: 'Auto Update', autogenerate: { directory: 'self-hosted/Auto Update' } },
+            { label: 'Manual', link: '/self-hosted/manual' },
+          ],
         },
       ],
     }),

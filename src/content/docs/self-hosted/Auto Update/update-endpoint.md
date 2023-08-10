@@ -1,7 +1,8 @@
 ---
-title: "a"
+title: "Update endpoint"
+sidebar:
+  order: 1
 ---
-# Update endpoint
 
 Here is an example of code in JavaScript to send an update to the plugin
 

@@ -1,7 +1,10 @@
 ---
-title: "a"
+title: "Getting started"
+sidebar:
+    order: 1
 ---
-# Getting started
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 This documentation will explain how to run your own auto-update server.
 
@@ -52,10 +55,10 @@ Here is the list:
 
 ## Choose between Auto and Manual
 
-{% hint style="warning" %}
+:::danger
 ⚠️ Update OTA(Over the Air) only works on HTML, CSS, JS changes.\
 When you update native code (capacitor plugin), you must resubmit to the app store.
-{% endhint %}
+:::
 
 In auto mode, part of the logic is handled by the Native code, updates are decided server side, this is more secure and allows fine grain update, partial deploy to one device or group and more.
 
@@ -63,18 +66,17 @@ In manual mode, all the logic is handled by the JS, that some good and some bad 
 
 ### Prepare your bundle
 
-To send updates to your app, you need to zip it.\
-\
+To send updates to your app, you need to zip it.
 The best way to be certain your zip is good is to use the Capgo CLI for zipping.
 
 `npx @capgo/cli/latest bundle zip` will create your zip ready to be uploaded in your backend.
 
+<LinkCard
+	title="Auto update"
+	href="/self-hosted/auto-update/"
+/>
 
-
-{% content-ref url="auto-update/" %}
-[auto-update](auto-update/)
-{% endcontent-ref %}
-
-{% content-ref url="manual.md" %}
-[manual.md](manual.md)
-{% endcontent-ref %}
+<LinkCard
+	title="Manual"
+	href="/self-hosted/manual/"
+/>
