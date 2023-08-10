@@ -26,5 +26,3 @@ jobs:
         run: pnpm install
       - name: Generate static pages
         run: pnpm build
-      - name: Generate pagefind
-        run: npx pagefind --source dist

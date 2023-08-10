@@ -5,9 +5,9 @@
     "astro": "astro",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
     "preview": "astro preview",
-    "fmt": "prettier --write '**/*' --ignore-unknown"
+    "fmt": "prettier --write '**/*' --ignore-unknown",
+    "build": "astro build && npx pagefind@latest --source 'dist'"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.7.0",

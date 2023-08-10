@@ -3,7 +3,7 @@
 
 [build]
   publish = "dist"
-  command = "pnpm run build && npx pagefind --source dist"
+  command = "pnpm run build"
 
 [dev]
   command = "pnpm dev"
